@@ -1,0 +1,27 @@
+/* Wrapper for swiper */
+.disc-swiper-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* IMPORTANT: allow peek */
+.disc-swiper-wrapper .swiper {
+  overflow: visible;
+  padding: 0 10px;
+}
+
+/* spacing between cards */
+.disc-swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* optional fade effect */
+.disc-swiper-wrapper .swiper-slide {
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+
+.disc-swiper-wrapper .swiper-slide-active {
+  opacity: 1;
+}

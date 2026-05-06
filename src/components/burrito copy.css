@@ -1,0 +1,140 @@
+.carousel-container {
+    padding: 40px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu-title {
+    font-family: 'Houseofcards';
+    font-size: clamp(20px, 5vw, 3.5rem);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Slides */
+.custom-slide {
+    width: clamp(280px, 70vw, 450px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0.6;
+    transform: scale(0.85);
+}
+
+/* ACTIVE SLIDE */
+.carousel-container .swiper-slide-active {
+    opacity: 1 ;
+    transform: scale(1.12) ;
+    z-index: 5; /* fix layering */
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+    margin: 50px 0px;
+}
+
+/* Image container */
+.carousel-container .image-container {
+    overflow: hidden;
+}
+
+/* Default image */
+.carousel-container .image-container img {
+    width: 100%;
+    display: block;
+    /* aspect-ratio: 4/3; */
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.sw-title{
+    font-size: 32px ;
+    transition: all 0.3ms ease;
+}
+
+/* ✅ ACTIVE IMAGE SCALE (no hover) */
+.carousel-container .swiper-slide-active .image-container img {
+    /* transform: scale(1.12); */
+
+    /* transform: translateY(-25px); */
+    transition: all 0.3ms ease;
+
+
+}
+
+.carousel-container .swiper-slide-active  .sw-title {
+    transition: all 0.3ms ease;
+    font-size: 52px ;
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+    display: none;
+}
+
+.swiper-pagination-bullet-active {
+    background: #D35400 ;
+}
+
+/* Content */
+.card-frame {
+    overflow: hidden;
+    height: auto;
+}
+
+.card-content {
+    padding: 30px 20px;
+}
+
+.card-content h3 {
+    font-size: clamp(32px, 4vw, 2.5rem);
+    margin: 0 0 15px 0;
+    font-weight: 900;
+    font-family: 'Houseofcards';
+    text-transform: uppercase;
+}
+
+.card-content p {
+    color: #444;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.5;
+    margin-bottom: 25px;
+    min-height: 130px;
+}
+
+/* Button */
+.view-menu-btn {
+    background-color: #6a724a;
+    color: white;
+    border: none;
+    padding: 10px 65px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.ox-arrow {
+    color: #EADCCF;
+}
+
+/* Desktop tweaks */
+@media (min-width: 768px) {
+
+    .menu-title {
+        font-size: 32px;
+    }
+
+    .card-content h3 {
+        font-size: 48px;
+    }
+
+    .carousel-container {
+        padding: 80px 0;
+    }
+}

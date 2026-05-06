@@ -1,0 +1,56 @@
+[
+  {
+    "id": "tortas",
+    "name": "TORTAS",
+    "image": "/torta.png",
+    "classic": ["POLLO (CHICKEN)", "AL PASTOR (PORK)", "VEGGIE"],
+    "signature": ["ASADA (STEAK)", "BARBACOA"]
+  },
+ {
+    "id": "kids",
+    "name": "kids",
+    "image": "/kids.png",
+    "classic": ["POLLO", "VEGGIE"],
+    "signature": ["CAMARON", "ASADA"]
+  },
+  
+  {
+    "id": "burritos",
+    "name": "BURRITOS",
+    "image": "/burritos.png",
+    "classic": ["POLLO", "VEGGIE"],
+    "signature": ["CAMARON", "ASADA"]
+  }, {
+    "id": "appetizers",
+    "name": "appetizers",
+    "image": "/appetizers.png",
+    "classic": ["POLLO", "VEGGIE"],
+    "signature": ["CAMARON", "ASADA"]
+  },
+  {
+    "id": "tacos",
+    "name": "TACOS",
+    "image": "/tacos.png",
+    "classic": ["POLLO (CHICKEN)", "AL PASTOR (PORK)", "PICADILLO (GROUND BEEF)", "VEGGIE"],
+    "signature": ["ASADA (STEAK)", "CAMARON (SHRIMP)", "BARBACOA (HOUSE SPECIAL)"]
+  },{
+    "id": "dinner",
+    "name": "ENCHILADAS DINNER",
+    "image": "/dinner.png",
+    "classic": ["POLLO", "VEGGIE"],
+    "signature": ["CAMARON", "ASADA"]
+  },{
+    "id": "desserts",
+    "name": "desserts",
+    "image": "/desserts.png",
+    "classic": ["POLLO", "VEGGIE"],
+    "signature": ["CAMARON", "ASADA"]
+  },{
+    "id": "drinks",
+    "name": "drinks",
+    "image": "/drinks.png",
+    "classic": ["POLLO", "VEGGIE"],
+    "signature": ["CAMARON", "ASADA"]
+  }
+]
+

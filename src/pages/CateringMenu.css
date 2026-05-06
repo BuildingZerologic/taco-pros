@@ -1,0 +1,407 @@
+/* --- Global Styles --- */
+.superman-container {
+
+    min-height: 100vh;
+    font-family: 'Arial Black', sans-serif;
+    padding: 20px;
+}
+
+
+.superman-content-area{
+    margin-top: 0;
+}
+
+.h4,
+h4 {
+
+    font-family: 'Houseofcards';
+}
+
+.superman-live-card>h4 {
+    text-transform: uppercase;
+}
+
+.superman-info-col {
+    width: 100%;
+}
+
+/* Tabs: Always Centered */
+.superman-tabs-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin: 0 0 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background: #fff;
+    /* border-bottom: 1px solid rgba(228, 83, 30, 0.12); */
+}
+
+
+.superman-tabs-header.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px 16px;
+    margin: 0;
+    z-index: 999;
+    align-items: center;
+    /* border-bottom: 1px solid rgba(228, 83, 30, 0.12); */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.superman-tabs-header.is-fixed + .superman-content-area {
+    margin-top: 90px;
+}
+
+.superman-tab-btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    color: #2E3138;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.superman-tab-btn:hover {
+    background-color: rgba(228, 83, 30, 0.12);
+    color: #e4531e;
+}
+
+.superman-tab-btn.active,
+.superman-tab-btn.active:hover,
+.superman-tab-btn.active:focus {
+    background-color: #e4531e;
+    color: white;
+}
+
+/* Mobile Typography & Layout */
+.superman-grid-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.superman-title {
+    color: #2e3e48;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.superman-hero-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+
+
+.superman-cta-btn {
+    background-color: #6d7a52;
+    color: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 18px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+}
+
+/* Card Styles */
+.superman-card, .superman-live-card {
+    background: #F5F7F8;
+    padding: 25px;
+    width: 100%;
+    border-radius: 12px;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+
+.superman-card2{
+      background: #F5F7F8;
+font-family: 'RobotoSlab';
+    width: 100%;
+    border-radius: 12px;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+
+.superman-card2 > h4{
+font-weight: 700;
+font-family: 'RobotoSlab';
+  
+}
+
+.superman-card>h3,
+.superman-card>h4,
+.superman-live-card>h4 {
+    /* color: #538C42; */
+    font-family: 'RobotoSlab';
+       font-weight: 800;
+       text-transform: uppercase;
+}
+
+.superman-main-price,
+.superman-min-people {
+    color: #538C42;
+    font-family: 'RobotoSlab';
+    font-weight: 800;
+}
+
+.superman-info-box >p {
+    color: #00000099;
+}
+
+.superman-price {
+    color: #e4531e;
+    font-family: 'RobotoSlab';
+       font-weight: 800;
+}
+
+.superman-price-row {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e4531e;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #333;
+    background: white;
+}
+
+/* .superman-price-row > span{
+    font-family: 'Houseofcards' ;
+} */
+
+.superman-info-box {
+    border: 1px solid #dcd1c5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.superman-info-box h4 {
+    margin: 0 0 10px 0;
+    color: #000;
+    font-size: 18px;
+    font-family: 'RobotoSlab', sans-serif;
+    font-weight: 800;
+}
+
+.superman-card > .superman-server-info ,.superman-card > small,.superman-info-box > .superman-main-price,.superman-main-price,.superman-min-people {
+    color: #e4531e;
+    font-size: 16px ;
+}
+
+.superman-info-box > small {
+    color: #00000099;
+    font-size: 16px ;
+}
+
+.superman-main-price,
+.superman-min-people,
+h3 {
+    font-family: 'RobotoSlab';
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.superman-server-info {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.superman-info-box>ul>li {
+    font-family: 'RobotoSlab', serif ;
+    font-size: 16px;
+    margin-bottom: 5px;
+    list-style: none;
+    color: #00000099;
+    
+}
+
+.superman-info-box>ul{
+    margin: 0;
+    padding: 0;
+}
+
+.superman-hero-img-wrapper2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================================================
+   PRO LEVEL DESKTOP STYLES (Min-width: 1024px)
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+    body.catering-page .nav-header {
+        position: relative;
+        top: auto;
+    }
+
+    .superman-container {
+        padding: 50px 10%;
+                z-index: 9999;
+        position: relative;
+    }
+
+    .superman-grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Two Equal Columns */
+        gap: 60px;
+        align-items: start;
+        max-width: 1200px;
+    }
+
+    /* Title spans across both columns */
+    .superman-title {
+        grid-column: 1 / span 2;
+        text-align: center;
+        font-size: 56px;
+        margin-bottom: 40px;
+    }
+
+    .superman-cta-btn {
+        max-width: 100%;
+        margin-top: 10px;
+        transition: 0.3s transform;
+        font-size: 24px;
+    }
+
+    /* Left Column: Image & Button stays in view while scrolling */
+    .superman-sticky-wrapper {
+        position: sticky;
+        top: 40px;
+    }
+
+    .superman-hero-img2 {
+        max-width: 60%;
+        /* Occupy full column width */
+    }
+
+    .superman-hero-img {
+        max-width: 100%;
+        /* Occupy full column width */
+    }
+
+    .superman-cta-btn {
+        max-width: 100%;
+        margin-top: 10px;
+
+        transition: 0.3s transform;
+    }
+
+    .superman-cta-btn:hover {
+        background-color: #5b6644;
+        transform: translateY(-3px);
+    }
+
+    /* Right Column: Cards */
+    .superman-info-col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .superman-card,
+    .superman-live-card {
+        max-width: 100%;
+        /* Cards stretch to fill right column */
+
+    }
+
+
+}
+
+.ddnone {
+    display: none;
+}
+
+/* Chrome, Safari aur Opera ke liye scrollbar hide karein */
+.superman-tabs-header::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mobile par buttons left se start honge taaki scroll ho sake */
+@media screen and (max-width: 1023px) {
+    .superman-tabs-header {
+        justify-content: flex-start;
+
+    }
+
+    .superman-tabs-header.is-fixed {
+        left: 0;
+        right: 0;
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 20px;
+}
+
+
+
+
+    .mnone {
+        display: none;
+    }
+
+    .superman-hero-img2 {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Desktop par center hi rakhenge */
+@media screen and (min-width: 1024px) {
+    .superman-tabs-header {
+        justify-content: center;
+        overflow-x: auto;
+        background: white;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .superman-tabs-header.is-fixed {
+        left: 50%;
+        right: auto;
+        /* width: min(100% - 48px, 1200px); */
+        transform: translateX(-50%);
+        padding: 12px 0;
+        justify-content: center;
+    }
+
+    .superman-tabs-header.is-fixed + .superman-content-area {
+        margin-top: 110px;
+    }
+
+    .superman-container {
+        padding: 50px 10%;
+        margin-top: 0;
+    }
+}
+
+/* Ensure buttons don't shrink */

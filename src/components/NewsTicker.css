@@ -1,0 +1,55 @@
+
+.news-container {
+  background-color: #538c42;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.news-item {
+    color: #fff;
+    font-family: 'Houseofcards' ;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.news-scroll-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.news-track {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  align-items: center;
+  animation: news-scroll-animation 30s linear infinite;
+}
+
+.news-container:hover .news-track {
+  animation-play-state: paused;
+}
+
+
+
+.news-divider {
+  margin-left: 40px;
+  opacity: 0.5;
+}
+
+
+@keyframes news-scroll-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); 
+  }
+}

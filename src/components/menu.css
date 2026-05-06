@@ -1,0 +1,505 @@
+/* --- 1. Base Styles (Mobile Default) --- */
+
+/* Container styling */
+.cds-card {
+    background-color: #538C42;
+    /* Orange color from image */
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Arial Narrow', sans-serif;
+    /* Font style matching the vibe */
+    max-width: 500px;
+    /* Aap ise apne hisaab se adjust kar sakte hain */
+    box-sizing: border-box;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.cds-card:hover {
+    box-shadow: -1px 2px 0 rgb(0 0 0 / 17%);
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.cat-cover {
+    width: 100%;
+    /* height: 249px; */
+    object-fit: cover;
+}
+
+/* Combo Deal Badge */
+.cds-badge {
+    font-family: 'Houseofcards';
+    background-color: #fff;
+    color: #e4531e;
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Main Heading */
+.cds-title {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Houseofcards';
+    color: #fff;
+}
+
+/* Description Text */
+.cds-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 400;
+    opacity: 0.95;
+    color: #fff;
+        transition: transform 0.3s ease;
+}
+
+/* Responsive adjustment (Jaise 2nd image mein wide dikh raha hai) */
+@media (min-width: 768px) {
+    .cds-card {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cds-title {
+        font-size: 36px;
+        margin: 0 0 15px 0;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-family: 'Houseofcards';
+        color: #fff;
+    }
+
+    .cds-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        font-weight: 400;
+        opacity: 0.95;
+        color: #fff;
+        text-align: left;
+    }
+}
+
+
+/* Fix Card (Special Offer Card) Styling */
+.fix-card {
+    width: 100%;
+
+
+    overflow: hidden;
+
+    margin-top: 40px;
+}
+
+.fix-card-header {
+    height: 250px;
+    overflow: hidden;
+}
+
+.fix-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fix-card-body {
+    background-color: #E3501d;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.fix-card-title {
+    color: #fff ;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: 'Houseofcards';
+}
+
+.fix-btn-primary {
+    display: inline-block;
+    background-color: #ffffff;
+
+    padding: 12px 35px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Houseofcards';
+}
+
+.cat-container {
+    --primary-color: #E4531E;
+    --bg-color: #fff;
+    --card-bg: #F0F0F0;
+    --text-dark: #4A4A4A;
+    --btn-green: #6a724a;
+    max-width: 100%;
+    /* Mobile par full width */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background: var(--bg-color);
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.cat-tab:hover {
+    background-color: rgba(228, 83, 30, 0.12);
+    color: var(--primary-color);
+}
+
+/* Tabs Navigation */
+.cat-tabs-wrapper {
+    width: 100%;
+    z-index: 1000;
+    margin: 0 0 16px;
+    padding: 10px 0;
+    display: flex;
+    background: var(--bg-color);
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgba(228, 83, 30, 0.12);
+}
+
+.cat-tabs-wrapper.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px 16px;
+    background: var(--bg-color);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.cat-tabs-wrapper.is-fixed + .cat-title {
+    margin-top: 90px;
+}
+
+
+.cat-tabs {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 0 15px;
+    scroll-padding-left: 15px;
+}
+
+.cat-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.cat-tab {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #f0f0f0;
+    color: var(--text-dark);
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.cat-tab.cat-tab-active,
+.cat-tab.cat-tab-active:hover,
+.cat-tab.cat-tab-active:focus {
+    background: var(--primary-color);
+    color: #fff ;
+}
+
+/* Content Elements */
+.cat-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 24px 0;
+    color: #2E3138;
+    line-height: 1.05;
+}
+
+
+
+.cat-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    /* Mobile par full width */
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.cat-item-card {
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+}
+.cat-item-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.cat-item-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    font-family: 'RobotoSlab';
+
+}
+
+/* Order Button */
+.cat-order-btn {
+    background-color: var(--btn-green);
+    color: white;
+    padding: 12px 35px;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-family: 'Houseofcards';
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+/* --- 2. Tablet Media Query (768px and up) --- */
+@media screen and (min-width: 768px) {
+    .cat-container {
+        max-width: 90%;
+        /* Side margins create karega */
+    }
+
+    .cat-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row */
+        gap: 20px;
+    }
+
+
+
+    .cat-title {
+        font-size: 56px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 24px;
+        color: #2E3138;
+    }
+
+    .cat-tabs {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        justify-content: flex-start;
+        padding: 0 18px;
+    }
+
+}
+
+.coverImg {
+
+    margin-bottom: 22px;
+}
+
+/* --- 3. Desktop Media Query (1024px and up) --- */
+@media screen and (min-width: 1024px) {
+    body.menu-page .nav-header {
+        position: relative;
+        top: auto;
+    }
+
+    .cat-container {
+        max-width: 1087px;
+        margin-top: 0;
+    }
+
+    .cat-tabs-wrapper {
+        /* top: 95px; */
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 12px 0;
+        margin-bottom: 10px;
+    }
+
+    .cat-tabs-wrapper.is-fixed {
+        top: 0;
+        left: 50%;
+        right: auto;
+        width: min(100% - 48px, 1087px);
+        transform: translateX(-50%);
+        padding: 12px 0;
+    }
+
+    .cat-tabs-wrapper.is-fixed + .cat-title {
+        margin-top: 110px;
+    }
+
+    .cat-tabs {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .coverImg {
+        border-radius: 12px;
+        width: 100%;
+        overflow: hidden;
+        max-height: 420px;
+        display: flex;
+        margin-bottom: 46px;
+    }
+
+    .cat-cover {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+
+
+    .cat-tab {
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: none;
+
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .cat-title {
+        font-size: 56px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 24px;
+        color: #2E3138;
+        margin-top: 24px;
+    }
+
+    .cat-items {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns standard */
+        gap: 30px;
+    }
+
+    /* Agar aapko desktop par card hover effect chahiye */
+    .cat-item-card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+        box-shadow: -1px 2px 0 rgb(0 0 0 / 17%);
+    }
+
+    /* Fix Card (Special Offer Card) Styling */
+    .fix-card {
+        width: 100%;
+        max-width: 1040px;
+
+        border-radius: 12px;
+
+        overflow: hidden;
+
+        margin-top: 80px;
+        display: flex;
+    }
+
+    .fix-btn-primary {
+        display: inline-block;
+        background-color: #ffffff;
+        padding: 12px 72px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 24px;
+
+        font-family: 'Houseofcards';
+    }
+
+    .fix-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fix-card-body {
+        background-color: #E3501d;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+
+    .cat-item-desc {
+        font-size: 16px;
+    }
+
+    .fix-card-body {
+        background-color: #E3501d;
+        padding: 40px 20px;
+        text-align: center;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fix-card-title {
+        color: #ffffff;
+        font-size: 28px;
+        margin-bottom: 30px;
+        font-family: 'Houseofcards';
+    }
+
+
+
+    .fix-card-header {
+        height: auto;
+        overflow: hidden;
+        width: 50%;
+    }
+
+    .cat-order-btn {
+
+        font-size: 24px;
+
+    }
+
+    .fix-card-title {
+        color: #ffffff;
+        font-size: 48px ;
+        margin-bottom: 30px;
+        font-family: 'Houseofcards';
+    }
+
+
+
+}

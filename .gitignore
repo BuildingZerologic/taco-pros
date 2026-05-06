@@ -1,0 +1,58 @@
+# =====================
+# Environment files
+# =====================
+.env
+.env.*
+!.env.example
+
+# =====================
+# Composer dependencies
+# =====================
+vendor/
+
+# =====================
+# Logs
+# =====================
+*.log
+logs/
+
+# =====================
+# Cache / runtime files
+# =====================
+cache/
+tmp/
+storage/
+bootstrap/cache/
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# IDE files
+# =====================
+.vscode/
+.idea/
+
+# =====================
+# Node (if used)
+# =====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =====================
+# Build outputs
+# =====================
+dist/
+build/
+public/build/
+
+# =====================
+# Backup files
+# =====================
+*.bak
+*.swp

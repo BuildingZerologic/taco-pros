@@ -1,0 +1,23 @@
+[
+  {
+    "id": "tortas",
+    "name": "TORTAS",
+    "image": "/images/torta.png",
+    "classic": ["POLLO (CHICKEN)", "AL PASTOR (PORK)", "VEGGIE"],
+    "signature": ["ASADA (STEAK)", "BARBACOA"]
+  },
+  {
+    "id": "tacos",
+    "name": "TACOS",
+    "image": "/images/tacos-tray.png",
+    "classic": ["POLLO (CHICKEN)", "AL PASTOR (PORK)", "PICADILLO (GROUND BEEF)", "VEGGIE"],
+    "signature": ["ASADA (STEAK)", "CAMARON (SHRIMP)", "BARBACOA (HOUSE SPECIAL)"]
+  },
+  {
+    "id": "burritos",
+    "name": "BURRITOS",
+    "image": "/images/burrito.png",
+    "classic": ["POLLO", "VEGGIE"],
+    "signature": ["CAMARON", "ASADA"]
+  }
+]

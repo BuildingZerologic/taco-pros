@@ -1,0 +1,286 @@
+/* ===== SECTION ===== */
+.discoverMenu {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== HEADING ===== */
+.discoverMenu > h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Houseofcards';
+}
+
+.underline {
+    width: 180px;
+    height: 6px;
+    background-color: #d15527;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+/* ===== TABS ===== */
+.menuTypeTabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+    background: #fff;
+    box-shadow: 1px 1px 18px #80808024;
+    padding: 8px;
+    border-radius: 50px;
+    min-width: 320px;
+}
+
+.menuTypeTabs button {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 30px;
+}
+
+
+.menuTypeTabs .activeTab {
+    background: #d15527;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ===== CONTAINER ===== */
+.discoverMenuCnt {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== WRAPPER ===== */
+.mdx-menu-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== SCROLL AREA ===== */
+.mdx-menu-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 16px;
+    width: 100%;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+}
+
+.mdx-menu-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* alignment control */
+.menuDiscover.justify-center {
+    justify-content: center;
+}
+
+.menuDiscover.justify-start {
+    justify-content: flex-start;
+}
+
+/* ===== CARD ===== */
+.menuDiscoverCard {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 220px;
+    background-color: #fff;
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 1px 1px 18px #80808024;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ease 0.2s;
+
+    scroll-snap-align: start;
+}
+
+.menuDiscoverCard:hover {
+    transform: translateY(-5px);
+}
+
+.menuDiscoverCard:active {
+    transform: scale(0.96);
+}
+
+/* ACTIVE CARD */
+.menuDiscoverCard.active {
+    border: 2px solid #d15527;
+}
+
+/* ===== IMAGE ===== */
+.MenuCage {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuDiscoverCard > .MenuCage > img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+/* ===== TEXT ===== */
+.menuDiscoverCard span {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* ===== ARROWS ===== */
+.mdx-scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #198754;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.mdx-scroll-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.mdx-left {
+    left: -50px;
+}
+
+.mdx-right {
+    right: -50px;
+}
+
+/* ===== BUTTON CENTER ===== */
+.btnCenter {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* ===== ANIMATION ===== */
+.bounce {
+    animation: bounce2 0.6s;
+}
+
+@keyframes bounce2 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ========================= */
+/* ===== RESPONSIVE ======== */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .discoverMenu {
+        padding: 40px 0;
+    }
+
+    .discoverMenu > h2 {
+        font-size: 1.6rem;
+    }
+
+    .underline {
+        width: 120px;
+        height: 4px;
+    }
+
+    .menuTypeTabs {
+        width: 95%;
+        padding: 4px;
+        gap: 5px;
+    }
+
+    .menuTypeTabs button {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .mdx-menu-scroll {
+        padding: 10px 12px;
+        gap: 10px;
+                
+    }
+
+    .menuDiscoverCard {
+        width: 130px;
+        height: 170px;
+        padding: 8px;
+        border-radius: 16px;
+    }
+
+    .MenuCage {
+        height: 110px;
+    }
+
+    .menuDiscoverCard img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .menuDiscoverCard span {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .mdx-left {
+    left: 0px;
+}
+
+
+.mdx-right {
+    right: 0px;
+}
+
+    /* hide arrows on mobile */
+    .mdx-scroll-arrow {
+        display: block;
+    }
+}

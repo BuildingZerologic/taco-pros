@@ -1,0 +1,66 @@
+/* Container holds the burnt-orange background */
+.cats-container {
+  background-color: #b3562d; /* The specific rust/orange color from the image */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  box-sizing: border-box;
+ 
+}
+
+.cat-wrapper {
+  max-width: 1200px; /* Limits width on ultra-wide screens */
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Title Styling */
+.cats-title {
+  color: #fff; /* Off-white/cream color */
+  font-size: clamp(2.5rem, 8vw, 4.5rem); /* Responsive font sizing */
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+  /* Using a generic heavy font to match the image style */
+
+}
+
+.cat-list {
+  width: 100%;
+}
+
+.cat-item {
+  margin-bottom: 20px;
+}
+
+/* Location Text Styling */
+.cat-location-text {
+  color: #e8d7c3;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Thin horizontal line */
+.cat-divider {
+  border: 0;
+  border-top: 1px solid rgba(232, 215, 195, 0.5); /* Semi-transparent cream */
+  margin: 0;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .cat-container {
+    padding: 80px 60px;
+  }
+  
+  .cat-wrapper {
+    width: 60%; /* Mimics the left-aligned layout in the image */
+    margin-left: 0;
+  }
+}

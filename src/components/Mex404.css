@@ -1,0 +1,54 @@
+/* Mex404.css */
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+  /* background: linear-gradient(to bottom, #fff7ed, #fde68a); */
+  text-align: center;
+}
+
+.error-image img {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    margin-top: 4rem;
+}
+
+.error-content h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #92400e;
+}
+
+.error-content h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem;
+  color: #b45309;
+}
+
+.error-content p {
+  max-width: 600px;
+  margin: 0.5rem auto;
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.error-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: #d15527;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-radius: 55px;
+}
+.error-btn:hover {
+  background-color: #ea580c;
+}

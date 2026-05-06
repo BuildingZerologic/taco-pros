@@ -1,0 +1,135 @@
+:root {
+  /* Brand Colors */
+  --primary: #005BB2;
+  --secondary: #FAC90E;
+  --label: #E6FF55;
+  --tp-terracotta: #e4531e;
+  --tp-accent: #f04f22;
+  --tp-dark: #2d3136;
+  --tp-green: #528042;
+  --tp-beige: #e8ddd0;
+  --tp-white: #fff;
+  --tp-gray: transparent;
+
+  /* Helper Backgrounds/Text (Optional) */
+  --bg-light: #fff;
+
+  /* Responsive Design Variables */
+  --spacing-xs: clamp(0.5rem, 2vw, 1rem);
+  --spacing-sm: clamp(0.75rem, 3vw, 1.5rem);
+  --spacing-md: clamp(1rem, 4vw, 2rem);
+  --spacing-lg: clamp(1.5rem, 5vw, 3rem);
+  --spacing-xl: clamp(2rem, 6vw, 4rem);
+}
+
+@font-face {
+    font-family: "RobotoSlab";
+    /* Root se path start karein */
+    src: url("/ROBOTOSLAB-REGULAR.TTF") format("truetype");
+
+}
+
+a{
+  text-decoration: none;
+  font-family: "RobotoSlab";
+}
+
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url("/Gilroy-Regular.ttf") format("truetype");
+
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+h1 {
+    background: none;
+    text-transform: uppercase;
+    border: none;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Houseofcards';
+}
+
+@font-face {
+    font-family: "Houseofcards";
+    src: url("/Houseofcards.woff2") format("woff2");
+
+}
+
+button{
+    font-family: "Houseofcards" ;
+
+}
+
+p,b,strong{
+  font-family: "RobotoSlab" ;
+  
+}
+
+h1,h2,h3,h4,h5,h6,a,p,span,small,ul,li,button{
+  color : #2E3138;
+}
+
+span,small,li{
+  
+    font-family:   "RobotoSlab" ;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  font-family: "RobotoSlab";
+}
+
+
+/* Fade-in animation for the main content */
+.cfx-main-content {
+  animation: cfxFadeIn 0.8s ease-in-out;
+  overflow: hidden;
+}
+
+.cfx-app-wrapper{
+  overflow: hidden;
+}
+
+@keyframes cfxFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loaderDiv{
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+.batman-rewards-section,.contact-banner-section,.cx-container,.main-wrapper {
+    margin-top: 93px;
+}
+
+
+}
+
+
+.mySpace{
+  width: 100%;
+  margin-bottom: 100px;
+}

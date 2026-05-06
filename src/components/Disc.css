@@ -1,0 +1,232 @@
+/* ================= BASE ================= */
+.ox-card {
+  --ox-bg-color: #E3501d;
+  --ox-bg-color2: #538C42;
+  --ox-text-white: #ffffff;
+  --ox-font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--ox-font-main);
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ================= CONTENT ================= */
+.ox-content,
+.ox-content-2 {
+  padding: clamp(30px, 5vw, 70px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ox-content {
+  background: var(--ox-bg-color);
+  color: #efe2c0;
+}
+
+.ox-content-2 {
+  background: var(--ox-bg-color2);
+  color: #fff;
+}
+
+/* ================= TEXT ================= */
+.ox-overline {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Houseofcards';
+  color: #fff;
+}
+
+.ox-title {
+  font-size: clamp(28px, 5vw, 72px);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.ox-description {
+  font-size: clamp(14px, 2vw, 20px);
+  line-height: 1.6;
+  color: #fff;
+}
+
+.ox-cta {
+  font-size: clamp(16px, 2.5vw, 28px);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: 'Houseofcards';
+  color: #fff;
+}
+
+/* ================= IMAGE ================= */
+.ox-image-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.ox-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
+/* ================= TABLET (768px+) ================= */
+@media (min-width: 768px) {
+
+  .ox-card {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: clamp(340px, 34vw, 440px);
+  }
+
+  .row-rev {
+    flex-direction: row-reverse;
+  }
+
+  .row-rev2 {
+    flex-direction: row;
+  }
+
+  .ox-content,
+  .ox-content-2 {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .ox-image-container {
+    width: 50%;
+    aspect-ratio: auto;
+  }
+
+  .ox-image {
+    height: 100%;
+  }
+}
+
+/* ================= DESKTOP (1024px+) ================= */
+@media (min-width: 1024px) {
+
+  .ox-content,
+  .ox-content-2 {
+    padding: clamp(34px, 3.5vw, 48px);
+    gap: clamp(18px, 1.6vw, 26px);
+  }
+
+  .ox-title {
+    font-size: clamp(50px, 4.2vw, 72px);
+    line-height: 1;
+  }
+
+  .ox-description {
+    max-width: 560px;
+    font-size: clamp(17px, 1.45vw, 21px);
+    line-height: 1.55;
+  }
+
+  .ox-cta {
+    font-size: 32px;
+    color: #EADCCF;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .ox-card {
+    min-height: clamp(380px, 36vw, 430px);
+    max-height: 450px;
+  }
+
+  .ox-content,
+  .ox-content-2 {
+    padding: clamp(32px, 3.4vw, 46px);
+    gap: clamp(16px, 1.4vw, 22px);
+  }
+
+  .ox-title {
+    font-size: clamp(46px, 3.8vw, 60px);
+  }
+
+  .ox-description {
+    max-width: 520px;
+    font-size: clamp(16px, 1.35vw, 18px);
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ox-card {
+    min-height: 420px;
+    max-height: 460px;
+  }
+
+  .ox-title {
+    font-size: clamp(58px, 4vw, 72px);
+  }
+
+  .ox-description {
+    font-size: clamp(18px, 1.25vw, 20px);
+  }
+
+  .ox-image {
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1536px) {
+  .ox-card {
+    min-height: 440px;
+    max-height: 480px;
+  }
+
+  .ox-content,
+  .ox-content-2 {
+    padding: clamp(40px, 3.2vw, 54px);
+    gap: 24px;
+  }
+
+  .ox-title {
+    font-size: clamp(62px, 4vw, 76px);
+  }
+
+  .ox-description {
+    max-width: 580px;
+    font-size: clamp(19px, 1.25vw, 21px);
+  }
+}
+
+@media (max-width: 767px) {
+  .ox-image-container {
+    max-height: clamp(260px, 60vw, 360px);
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+
+  .ox-content,
+  .ox-content-2 {
+    padding: 25px 20px;
+  }
+
+  .ox-image-container {
+    max-height: 280px;
+  }
+
+  .ox-title {
+    font-size: 26px;
+  }
+
+  .ox-description {
+    font-size: 13px;
+  }
+}

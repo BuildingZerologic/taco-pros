@@ -1,0 +1,48 @@
+
+
+
+/* Agar aapka path dotted line hai (stroke animation ke liye) */
+.draw-effect {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 2s ease-in-out, opacity 0.5s;
+}
+
+.visible .draw-effect {
+  stroke-dashoffset: 0;
+}
+
+
+/* SVG ko screen ke upar float karne ke liye */
+.svg-overlay-container {
+  position: fixed;    /* Screen par ek jagah fix rahega */
+  top: 0;
+  left: 0;
+  width: 100vw;       /* Poori screen ki width */
+  height: 100vh;      /* Poori screen ki height */
+  z-index: 9999;      /* Sabse upar dikhne ke liye */
+  pointer-events: none; /* Taaki aap niche ke buttons/links click kar sakein */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-overlay-container svg {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+}
+
+/* Animation Styles */
+.scroll-path {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-path.visible {
+  opacity: 1;
+  transform: scale(1);
+}

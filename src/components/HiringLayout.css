@@ -1,0 +1,268 @@
+/* --- GLOBAL UTILITIES --- */
+.text-primary {
+    color: var(--tp-accent) ;
+}
+
+/* --- FORM CONTAINER --- */
+.hiring-form {
+    max-width: 1024px;
+    margin: 40px auto;
+    padding: 40px;
+    width: 100%;
+    font-family: 'RobotoSlab', sans-serif;
+    box-sizing: border-box;
+
+}
+
+.hiring-form h2 {
+    font-family: 'Houseofcards', sans-serif;
+    color: var(--tp-dark);
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* --- STEPPER PROGRESS --- */
+.progress {
+    background-color: #ddd ;
+    overflow: visible ;
+    margin-bottom: 40px;
+    height: 6px ;
+}
+
+.progress-bar {
+    background-color: var(--tp-accent) ;
+    transition: width 0.4s ease;
+}
+
+.circle {
+    width: 45px;
+    height: 45px;
+    background: var(--tp-white);
+    border: 2px solid var(--tp-accent);
+    color: var(--tp-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    z-index: 2;
+    transition: all 0.3s ease;
+  
+}
+
+.circle.active {
+    background: var(--tp-accent);
+    color: white;
+}
+
+.circle.completed {
+    background: var(--tp-accent);
+    border-color: var(--tp-accent);
+}
+
+.ProGress {
+    margin-top: -65px;
+}
+
+small.mnone {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Houseofcards';
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--tp-accent) !important;
+}
+
+/* --- INPUT STYLING (The Mobile/Buggy Fix) --- */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.required-star {
+    color: #c62828;
+    font-weight: 800;
+}
+
+.form-group label {
+    font-family: 'Houseofcards';
+    color: var(--tp-dark);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* This targets text, email, date, and select but EXCLUDES radio/checkbox */
+.form-group input:not([type="radio"]):not([type="checkbox"]), 
+.form-group select, 
+.form-group textarea {
+    padding: 12px 15px ;
+    border: 1px solid var(--tp-accent) ;
+    background-color: #fff ;
+    font-size: 16px ; 
+    border-radius: 0 ;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none; 
+    -webkit-appearance: none;
+    height: 50px; 
+    display: block;
+    transition: border-color 0.2s;
+}
+
+.form-group textarea {
+    height: auto;
+    min-height: 120px;
+}
+
+/* Custom dropdown arrow for Select */
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23B1806F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--tp-dark) ;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(177, 128, 111, 0.1) ;
+}
+
+/* --- RADIO & CHECKBOX FIX --- */
+/* This resets the buggy "white box" look from your screenshot */
+input[type="radio"], 
+input[type="checkbox"] {
+    appearance: auto ; 
+    -webkit-appearance: auto ;
+    width: 20px ; 
+    height: 20px ; 
+    margin: 0 ;
+    cursor: pointer;
+    accent-color: var(--tp-accent);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.radio-group label, .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Arial', sans-serif;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--tp-dark);
+}
+
+
+.form-success {
+    color: var(--tp-green);
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.form-error {
+    color: #c62828;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+/* --- NAVIGATION BUTTONS --- */
+.btn-primary, .btn-success, .btn-outline-secondary {
+    padding: 12px 30px ;
+    font-family: 'Houseofcards' ;
+    text-transform: uppercase;
+    font-size: 18px ;
+    border-radius: 0 ;
+    transition: 0.3s ease ;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary, .btn-success {
+    background-color: var(--tp-green) ;
+    border: none ;
+    color: white ;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    background-color: var(--tp-dark) ;
+}
+
+.btn-outline-secondary {
+    border: 1px solid var(--tp-dark) ;
+    color: var(--tp-dark) ;
+    background-color: white;
+}
+
+/* Desktop Width Control for the "Next/Previous" buttons */
+.next.full-width, .btn-success {
+    width: 100% ;
+}
+
+.next.half-width, .btn-outline-secondary {
+    width: 100px ; 
+}
+
+/* --- MOBILE OPTIMIZATION --- */
+@media (max-width: 768px) {
+    .hiring-form {
+        padding: 0;
+        margin: 10px auto;
+    }
+/* 
+    .ProGress {
+        margin-top: -60px;
+    } */
+
+    .circle {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    small.mnone,
+    .step-label {
+        display: none;
+    }
+
+    .full-width{
+        width: 100%;
+    }
+
+   
+
+    
+.next.half-width, .btn-outline-secondary {
+    width: auto ; 
+}
+  
+}
+
+@media (min-width: 768px) {
+    small.mnone,
+    .step-label {
+        display: block;
+    }
+}

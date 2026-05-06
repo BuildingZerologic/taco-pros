@@ -1,0 +1,450 @@
+.location-detail-page {
+  --taco-orange: #f04f22;
+  --taco-orange-dark: #d94319;
+  --taco-cream: #fff8f3;
+  --taco-panel: #fff0e9;
+  --taco-text: #1f1d1a;
+  --taco-muted: #5f5b55;
+  --taco-border: #eee5df;
+  min-height: 100vh;
+  background: #fff;
+  color: var(--taco-text);
+  font-family: 'RobotoSlab', serif;
+}
+
+.location-detail-page .container {
+  width: min(100% - 40px, 1080px);
+  margin-inline: auto;
+}
+
+.location-detail-page.not-found {
+  display: grid;
+  min-height: 50vh;
+  place-items: center;
+  text-align: center;
+}
+
+.location-detail-page.not-found a {
+  color: var(--taco-orange);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.location-detail-page .hero-section {
+  position: relative;
+  display: flex;
+  min-height: 260px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.location-detail-page .hero-section h1,
+.location-detail-page .hero-section p,
+.location-detail-page .hero-section span {
+  color: #fff;
+}
+
+.location-detail-page .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.location-detail-page .hero-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 42px 20px;
+}
+
+.location-detail-page .hero-content h1,
+.location-detail-page h2,
+.location-detail-page .sidebar-title,
+.location-detail-page .cta-banner h2 {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Houseofcards', sans-serif;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.location-detail-page .hero-content h1 {
+  margin: 0;
+  font-size: clamp(30px, 4.4vw, 46px);
+}
+
+.location-detail-page .subtitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.location-detail-page .tp-action-button {
+  position: relative;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  background: #fff;
+  color: var(--taco-orange);
+  font-family: 'Houseofcards', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: -6px 6px 0 var(--taco-orange);
+  transform: translate(0, 0);
+  transition: transform 0.08s ease-out;
+  z-index: 1;
+}
+
+.location-detail-page .tp-action-button:hover {
+  color: var(--taco-orange);
+  transform: translate(-2px, 2px);
+}
+
+.location-detail-page .tp-action-button:active {
+  transform: translate(-6px, 6px) scale(0.98);
+}
+
+.location-detail-page .intro-section {
+  padding-top: 26px;
+}
+
+.location-detail-page .intro-text {
+  max-width: 900px;
+  margin: 0;
+  color: var(--taco-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.location-detail-page .content-wrapper {
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+
+.location-detail-page .main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+  gap: 52px;
+  align-items: start;
+}
+
+.location-detail-page .info-section {
+  margin-bottom: 30px;
+}
+
+.location-detail-page .info-section h2 {
+  margin: 0 0 12px;
+  font-size: 27px;
+}
+
+.location-detail-page .info-section p {
+  margin: 0 0 12px;
+  color: var(--taco-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.location-detail-page .info-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--taco-muted);
+  font-size: 14px;
+  line-height: 1.45;
+  list-style: disc;
+}
+
+.location-detail-page .info-list li {
+  padding-left: 2px;
+}
+
+.location-detail-page .info-list li::marker {
+  color: var(--taco-orange);
+  font-size: 0.9em;
+}
+
+.location-detail-page .btn-inline {
+  margin-top: 18px;
+}
+
+.location-detail-page aside {
+  min-width: 0;
+}
+
+.location-detail-page .location-sidebar {
+  position: sticky;
+  top: 24px;
+  background: var(--taco-panel);
+  padding: 30px;
+}
+
+.location-detail-page .sidebar-title {
+  margin: 0 0 24px;
+  font-size: 20px;
+}
+
+.location-detail-page .detail-item {
+  margin-bottom: 21px;
+}
+
+.location-detail-page .detail-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--taco-text);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.location-detail-page .detail-item p,
+.location-detail-page .detail-item a {
+  margin: 0;
+  color: var(--taco-muted);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.55;
+  text-decoration: none;
+}
+
+.location-detail-page .detail-item a {
+  color: var(--taco-orange);
+}
+
+.location-detail-page .btn-order-sidebar {
+  margin: 22px 0;
+  text-align: center;
+}
+
+.location-detail-page .address-lines span {
+  display: block;
+}
+
+.location-detail-page .hours-list {
+  display: grid;
+  gap: 0;
+}
+
+.location-detail-page .hours-list div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid #decfc7;
+  padding: 8px 0;
+}
+
+.location-detail-page .hours-list span {
+  color: var(--taco-muted);
+  font-family: 'RobotoSlab', serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.location-detail-page .map-container {
+  margin-top: 24px;
+}
+
+.location-detail-page .map-container span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.location-detail-page .map-container iframe {
+  display: block;
+  width: 100%;
+  height: 340px;
+  border: 0;
+  background: #e2ddda;
+}
+
+.location-detail-page .faq-section {
+  padding: 34px 0 26px;
+  background: #fff;
+}
+
+.location-detail-page .faq-section h2 {
+  margin: 0 0 22px;
+  font-size: 28px;
+}
+
+.location-detail-page .faq-item {
+  border-bottom: 1px solid var(--taco-border);
+}
+
+.location-detail-page .faq-trigger {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  border: 0;
+  background: transparent;
+  color: var(--taco-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 0;
+  text-align: left;
+}
+
+.location-detail-page .faq-icon {
+  flex: 0 0 18px;
+  color: var(--taco-orange);
+  font-family: 'Houseofcards', sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+}
+
+.location-detail-page .faq-answer {
+  margin: -3px 0 16px;
+  color: var(--taco-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.location-detail-page .cta-banner {
+  padding: 22px 0 40px;
+  background: #fff;
+  color: #fff;
+}
+
+.location-detail-page .cta-banner h2,
+.location-detail-page .cta-banner p,
+.location-detail-page .cta-banner span {
+  color: #fff;
+}
+
+.location-detail-page .cta-banner .container {
+  background: var(--taco-orange);
+  padding: 30px;
+}
+
+.location-detail-page .cta-banner h2 {
+  margin: 0 0 12px;
+  font-size: 26px;
+}
+
+.location-detail-page .cta-banner p {
+  max-width: 780px;
+  margin: 0 0 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .location-detail-page .main-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .location-detail-page .location-sidebar {
+    position: static;
+  }
+}
+
+@media (min-width: 1024px) {
+  .location-detail-page {
+    padding-top: 95px;
+  }
+}
+
+@media (max-width: 600px) {
+  .location-detail-page .container {
+    width: min(100% - 30px, 1080px);
+  }
+
+  .location-detail-page .hero-section {
+    min-height: 180px;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .location-detail-page .hero-content {
+    align-items: start;
+    justify-items: start;
+    width: 100%;
+    padding: 34px 22px;
+  }
+
+  .location-detail-page .hero-content h1 {
+    max-width: 250px;
+    font-size: 23px;
+  }
+
+  .location-detail-page .subtitle {
+    max-width: 260px;
+    font-size: 11px;
+  }
+
+  .location-detail-page .intro-section {
+    padding-top: 22px;
+  }
+
+  .location-detail-page .intro-text,
+  .location-detail-page .info-section p,
+  .location-detail-page .info-list,
+  .location-detail-page .faq-trigger,
+  .location-detail-page .faq-answer {
+    font-size: 12px;
+  }
+
+  .location-detail-page .content-wrapper {
+    padding-top: 26px;
+  }
+
+  .location-detail-page .info-section {
+    margin-bottom: 28px;
+  }
+
+  .location-detail-page .info-section h2,
+  .location-detail-page .faq-section h2 {
+    font-size: 20px;
+  }
+
+  .location-detail-page .location-sidebar {
+    padding: 24px 18px;
+  }
+
+  .location-detail-page .sidebar-title {
+    font-size: 17px;
+  }
+
+  .location-detail-page .map-container iframe {
+    height: 280px;
+  }
+
+  .location-detail-page .cta-banner {
+    padding-bottom: 28px;
+  }
+
+  .location-detail-page .cta-banner .container {
+    padding: 24px 18px;
+  }
+
+  .location-detail-page .cta-banner h2 {
+    font-size: 19px;
+  }
+}

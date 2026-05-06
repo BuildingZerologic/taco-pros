@@ -1,0 +1,135 @@
+/* ==========================================
+   BASE STYLES
+   ========================================== */
+.ox-carousel-container {
+    padding: 40px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ox-drinks {
+    font-family: 'Houseofcards', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.ox-menu-title.ox-menu-size {
+    color: #538c42;
+    font-family: 'Houseofcards', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+/* ==========================================
+   REEL CARD (IMPORTANT PART)
+   ========================================== */
+.ox-card-frame-y {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;   /* 🔥 Reel Ratio */
+    overflow: hidden;
+    border-radius: 16px;
+    background: #000;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Video should fully cover */
+.ox-image-container-3 {
+    width: 100%;
+    height: 100%;
+}
+
+.ox-image-container-3 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 🔥 Important for reel crop */
+    display: block;
+}
+
+/* ==========================================
+   SWIPER (MOBILE)
+   ========================================== */
+.ox-mySwiper {
+    padding-bottom: 50px ;
+    overflow: visible ;
+    margin-top: 50px;
+}
+
+.ox-custom-slide {
+    width: 260px;
+    opacity: 0.4;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: scale(0.85);
+}
+
+/* Active slide */
+.ox-custom-slide.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.ox-carousel-container .swiper-pagination-bullet-active {
+    background: #000 ;
+}
+
+/* ==========================================
+   DESKTOP (STATIC GRID)
+   ========================================== */
+@media screen and (min-width: 1024px) {
+
+    .ox-carousel-container {
+        padding: 56px 20px;
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+
+    .ox-menu-title.ox-menu-size {
+        font-size: 40px;
+        margin-bottom: 36px;
+    }
+
+    /* Grid Layout */
+    .ox-mySwiper .swiper-wrapper {
+        display: grid ;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        transform: none ;
+        width: 100% ;
+    }
+
+    .ox-custom-slide {
+        width: 100% ;
+        opacity: 1 ;
+        transform: none ;
+        margin: 0 ;
+    }
+
+    .ox-custom-slide.swiper-slide-active {
+        transform: none ;
+        opacity: 1 ;
+    }
+
+    /* Hover effect */
+    .ox-card-frame-y {
+        border-radius: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ox-card-frame-y:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    /* Hide pagination */
+    .ox-carousel-container .swiper-pagination {
+        display: none ;
+    }
+
+    .ox-mySwiper {
+        cursor: default ;
+        overflow: hidden ;
+    }
+}

@@ -1,0 +1,230 @@
+.mainX {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: bounce 2.5s infinite ease-in-out;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+
+
+.taco {
+  position: absolute;
+  height: 150px;
+  width: 300px;
+  border-radius: 150px 150px 0 0;
+  background: #FFB958;
+  bottom: -50px;
+  left: -150px;
+}
+
+.taco2 {
+  position: absolute;
+  height: 150px;
+  width: 300px;
+  border-radius: 150px 150px 0 0;
+  background: #ba8b49;
+  bottom: 0px;
+  left: -30px;
+  z-index: -4;
+}
+
+.taco-inner {
+  position: absolute;
+  height: 150px;
+  width: 300px;
+  border-radius: 150px 150px 0 0;
+  background: #439909;
+  bottom: 0px;
+  left: -20px;
+  z-index: -3;
+}
+
+.taco-meal {
+  position: absolute;
+  top: 33px;
+  left: -10px;
+  height: 45px;
+  width: 90px;
+  border-radius: 90px 90px 0 0;
+  transform: rotate(-40deg);
+  background: #ee543a;
+  z-index: -2;
+}
+
+.taco-meal::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -50px;
+  height: 35px;
+  width: 60px;
+  border-radius: 90px 90px 0 0;
+  transform: rotate(-30deg);
+  background: #6d4b11;
+  z-index: -2;
+}
+
+.taco-meal::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 55px;
+  height: 35px;
+  width: 60px;
+  border-radius: 90px 90px 0 0;
+  transform: rotate(-20deg);
+  background: #6d4b11;
+  z-index: -2;
+}
+
+.taco-face {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: 3px solid transparent;
+  border-top: 5px solid black;
+  border-radius: 65px;
+  top: -50px;
+  left: -40px;
+}
+
+.taco-face::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: 3px solid transparent;
+  border-top: 5px solid black;
+  border-radius: 65px;
+  top: -5px;
+  left: 60px;
+}
+
+.taco-face::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-bottom: 5px solid black;
+  border-radius: 65px;
+  top: -15px;
+  left: 45px;
+  transform: translateX(-50%);
+}
+
+.blush {
+  position: absolute;
+  top: -25px;
+  left: -70px;
+  width: 30px;
+  height: 15px;
+  background: #d9594c;
+  border-radius: 100%;
+  opacity: 0.5;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.blush:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  width: 30px;
+  height: 15px;
+  background: #d9594c;
+  border-radius: 100%;
+}
+
+.dots {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #d9594c;
+  border-radius: 50%;
+  animation: bounceDot 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateY(-12px);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+@keyframes bounceDot {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .mnone{
+    display: none;
+  }
+
+  .mnk {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: white;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dots{
+    display: none;
+  }
+}

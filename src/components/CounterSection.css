@@ -1,0 +1,116 @@
+/* CounterSection.css */
+
+/* 1. Container Styles */
+.count-container {
+    position: relative;
+    padding: 60px 20px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+ 
+    display: flex;
+    background: #E3501d;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.count-value {
+    
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0;
+    font-family: 'Levenim MT', sans-serif; /* Added fallback */
+}
+
+/* 2. Flexbox Wrapper */
+.count-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 30px;
+    z-index: 2; /* Keeps text above pseudo-elements if they overlap */
+}
+
+.count-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.count-label {
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Houseofcards' ;
+}
+
+/* 3. The "Perfect Alignment" Edges */
+
+/* Common styles for both top and bottom edges */
+.count-container::before,
+.count-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 16px; /* Match your SVG height exactly */
+    background-repeat: repeat-x;
+    background-size: auto 16px;
+    pointer-events: none; /* Prevents edges from interfering with clicks */
+}
+
+/* Top Edge (Zig-Zag / Pattern) */
+.count-container::before {
+    top: 0;
+    background-image: url('/bykk.svg');
+    /* Move it exactly above the top border */
+    transform: translateY(-100%);
+}
+
+/* Bottom Edge (Zig-Zag / Pattern) */
+.count-container::after {
+    bottom: 0;
+    background-image: url('/byk.svg');
+    /* Move it exactly below the bottom border */
+    transform: translateY(100%);
+}
+
+/* 4. Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .count-container {
+        padding: 40px 0;
+        margin: 0;
+    }
+
+    .count-wrapper {
+        flex-direction: column;
+        gap: 40px; /* More space between stacked items */
+        
+    }
+
+    .count-item {
+        min-width: 100%;
+    }
+
+    .count-value {
+        font-size: 32px;
+    }
+
+    .count-label {
+        font-size: 18px;
+    }
+
+}
+
+/* Fix for potential 1px gaps on high-res screens */
+@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .count-container::before { transform: translateY(-99%); }
+    .count-container::after { transform: translateY(99%); }
+}

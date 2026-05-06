@@ -1,0 +1,44 @@
+
+import { Link } from "react-router-dom";
+import "./Disc.css";
+import TacoButton from "./TacoButton";
+
+function Kit() {
+    return (
+        <>
+            <div className="ox-card row-rev2">
+                <div className="ox-content-2">
+
+                    <h1 className="ox-title">CUISINE CRAFTED BY CULTURE</h1>
+                    <p className="ox-description">
+                        Inspired by the gastronomic art of Mexico, Taco Pros aims to transport you to the flavors of
+                        Mexican Tianguis (market) street foods. We take
+                        pride in investing in quality ingredients to
+                        ensure our customers get the great taste we’re
+                        famous for, because our vision is to present the
+                        purest flavors of Mexico.
+                    </p>
+
+                  
+                        <TacoButton text="Order now"
+                            width="clamp(115px, 15vw, 191px)"
+                            height="clamp(51px, 5vw, 57px)"
+                            fontSize="clamp(16px, 2vw, 24px)"
+                            styleType="2"
+                            link ="/catering"
+                            textColor ="#538C42"
+                        
+                        />
+
+                        
+
+                </div>
+                <div className="ox-image-container">
+                    <img src="/culture.jpg" alt="Authentic Mexican Food" className="ox-image" />
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default Kit;

@@ -1,0 +1,128 @@
+.mex-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.mex-row {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  min-height: 700px;
+}
+
+
+/* Column Styles */
+.mex-col-left, .mex-col-right {
+  flex: 1;
+  min-width: 50%; /* 50/50 split on desktop */
+}
+
+/* Image Handling */
+.mex-col-left {
+  line-height: 0; /* Removes bottom whitespace under image */
+}
+
+.mex-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the column professionally */
+  display: block;
+}
+
+/* Text Content Area */
+.mex-col-right {
+  background-color: #b38573; /* Terracotta background from image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.mex-content {
+  max-width: 530px;
+}
+
+.mex-heading {
+    color: #eaddd0;
+    font-family: 'Houseofcards';
+    /* font-size: clamp(2rem, 5vw, 3.5rem); */
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.mex-body {
+  color: #eaddd0;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* Button Styling */
+.mex-button {
+    background-color: #5d4e46;
+    color: #eaddd0;
+    border: none;
+    padding: 20px 35px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.mex-button:hover {
+  background-color: #4a3e37;
+  transform: translateY(-2px);
+}
+
+/* Responsive Breakpoint (Tablet/Mobile) */
+@media (max-width: 992px) {
+  .mex-col-left, .mex-col-right {
+    min-width: 100%; /* Stacks columns on smaller screens */
+  }
+  
+  .mex-col-right {
+    padding: 40px 20px;
+    text-align: center;
+  }
+}
+
+
+.cfx-mex-heading {
+    /* Using clamp for fluid typography */
+    font-size: clamp(2.5rem, 8vw, 6rem); 
+
+
+    text-transform: uppercase;
+    margin: 2rem 0;
+
+    color: #eaddd0;
+    font-family: 'Houseofcards';
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    
+}
+
+/* Styling the Trademark for professional alignment */
+.cfx-trademark {
+    font-size: 0.3em; /* Relative to parent size */
+    vertical-align: super;
+    font-weight: 600;
+    margin-left: 4px;
+    color: var(--cfx-brand-blue);
+    opacity: 0.8;
+}
+
+/* Subtle text stroke or shadow for extra depth */
+.cfx-mex-heading {
+    text-shadow: 2px 2px 0px var(--cfx-brand-cream);
+}
+
+@media (max-width: 768px) {
+    .cfx-mex-heading {
+        letter-spacing: -1px;
+        line-height: 1.0;
+    }
+}

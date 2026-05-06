@@ -1,0 +1,36 @@
+.hirew {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hirew > p {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    max-width: 800px;
+}
+
+
+.divider2 {
+    margin-bottom: 0px;
+    margin-top: 24px;
+    border: none;
+    border-top: 2px solid #e4531e;
+    opacity: 1;
+    color: unset;
+}
+
+.Heading-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+}
+.Heading-main h1 {
+    font-size: 5rem;
+    letter-spacing: 4px;
+    margin: 2;
+   
+}

@@ -1,0 +1,92 @@
+/* Base Button Container */
+.taco-btn-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    transition: transform 0.1s ease;
+}
+
+/* The Shadow Layer */
+.taco-btn-shadow {
+    position: absolute;
+    top: 6px;
+    left: -6px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 0.1s ease;
+}
+
+/* The Top Layer (The actual button face) */
+.taco-btn-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-family: 'Houseofcards';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px;
+
+    /* Smooth press animation */
+    transform: translate(0, 0);
+    transition: transform 0.08s ease-out;
+}
+
+/* --- Style Variations --- */
+
+/* Style 1: Orange Theme */
+.taco-btn-style-1 .taco-btn-shadow {
+    background-color: #E4531E;
+}
+
+.taco-btn-style-1 .taco-btn-top {
+    color: #E4531E;
+}
+
+/* Style 2: Green Theme */
+.taco-btn-style-2 .taco-btn-shadow {
+    background-color: #000;
+}
+
+.taco-btn-style-2 .taco-btn-top {
+    color: #538C42;
+}
+
+/* --- Hover / Pressed Interaction --- */
+
+/* Hover: slight press (subtle movement) */
+.taco-btn-container:hover .taco-btn-top {
+    transform: translate(-2px, 2px);
+}
+
+/* Active (click): fully pressed into shadow */
+.taco-btn-container:active .taco-btn-top {
+    transform: translate(-6px, 6px) scale(0.98);
+}
+
+/* Optional: shadow softens when pressed */
+.taco-btn-container:active .taco-btn-shadow {
+    opacity: 0.6;
+}
+
+
+
+@media (max-width: 786px) {
+ 
+  .taco-btn-top {
+    font-size: 16px;
+  }
+
+  .taco-btn-container {
+    width: 155px;
+    height: 51px;
+  }
+
+}

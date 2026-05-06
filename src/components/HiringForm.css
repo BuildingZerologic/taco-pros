@@ -1,0 +1,172 @@
+.hiring-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.success-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 56px) clamp(18px, 4vw, 48px);
+  border: 1px solid rgba(242, 76, 31, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,248,245,0.96));
+  box-shadow: 0 18px 48px rgba(23, 32, 43, 0.12);
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--tp-green);
+  color: var(--tp-white);
+  font-size: 34px;
+  line-height: 1;
+  box-shadow: 0 10px 22px rgba(33, 116, 78, 0.22);
+}
+
+.success-card h3 {
+  margin: 0;
+  font-family: 'Houseofcards', sans-serif;
+  color: var(--tp-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.success-card p {
+  max-width: 520px;
+  margin: 0;
+  color: #344054;
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.65;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group > input:focus {
+  border-color: #ffaa8a;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgb(255 192 168);
+}
+
+
+.form-control{
+padding: 0.6rem ;
+}
+.ProGress {
+    margin-top: -65px;
+}
+
+.progress-bar {
+    background-color: var(--tp-accent) !important;
+    transition: width 0.4s ease;
+}
+
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;   
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+small.mnone {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Houseofcards';
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--tp-accent) !important;
+}
+
+
+button[type="submit"]:hover {
+  background: #032d5b;
+}
+
+.form-error,
+.form-success {
+  margin: 18px 0 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form-error {
+  color: #d84315;
+}
+
+.form-success {
+  color: #2e7d32;
+}
+
+
+@media (max-width: 992px) {
+  .form-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (max-width:768px){
+  
+    .ProGress {
+        margin-top: -60px;
+    }
+
+    small.mnone,
+    .step-label {
+        display: none;
+    }
+
+    .success-card {
+        margin-top: 8px;
+        min-height: 320px;
+    }
+}
+
+@media (min-width:768px){
+    small.mnone,
+    .step-label {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+  .hiring-form {
+    padding: 0.8rem;
+    font-size: 0.9rem; 
+  }
+
+  button[type="submit"] {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
