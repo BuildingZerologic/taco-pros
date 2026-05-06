@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { locationSourceHtmlPlugin } from './build/locationSourceHtmlPlugin.js'
+import { locationSourceHtmlPlugin } from './src/plugins/locationSourceHtmlPlugin'
 
 // https://vite.dev/config/
 export default defineConfig({
