@@ -2,8 +2,6 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import locations from '../pages/locations.js';
 
-const SITE_URL = 'https://tacopros.com';
-
 const createSlug = (name) =>
   name
     .toLowerCase()
@@ -21,125 +19,92 @@ const escapeHtml = (value = '') =>
 
 const phoneHref = (phone = '') => phone.replace(/[^\d+]/g, '');
 
-const getCityName = (location) => location.name.split(',')[0].trim();
-
-const getStateName = (location) => {
-  const parts = location.name.split(',').map((part) => part.trim());
-  return parts[1] || '';
-};
-
-const getSeo = (location) => {
-  const city = getCityName(location);
-  const state = getStateName(location);
-  const cityState = [city, state].filter(Boolean).join(' ');
-  const title = `Taco Pros ${cityState} | Mexican Restaurant & Tacos`;
-  const description = `Taco Pros in ${location.name} serves fresh tacos, burritos and Mexican street food. Dine-in, takeout, catering and online ordering are available.`;
-  const slug = createSlug(location.name);
-  const canonical = `${SITE_URL}/locations/${slug}/`;
-
-  return {
-    slug,
-    canonical,
-    title,
-    description,
-    ogTitle: `Taco Pros ${cityState} | Mexican Restaurant`,
-    ogDescription: `Fresh tacos, burritos and Mexican food in ${location.name}. Order online or visit Taco Pros today.`,
-  };
-};
-
-const getSchema = (location, seo) => ({
-  '@context': 'https://schema.org',
-  '@type': 'Restaurant',
-  name: `Taco Pros - ${location.name}`,
-  url: seo.canonical,
-  telephone: location.phone,
-  address: location.address,
-  servesCuisine: 'Mexican',
-  priceRange: '$$',
-  hasMap: location.dir,
-  hasMenu: `${SITE_URL}/menu/`,
-  acceptsReservations: false,
-});
+const formatCityStateZip = (address = {}) =>
+  [
+    address.addressLocality,
+    [address.addressRegion, address.postalCode].filter(Boolean).join(' '),
+  ]
+    .filter(Boolean)
+    .join(', ');
 
 const renderLocationHtml = (location) => {
-  const seo = getSeo(location);
-  const city = getCityName(location);
+  const content = location.pageContent;
+  const address = location.addressParts || {};
 
   return `
-    <article class="source-location-detail" data-location-slug="${escapeHtml(seo.slug)}">
+    <article class="source-location-detail" data-location-slug="${escapeHtml(location.slug)}">
       <header>
-        <h1>Mexican Restaurant in ${escapeHtml(location.name)} | Taco Pros</h1>
-        <p>Looking for a Mexican restaurant in ${escapeHtml(location.name)}? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, bowls and freshly prepared meals packed with bold flavors.</p>
+        <h1>${escapeHtml(content.h1)}</h1>
+        <h2>${escapeHtml(content.introTitle)}</h2>
+        <p>${escapeHtml(content.introText)}</p>
       </header>
 
       <section>
-        <h2>Why Choose Taco Pros in ${escapeHtml(city)}</h2>
+        <h2>${escapeHtml(content.whyTitle)}</h2>
         <ul>
-          <li>Fresh, made-to-order tacos and burritos</li>
-          <li>Authentic Mexican street food flavors</li>
-          <li>Fast dine-in and takeout service</li>
-          <li>Easy online ordering</li>
-          <li>Catering available for events and gatherings</li>
+          ${content.whyItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
         </ul>
       </section>
 
       <section>
-        <h2>Popular Menu Items</h2>
+        <h2>${escapeHtml(content.menuTitle)}</h2>
         <ul>
-          <li>Street tacos with chicken, steak and al pastor</li>
-          <li>Burritos and burrito bowls</li>
-          <li>Quesadillas</li>
-          <li>Taco plates and combos</li>
-          <li>Mexican sides and add-ons</li>
+          ${content.menuItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
         </ul>
-        <p><a href="${escapeHtml(location.orderLink)}">Order Taco Pros ${escapeHtml(location.name)} online</a></p>
+        <p><a href="https://tacopros.com/menu/">View Full Menu</a></p>
       </section>
 
       <section>
-        <h2>Mexican Catering in ${escapeHtml(city)}</h2>
-        <p>Taco Pros offers Mexican catering for corporate events, family gatherings, birthday parties and group celebrations near ${escapeHtml(location.name)}.</p>
+        <h2>${escapeHtml(content.cateringTitle)}</h2>
+        <p>${escapeHtml(content.cateringText)}</p>
+        <ul>
+          ${content.cateringItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
+        </ul>
+        <p><a href="https://tacopros.com/catering-menu/">Explore Catering Menu</a></p>
       </section>
 
       <section>
-        <h2>Location Details</h2>
-        <p><strong>Address:</strong> ${escapeHtml(location.address)}</p>
-        <p><strong>Phone:</strong> <a href="tel:${escapeHtml(phoneHref(location.phone))}">${escapeHtml(location.phone)}</a></p>
-        <p><strong>Directions:</strong> <a href="${escapeHtml(location.dir)}">View Taco Pros ${escapeHtml(location.name)} on Google Maps</a></p>
+        <h2>${escapeHtml(content.locationTitle)}</h2>
+        <p><strong>${escapeHtml(content.locationName)}</strong></p>
+        <p><strong>Address:</strong><br>${escapeHtml(address.streetAddress || location.address)}<br>${escapeHtml(formatCityStateZip(address))}<br>United States</p>
+        <p><strong>Phone:</strong> <a href="tel:${escapeHtml(phoneHref(location.phoneE164 || location.phone))}">${escapeHtml(location.displayPhone || location.phone)}</a></p>
         <p><strong>Order Online:</strong> <a href="${escapeHtml(location.orderLink)}">Order here</a></p>
+        <p><strong>Google Maps:</strong> ${escapeHtml(content.googleMapsText)}</p>
       </section>
 
       <section>
         <h2>Store Hours</h2>
-        <p>Monday to Friday: 10:00 AM - 9:00 PM</p>
-        <p>Saturday and Sunday: 11:00 AM - 9:00 PM</p>
+        <table>
+          <tbody>
+            ${content.hours.map((item) => `<tr><th>${escapeHtml(item.label)}</th><td>${escapeHtml(item.hours)}</td></tr>`).join('')}
+          </tbody>
+        </table>
       </section>
 
       <section>
         <h2>Frequently Asked Questions</h2>
-        <h3>What kind of food does Taco Pros serve?</h3>
-        <p>Taco Pros serves Mexican street food including tacos, burritos, quesadillas, bowls and combo meals.</p>
-        <h3>Can I order Taco Pros online in ${escapeHtml(city)}?</h3>
-        <p>Yes, online ordering is available for this Taco Pros location.</p>
-        <h3>Does this location offer catering?</h3>
-        <p>Yes, Taco Pros provides catering for events and gatherings.</p>
+        ${content.faqs.map((faq) => `<h3>${escapeHtml(faq.q)}</h3><p>${escapeHtml(faq.a)}</p>`).join('')}
       </section>
 
+      <section>
+        <h2>Explore More Locations</h2>
+        <p><a href="https://tacopros.com/locations/">View All Locations</a></p>
+      </section>
     </article>
   `;
 };
 
 const injectHead = (html, location) => {
-  const seo = getSeo(location);
-  const schema = getSchema(location, seo);
+  const seo = location.meta;
   const head = `
     <title>${escapeHtml(seo.title)}</title>
     <meta name="description" content="${escapeHtml(seo.description)}" />
     <link rel="canonical" href="${escapeHtml(seo.canonical)}" />
     <meta property="og:title" content="${escapeHtml(seo.ogTitle)}" />
     <meta property="og:description" content="${escapeHtml(seo.ogDescription)}" />
-    <meta property="og:url" content="${escapeHtml(seo.canonical)}" />
-    <meta property="og:type" content="website" />
-    <script type="application/ld+json">${JSON.stringify(schema)}</script>
+    <meta property="og:url" content="${escapeHtml(seo.ogUrl)}" />
+    <meta property="og:type" content="${escapeHtml(seo.ogType)}" />
+    <script type="application/ld+json">${JSON.stringify(location.schema)}</script>
   `;
 
   return html
@@ -154,11 +119,23 @@ const injectBody = (html, location) =>
 
 const buildLocationPage = (html, location) => injectBody(injectHead(html, location), location);
 
+const getRequestPathname = (requestUrl = '') => {
+  if (!requestUrl.includes('/locations/')) return null;
+
+  try {
+    return new URL(requestUrl, 'http://localhost').pathname;
+  } catch {
+    return null;
+  }
+};
+
 const findLocationByPath = (pathname) => {
+  if (!pathname) return null;
+
   const match = pathname.match(/^\/locations\/([^/]+)\/?$/);
   if (!match) return null;
 
-  return locations.find((location) => createSlug(location.name) === match[1]);
+  return locations.find((location) => location.slug === match[1] || createSlug(location.name) === match[1]);
 };
 
 export function locationSourceHtmlPlugin() {
@@ -167,8 +144,8 @@ export function locationSourceHtmlPlugin() {
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         try {
-          const url = new URL(req.url || '/', 'http://localhost');
-          const location = findLocationByPath(url.pathname);
+          const pathname = getRequestPathname(req.url || '');
+          const location = findLocationByPath(pathname);
 
           if (!location) {
             next();
@@ -177,7 +154,7 @@ export function locationSourceHtmlPlugin() {
 
           const indexPath = path.resolve('index.html');
           const baseHtml = await fs.readFile(indexPath, 'utf8');
-          const transformedHtml = await server.transformIndexHtml(url.pathname, baseHtml);
+          const transformedHtml = await server.transformIndexHtml(pathname, baseHtml);
           const html = buildLocationPage(transformedHtml, location);
 
           res.statusCode = 200;
@@ -195,8 +172,7 @@ export function locationSourceHtmlPlugin() {
 
       await Promise.all(
         locations.map(async (location) => {
-          const seo = getSeo(location);
-          const routeDir = path.join(distDir, 'locations', seo.slug);
+          const routeDir = path.join(distDir, 'locations', location.slug);
           const routeHtml = buildLocationPage(baseHtml, location);
 
           await fs.mkdir(routeDir, { recursive: true });

@@ -62,13 +62,10 @@ export default function TimelineLayout() {
                             <span>OUR STORY</span>
                             <h2>WHERE IT STARTED</h2>
                             <p>
-                                In Mexico, food has always been more
-                                than just a meal — it’s an experience...
-                                and an experiment. Blending spices,
-                                roasting chilies, and perfecting recipes
-                                not with cookbooks, but with curiosity.
-                                Every dish is a discovery, every spice a
-                                new note in the story of flavor.
+                                In Mexico, food isn't polished or perfect - it's alive. It's fire,
+                                hands, noise, and instinct. It's born in the streets, shaped in the
+                                markets, and carried in the memories of the people who make it.
+                                That's where Mercedes comes in.
                             </p>
                         </div>
                     </div>
@@ -89,10 +86,15 @@ export default function TimelineLayout() {
                             <img src="/a5.jpg" />
                         </div>
                         <div className="cardThreeRight">
-                            <p>That spirit of experimentation, love, and
-                                authenticity, that's our drive. Taco Pros
-                                was built on the belief that Mexican food
-                                should surprise, comfort, and connect.</p>
+                            <p>
+                                She grew up in the tianguis, Mexico's open-air markets, working
+                                beside her parents as they cooked for crowds that wanted flavor with
+                                personality. As a kid, she learned everything the real way - grinding
+                                chiles on stone, pressing tortillas by hand, tasting until it felt
+                                right. No recipes. No shortcuts. Just skill, repetition, and heart.
+                                Over time, Mercedes built her own style - bold, colorful, and
+                                unmistakably hers.
+                            </p>
                         </div>
                     </div>
 
@@ -107,11 +109,12 @@ export default function TimelineLayout() {
                         </div>
                         <div className="cardFourRight">
                             <p>
-                                At Taco Pros, we share with you
-                                a journey. A journey of flavors
-                                discovered, perfected, and
-                                shared — one unforgettable first
-                                bite at a time.
+                                Her sons, Victor and Cesar, grew up in that world. When they came to
+                                Chicago, they brought the tianguis with them. They opened Taco Pros
+                                in Oak Park on the same things Mercedes taught them: slow-crafted
+                                marinades, fire-kissed chiles, salsas with attitude, and flavors that
+                                don't apologize for being bold. Welcome to Taco Pros - where the
+                                streets of Mexico meet the heart of Chicago.
                             </p>
 
                         </div>
@@ -126,7 +129,7 @@ export default function TimelineLayout() {
                             <p className="mapH">Find A Tacopros </p>
 
                             <Link to="/locations" data-discover="true">
-                               
+
 
                                 <TacoButton text="Our Locations"
                                     width="clamp(155px, 22vw, 302px)"
@@ -136,7 +139,7 @@ export default function TimelineLayout() {
                                     link="/locations"
                                 />
 
-                        
+
 
                             </Link>
                         </div>
@@ -157,24 +160,24 @@ export default function TimelineLayout() {
                                 real pros, with real flavor that hits every time.
                             </p>
 
-                
 
-                             <TacoButton text="Order Now"
-                                    width="clamp(155px, 22vw, 302px)"
-                                    height="clamp(51px, 5vw, 57px)"
-                                    styleType="1"
-                                    fontSize="clamp(18px, 2vw, 24px)"
-                                    link="/locations"
-                                />
-                                 <div className="bottomTile"></div>
+
+                            <TacoButton text="Order Now"
+                                width="clamp(155px, 22vw, 302px)"
+                                height="clamp(51px, 5vw, 57px)"
+                                styleType="1"
+                                fontSize="clamp(18px, 2vw, 24px)"
+                                link="/locations"
+                            />
+                            <div className="bottomTile"></div>
                         </div>
 
                         <div className="cardfiveRight">
-                            <img src="tp taqueria only uncle.webp"/>
+                            <img src="tp taqueria only uncle.webp" />
                         </div>
                     </div>
 
-                   
+
                 </ScrollCard>
 
             </section>
@@ -203,10 +206,10 @@ export default function TimelineLayout() {
                     </div>
                     <div className="jhv-content-section">
                         <p className="jhv-body-text">
-                            In Mexico, food has always been more than just a meal - it's an
-                            experience....and a an experiment. Blending spices, roasting chilies, and
-                            perfecting recipes not with cookbooks, but with curiosity. Every dish is a
-                            discovery, every spice a new note in the story of flavor.
+                            In Mexico, food isn't polished or perfect - it's alive. It's fire,
+                            hands, noise, and instinct. It's born in the streets, shaped in the
+                            markets, and carried in the memories of the people who make it.
+                            That's where Mercedes comes in.
                         </p>
                     </div>
                 </div>
@@ -235,9 +238,12 @@ export default function TimelineLayout() {
                     </div>
                     <div className="jhv-footer-content">
                         <p className="jhv-footer-text">
-                            The spirit of experimentation, love and authenticity, that's our drive.
-                            Taco Pros was built on the belief that Mexican food should surprise,
-                            comfort and connect.
+                            She grew up in the tianguis, Mexico's open-air markets, working beside
+                            her parents as they cooked for crowds that wanted flavor with
+                            personality. As a kid, she learned everything the real way - grinding
+                            chiles on stone, pressing tortillas by hand, tasting until it felt right.
+                            No recipes. No shortcuts. Just skill, repetition, and heart. Over time,
+                            Mercedes built her own style - bold, colorful, and unmistakably hers.
                         </p>
                     </div>
                 </div>
@@ -266,9 +272,12 @@ export default function TimelineLayout() {
                     </div>
                     <div className="jhv-footer-content">
                         <p className="jhv-footer-text">
-                            At Taco Pros, we share with you a journey. A journey of flavors
-                            discovered, perfected, and shared - one unforgettable first bite at a
-                            time.
+                            Her sons, Victor and Cesar, grew up in that world. When they came to
+                            Chicago, they brought the tianguis with them. They opened Taco Pros in
+                            Oak Park on the same things Mercedes taught them: slow-crafted marinades,
+                            fire-kissed chiles, salsas with attitude, and flavors that don't
+                            apologize for being bold. Welcome to Taco Pros - where the streets of
+                            Mexico meet the heart of Chicago.
                         </p>
                     </div>
                     <div className="jhv-img-row">
@@ -301,11 +310,6 @@ export default function TimelineLayout() {
 
                 <div className="jhv-cta-container">
                     <span className="jhv-cta-subheadline">THE MISSION STAYS THE SAME</span>
-                    <img
-                        src="/tp taqueria only uncle.webp"
-                        alt=""
-                        className="jhv-cta-img"
-                    />
                     <div className="jhv-headline-stack">
                         <h2 className="jhv-bold-title">KEEP IT BOLD</h2>
                         <h2 className="jhv-bold-title">KEEP IT REAL</h2>
@@ -318,6 +322,11 @@ export default function TimelineLayout() {
                     <a href="#" className="jhv-cta-button">
                         ORDER NOW
                     </a>
+                    <img
+                        src="/tp taqueria only uncle.webp"
+                        alt=""
+                        className="jhv-cta-img"
+                    />
                 </div>
 
 

@@ -30,7 +30,7 @@ const LocationDetail = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   const location = useMemo(
-    () => locationsData.find((item) => createSlug(item.name) === slug),
+    () => locationsData.find((item) => item.slug === slug || createSlug(item.name) === slug),
     [slug]
   );
 
@@ -47,52 +47,25 @@ const LocationDetail = () => {
     );
   }
 
+  const content = location.pageContent;
+  const meta = location.meta;
   const city = location.name;
-  const cityName = city.split(',')[0];
   const addressLines = getAddressLines(location.address);
-  const seoDescription = `Visit Taco Pros in ${city} for fresh tacos, burritos, Mexican street food, online ordering, and catering. Find address, phone, directions, and store details.`;
-  const locationUrl = `https://www.tacopros.com/locations/${slug}`;
-  const locationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Restaurant',
-    name: `Taco Pros - ${city}`,
-    url: locationUrl,
-    telephone: location.phone,
-    address: location.address,
-    servesCuisine: 'Mexican',
-    hasMap: location.dir,
-  };
-
-  const faqs = [
-    {
-      q: 'What type of food does Taco Pros serve?',
-      a: 'Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo plates made fresh daily.',
-    },
-    {
-      q: `Does Taco Pros in ${city} offer catering?`,
-      a: `Yes! Catering is available for events and gatherings in ${city}.`,
-    },
-    {
-      q: `Can I order Taco Pros online in ${city}?`,
-      a: 'Yes, online ordering is available for pickup and delivery.',
-    },
-    {
-      q: 'What are the most popular items at Taco Pros?',
-      a: 'Street tacos, burritos, quesadillas, and combo plates are customer favorites.',
-    },
-  ];
+  const faqs = content.faqs;
+  const menuUrl = 'https://tacopros.com/menu/';
+  const cateringUrl = 'https://tacopros.com/catering-menu/';
 
   return (
     <div className="location-detail-page">
       <Helmet>
-        <title>Taco Pros {city} | Mexican Food, Tacos & Online Ordering</title>
-        <meta name="description" content={seoDescription} />
-        <link rel="canonical" href={locationUrl} />
-        <meta property="og:title" content={`Taco Pros ${city}`} />
-        <meta property="og:description" content={seoDescription} />
-        <meta property="og:type" content="restaurant" />
-        <meta property="og:url" content={locationUrl} />
-        <script type="application/ld+json">{JSON.stringify(locationSchema)}</script>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <link rel="canonical" href={meta.canonical} />
+        <meta property="og:title" content={meta.ogTitle} />
+        <meta property="og:description" content={meta.ogDescription} />
+        <meta property="og:type" content={meta.ogType} />
+        <meta property="og:url" content={meta.ogUrl} />
+        <script type="application/ld+json">{JSON.stringify(location.schema)}</script>
       </Helmet>
 
       <section
@@ -104,8 +77,8 @@ const LocationDetail = () => {
       >
         <div className="hero-overlay" />
         <div className="hero-content">
-          <h1>Taco Pros - {city}</h1>
-          <p className="subtitle">Authentic Mexican Food in {city}</p>
+          <h1>{content.h1}</h1>
+          <p className="subtitle">{content.introTitle}</p>
           <a href={location.orderLink} target="_blank" rel="noreferrer" className="tp-action-button">
             Order Now
           </a>
@@ -115,10 +88,7 @@ const LocationDetail = () => {
       <section className="intro-section">
         <div className="container">
           <p className="intro-text">
-            Looking for a Mexican restaurant in {city}? Taco Pros brings bold, authentic Mexican street food to the area,
-            serving freshly made tacos, burritos, quesadillas, and more. Whether you're stopping by for a quick bite,
-            ordering takeout, or planning a catered event, Taco Pros delivers a fast-casual dining experience rooted in
-            traditional Mexican flavors.
+            {content.introText}
           </p>
         </div>
       </section>
@@ -127,44 +97,32 @@ const LocationDetail = () => {
         <div className="main-grid">
           <div className="location-main-content">
             <section className="info-section">
-              <h2>Why Choose Taco Pros in {city}</h2>
+              <h2>{content.whyTitle}</h2>
               <ul className="info-list">
-                <li>Fresh, made-to-order tacos and burritos</li>
-                <li>Authentic Mexican street food flavors</li>
-                <li>Fast service for dine-in and takeout</li>
-                <li>Convenient online ordering</li>
-                <li>Catering available for events and gatherings</li>
+                {content.whyItems.map((item) => <li key={item}>{item}</li>)}
               </ul>
             </section>
 
             <section className="info-section">
-              <h2>Popular Menu Items</h2>
-              <p>Taco Pros is known for classic Mexican favorites made fresh daily:</p>
+              <h2>{content.menuTitle}</h2>
               <ul className="info-list">
-                <li>Street Tacos (Chicken, Steak, Al Pastor)</li>
-                <li>Burritos & Burrito Bowls</li>
-                <li>Quesadillas</li>
-                <li>Taco Dinners & Combo Plates</li>
-                <li>Mexican Sides & Add-ons</li>
+                {content.menuItems.map((item) => <li key={item}>{item}</li>)}
               </ul>
 
-              <a href={location.orderLink} target="_blank" rel="noreferrer" className="tp-action-button btn-inline">
-                Explore Full Menu
+              <a href={menuUrl} className="tp-action-button btn-inline">
+                View Full Menu
               </a>
             </section>
 
             <section className="info-section">
-              <h2>Mexican Catering in {cityName}</h2>
-              <p>Planning an event in {cityName}? Taco Pros offers reliable Mexican catering services perfect for:</p>
+              <h2>{content.cateringTitle}</h2>
+              <p>{content.cateringText}</p>
               <ul className="info-list">
-                <li>Corporate events</li>
-                <li>Birthday parties</li>
-                <li>Family gatherings</li>
-                <li>Office lunches</li>
+                {content.cateringItems.map((item) => <li key={item}>{item}</li>)}
               </ul>
 
-              <a href={location.orderLink} target="_blank" rel="noreferrer" className="tp-action-button btn-inline">
-                View Catering Menu
+              <a href={cateringUrl} className="tp-action-button btn-inline">
+                Explore Catering Menu
               </a>
             </section>
           </div>
@@ -184,7 +142,7 @@ const LocationDetail = () => {
 
               <div className="detail-item">
                 <span className="detail-label">Phone</span>
-                <a href={`tel:${location.phone}`}>{location.phone}</a>
+                <a href={`tel:${location.phoneE164}`}>{location.displayPhone || location.phone}</a>
               </div>
 
               <a href={location.orderLink} target="_blank" rel="noreferrer" className="tp-action-button btn-order-sidebar">
@@ -194,14 +152,12 @@ const LocationDetail = () => {
               <div className="detail-item">
                 <span className="detail-label">Store Hours</span>
                 <div className="hours-list">
-                  <div>
-                    <span>Mon - Fri</span>
-                    <span>10:00 AM - 9:00 PM</span>
-                  </div>
-                  <div>
-                    <span>Sat - Sun</span>
-                    <span>11:00 AM - 9:00 PM</span>
-                  </div>
+                  {content.hours.map((item) => (
+                    <div key={item.label}>
+                      <span>{item.label}</span>
+                      <span>{item.hours}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -240,7 +196,7 @@ const LocationDetail = () => {
       <section className="cta-banner">
         <div className="container">
           <h2>Explore More Taco Pros Locations</h2>
-          <p>Looking for Taco Pros near you? We have locations in Libertyville, Gurnee, Vernon Hills, and more.</p>
+          <p>Looking for Taco Pros near you? Browse every Taco Pros location and find fresh Mexican food nearby.</p>
           <Link to="/locations" className="tp-action-button btn-cta">
             View All Locations
           </Link>

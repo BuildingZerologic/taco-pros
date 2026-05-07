@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import TacoButton from './TacoButton';
 import { createPortal } from "react-dom";
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0 });
+  const location = useLocation();
 
   const moreRef = useRef(null);
 
@@ -38,6 +39,11 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+    setIsMoreOpen(false);
+  }, [location.pathname]);
 
   /* ✅ CLOSE ON OUTSIDE CLICK */
   useEffect(() => {
@@ -96,7 +102,7 @@ const Header = () => {
       <div className="nav-column right">
         <TacoButton
           text="ORDER ONLINE"
-          link="https://tacopros.com/order-online"
+          link="https://tacopros.toast.site/"
           styleClass="order-button-responsive"
           styleType="1"
           width="clamp(120px, 14vw, 190px)"
@@ -116,11 +122,11 @@ const Header = () => {
               left: dropdownPos.left
             }}
           >
-            <Link to="/hiring">HIRING</Link>
-            <Link to="/franchising">FRANCHISING</Link>
-            <Link to="/locations">LOCATIONS</Link>
-            <Link to="/contact">CONTACT</Link>
-            <Link to="/news">NEWS</Link>
+            <Link to="/hiring" onClick={() => setIsMoreOpen(false)}>HIRING</Link>
+            <Link to="/franchising" onClick={() => setIsMoreOpen(false)}>FRANCHISING</Link>
+            <Link to="/locations" onClick={() => setIsMoreOpen(false)}>LOCATIONS</Link>
+            <Link to="/contact" onClick={() => setIsMoreOpen(false)}>CONTACT</Link>
+            <Link to="/news" onClick={() => setIsMoreOpen(false)}>NEWS</Link>
           </div>,
           document.body
         )}

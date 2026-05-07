@@ -11,6 +11,19 @@
    
 }
 
+.franchise-banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.franchise-banner-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .bhjk {
     max-width: 1024px;
@@ -31,25 +44,28 @@
 }
 
 
-.progress {
+.bhjk .franchise-progress {
     background-color: #ddd !important;
+    height: 6px !important;
+    margin-bottom: 0 !important;
     overflow: visible !important;
 }
 
-.progress-bar {
+.bhjk .franchise-progress-bar {
     background-color: var(--tp-accent) !important;
+    height: 100% !important;
     transition: width 0.4s ease;
 }
 
-.ProGress {
-    margin-top: -25px;
+.bhjk .franchise-progress-steps {
+    margin-top: -25px !important;
 }
 
-.step-item {
+.bhjk .franchise-step-item {
     min-width: 0;
 }
 
-.step-label {
+.bhjk .franchise-step-label {
     display: block;
     margin-top: 10px;
     font-family: 'Houseofcards';
@@ -107,7 +123,7 @@
   line-height: 1.65;
 }
 
-.circle {
+.bhjk .franchise-step-circle {
     width: 45px;
     height: 45px;
     background: var(--tp-white);
@@ -118,17 +134,18 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
+    font-size: 16px;
     z-index: 2;
     transition: all 0.3s ease;
  
 }
 
-.circle.active {
+.bhjk .franchise-step-circle.active {
     background: var(--tp-accent);
     color: white;
 }
 
-.circle.completed {
+.bhjk .franchise-step-circle.completed {
     background: var(--tp-accent);
     border-color: var(--tp-accent);
 }
@@ -207,13 +224,13 @@ label {
 
 @media (max-width: 768px) {
     .bhjk { padding: 20px 15px; }
-    .circle { width: 35px; height: 35px; }
+    .bhjk .franchise-step-circle { width: 35px; height: 35px; }
     .bhjk .row > [class*="col-"] {
         flex: 0 0 100%;
         max-width: 100%;
         width: 100%;
     }
-    .step-label {
+    .bhjk .franchise-step-label {
         display: none;
     }
     
@@ -226,7 +243,7 @@ label {
     .d-flex.justify-content-between.mt-4 {
         flex-direction: column-reverse;
     }
-     .ProGress {
+     .bhjk .franchise-progress-steps {
         margin-top: -20px;
     }
     .success-card {
@@ -236,7 +253,7 @@ label {
 }
 
 @media (min-width: 768px) {
-    .step-label {
+    .bhjk .franchise-step-label {
         display: block;
     }
 }

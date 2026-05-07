@@ -164,12 +164,12 @@ function FranchiseForm() {
 
   return (
     <>
-      <section className="contact-banner-section">
-        <div className="contact-banner-container">
+      <section className="contact-banner-section franchise-banner-section">
+        <div className="contact-banner-container franchise-banner-container">
           <img
             src="/tp pg banners 1920x600 franchise.jpg"
             alt="Contact Taco Pros"
-            className="contact-banner-img"
+            className="contact-banner-img franchise-banner-img"
           />
         </div>
       </section>
@@ -180,9 +180,9 @@ function FranchiseForm() {
 
       <div className="container bhjk my-5">
        
-        <div className="progress position-relative" style={{ height: "6px" }}>
+        <div className="progress franchise-progress position-relative" style={{ height: "6px" }}>
           <div
-            className="progress-bar bg-primary"
+            className="progress-bar franchise-progress-bar bg-primary"
             role="progressbar"
             style={{ width: `${progressPercent}%` }}
             aria-valuenow={progressPercent}
@@ -192,21 +192,23 @@ function FranchiseForm() {
         </div>
 
         
-        <div className="d-flex justify-content-between position-relative ProGress" style={{ zIndex: 2 }}>
+        <div className="d-flex justify-content-between position-relative ProGress franchise-progress-steps" style={{ zIndex: 2 }}>
           {steps.map((label, i) => {
-            let circleClass = "circle";
+            let circleClass = "circle franchise-step-circle";
             if (i + 1 < step || submitted) circleClass += " completed";
             else if (i + 1 === step) circleClass += " active";
 
             return (
-              <div key={i} className="text-center step-item">
+              <div key={i} className="text-center step-item franchise-step-item">
                 <div className={circleClass}>
                   <span>{i + 1 < step || submitted ? svg : i + 1}</span>
                 </div>
 
                 <small
                   className={
-                    i + 1 <= step ? "fw-bold text-primary step-label" : "text-muted step-label"
+                    i + 1 <= step
+                      ? "fw-bold text-primary step-label franchise-step-label"
+                      : "text-muted step-label franchise-step-label"
                   }
                 >
                   {label}

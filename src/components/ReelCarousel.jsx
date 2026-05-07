@@ -20,22 +20,22 @@ const data = [
     {
         type: "video",
         src: "1.mp4",
-        link: "https://google.com",
+        link: "https://www.instagram.com/taco_pros/",
     },
     {
         type: "video",
         src: "2.mp4",
-        link: "https://youtube.com",
+        link: "https://www.instagram.com/taco_pros/",
     },
     {
         type: "video",
         src: "2.mp4",
-        link: "https://example.com",
+        link: "https://www.instagram.com/taco_pros/",
     },
     {
         type: "video",
         src: "2.mp4",
-        link: "https://example.com",
+        link: "https://www.instagram.com/taco_pros/",
     },
 
 

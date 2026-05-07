@@ -3,9 +3,9 @@ import './NewsTicker.css';
 
 const NewsTicker = () => {
   const newsItems = [
-    "DEAL OF THE DAY: GET 1+1 ON TACOS*",
-    "20% OFF ON CATERING",
-    "COMBOS STARTING @ $12.99"
+    "Taco Tuesday – 2 for $4.99",
+    " Lunch Special – 2 Tacos and a Drink $7.99",
+    "Bigger Better Pro Burritos – Starting at $10"
   ];
 
   // Repeat items multiple times for large screens

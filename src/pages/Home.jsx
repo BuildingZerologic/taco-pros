@@ -61,7 +61,7 @@ export default function Home() {
             "url": "https://tacopros.com",
             "potentialAction": {
               "@type": "OrderAction",
-              "target": "https://tacopros.com/order-online"
+              "target": "https://tacopros.toast.site/"
             }
           })}
         </script>

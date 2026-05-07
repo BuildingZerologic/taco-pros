@@ -11,8 +11,8 @@ const CateringMenu = () => {
                 return <PartyTraysSection />;
             case 'live-catering':
                 return <LiveCateringSection />;
-            case 'buffet-style':
-                return <BuffetStyleSection />;
+            // case 'buffet-style':
+            //     return <BuffetStyleSection />;
             case 'individual-packs':
                 return <IndividualPacksSection />;
             case 'sides':
@@ -46,7 +46,7 @@ const CateringMenu = () => {
         <div className="superman-container">
             {/* Scrollable Tabs Header */}
             <div className={`superman-tabs-header ${isSticky ? "is-fixed" : ""}`}>
-                {['party-trays', 'live-catering', 'buffet-style', 'individual-packs', 'sides'].map((tab) => (
+                {['party-trays', 'live-catering', 'individual-packs', 'sides'].map((tab) => (
                     <button
                         key={tab}
                         className={`superman-tab-btn ${activeTab === tab ? 'active' : ''}`}
@@ -181,58 +181,58 @@ const LiveCateringSection = () => (
 );
 
 /* --- 3. BUFFET STYLE SECTION --- */
-const BuffetStyleSection = () => (
-    <div className="superman-grid-layout">
-        <h1 className="superman-title">BUFFET STYLE CATERING</h1>
-        <div className="superman-media-col">
-            <div className="superman-sticky-wrapper">
-                <div className="superman-hero-img-wrapper">
-                    <img src="/BUFFET STYLE CATERING.png" alt="Buffet Style" className="superman-hero-img" />
-                </div>
-                <div className="ddnone">
-                    <TacoButton text="CATER NOW"
-                        width={window.innerWidth < 768 ? "100%" : "100%"}
-                        height={window.innerWidth < 768 ? "51px" : "57px"}
-                        styleType="1"
-                        fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                        link="https://www.ezcater.com/brand/pvt/taco-pros"
-                        textColor={"#E3501d"}
-                    />
-                </div>
+// const BuffetStyleSection = () => (
+//     <div className="superman-grid-layout">
+//         <h1 className="superman-title">BUFFET STYLE CATERING</h1>
+//         <div className="superman-media-col">
+//             <div className="superman-sticky-wrapper">
+//                 <div className="superman-hero-img-wrapper">
+//                     <img src="/BUFFET STYLE CATERING.png" alt="Buffet Style" className="superman-hero-img" />
+//                 </div>
+//                 <div className="ddnone">
+//                     <TacoButton text="CATER NOW"
+//                         width={window.innerWidth < 768 ? "100%" : "100%"}
+//                         height={window.innerWidth < 768 ? "51px" : "57px"}
+//                         styleType="1"
+//                         fontSize={window.innerWidth < 768 ? "18px" : "24px"}
+//                         link="https://www.ezcater.com/brand/pvt/taco-pros"
+//                         textColor={"#E3501d"}
+//                     />
+//                 </div>
 
-            </div>
-        </div>
-        <div className="superman-info-col">
-            <div className="superman-card">
-                <p className="superman-server-info">Half Tray of Meat, 9x9 Topping Tray, 50 Tortillas, Side of Rice & Beans, Serves 15-20 People for $240</p>
-                <small>(Starting At $12 Per Person)</small>
-            </div>
-            <div className="superman-card">
-                <h3>Meat Trays</h3>
-                <div className="superman-price-row"><span>Half Tray</span><span className="superman-price">$132</span></div>
-                <div className="superman-price-row"><span>Full Tray</span><span className="superman-price">$240</span></div>
-            </div>
-            <div className="superman-card">
-                <h3>Topping Trays</h3>
-                <div className="superman-price-row"><span>9x9 Tray</span><span className="superman-price">$36</span></div>
-                <div className="superman-price-row"><span>Half Tray</span><span className="superman-price">$72</span></div>
-            </div>
-              <div className="superman-card">
-                <h3>Tortillas</h3>
-                <div className="superman-price-row"><span>50 Tortillas</span><span className="superman-price">$24</span></div>
-                <div className="superman-price-row"><span>100 Tortillas</span><span className="superman-price">$48</span></div>
-            </div>
-            <TacoButton text="CATER NOW"
-                width={window.innerWidth < 768 ? "100%" : "100%"}
-                height={window.innerWidth < 768 ? "51px" : "57px"}
-                styleType="1"
-                fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                link="https://www.ezcater.com/brand/pvt/taco-pros"
-                textColor={"#E3501d"}
-            />
-        </div>
-    </div>
-);
+//             </div>
+//         </div>
+//         <div className="superman-info-col">
+//             <div className="superman-card">
+//                 <p className="superman-server-info">Half Tray of Meat, 9x9 Topping Tray, 50 Tortillas, Side of Rice & Beans, Serves 15-20 People for $240</p>
+//                 <small>(Starting At $12 Per Person)</small>
+//             </div>
+//             <div className="superman-card">
+//                 <h3>Meat Trays</h3>
+//                 <div className="superman-price-row"><span>Half Tray</span><span className="superman-price">$132</span></div>
+//                 <div className="superman-price-row"><span>Full Tray</span><span className="superman-price">$240</span></div>
+//             </div>
+//             <div className="superman-card">
+//                 <h3>Topping Trays</h3>
+//                 <div className="superman-price-row"><span>9x9 Tray</span><span className="superman-price">$36</span></div>
+//                 <div className="superman-price-row"><span>Half Tray</span><span className="superman-price">$72</span></div>
+//             </div>
+//               <div className="superman-card">
+//                 <h3>Tortillas</h3>
+//                 <div className="superman-price-row"><span>50 Tortillas</span><span className="superman-price">$24</span></div>
+//                 <div className="superman-price-row"><span>100 Tortillas</span><span className="superman-price">$48</span></div>
+//             </div>
+//             <TacoButton text="CATER NOW"
+//                 width={window.innerWidth < 768 ? "100%" : "100%"}
+//                 height={window.innerWidth < 768 ? "51px" : "57px"}
+//                 styleType="1"
+//                 fontSize={window.innerWidth < 768 ? "18px" : "24px"}
+//                 link="https://www.ezcater.com/brand/pvt/taco-pros"
+//                 textColor={"#E3501d"}
+//             />
+//         </div>
+//     </div>
+// );
 
 /* --- 4. INDIVIDUAL PACKS SECTION --- */
 const IndividualPacksSection = () => (
@@ -258,7 +258,7 @@ const IndividualPacksSection = () => (
         <div className="superman-info-col">
             <div className="superman-live-card">
                 <div className="superman-info-box">
-                    <h2 className="superman-main-price">Starting At $13</h2>
+                    <h2 className="superman-main-price">Individual Catering Packs start at $14</h2>
                     <small>(Minimum of 25 Orders)</small>
                 </div>
                 <div className="superman-card2">

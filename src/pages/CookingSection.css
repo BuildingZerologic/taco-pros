@@ -49,6 +49,12 @@
   
 }
 
+@media screen and (min-width: 1025px) {
+    .cx-header {
+        text-align: center;
+    }
+}
+
 .cx-card {
     background: transparent;
 
@@ -398,4 +404,3 @@
         font-size: 2.5rem;
     }
 }
-

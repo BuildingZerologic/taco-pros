@@ -24,7 +24,7 @@ export default function Marquee({
                     {data.map((item, index) => (
                         <a
                             key={index}
-                            href={item.link || "#"}
+                            href={item.link || "https://www.instagram.com/taco_pros/"}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="marquee__item"

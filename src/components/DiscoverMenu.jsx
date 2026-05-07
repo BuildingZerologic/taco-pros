@@ -128,50 +128,51 @@ const menuItems = [
         ],
     },
     {
-        category: 'TORTAS',
-        menuIcon: 'i-33.png',
-        image: 'i-33.png',
-        menuTitle: 'Tortas',
+        category: 'PROTEIN BOWL',
+        menuIcon: 'pro.png',
+        image: 'pro.png',
+        menuTitle: 'Protein Bowl',
         dishes: [
             {
                 title: 'Veggie',
                 description:
-                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each)',
+                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
                 price: '$6',
                 img: "GUAC AND CHIPS.png"
             },
             {
-                title: 'Picadillo (Ground Beef)',
-                description:
-                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
-                price: '$5',
-                img: "GUAC AND CHIPS.png"
-            }, {
                 title: 'Asada (Steak)',
                 description:
-                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
                 price: '$5',
                 img: "GUAC AND CHIPS.png"
             },
             {
-                title: 'Pollo (Chicken)',
+                title: 'Ground Beef (Picadillo)',
                 description:
-                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
                 price: '$5',
                 img: "GUAC AND CHIPS.png"
             }, {
-                title: 'Barbacoa (House Special)',
+                title: 'Pollo (Chicken)',
                 description:
-                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
                 price: '$5',
                 img: "GUAC AND CHIPS.png"
             }, {
                 title: 'AL Pastor (Pork)',
                 description:
-                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
                 price: '$5',
                 img: "GUAC AND CHIPS.png"
             },
+            {
+                title: 'Barbacoa (House Special)',
+                description:
+                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
+                price: '$5',
+                img: "GUAC AND CHIPS.png"
+            }
         ],
     },
     {
@@ -219,6 +220,122 @@ const menuItems = [
                 price: '$5',
                 img: "GUAC AND CHIPS.png"
             },
+        ],
+    },
+    {
+        category: 'TORTAS',
+        menuIcon: 'i-33.png',
+        image: 'i-33.png',
+        menuTitle: 'Tortas',
+        dishes: [
+            {
+                title: 'Veggie',
+                description:
+                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each)',
+                price: '$6',
+                img: "GUAC AND CHIPS.png"
+            },
+            {
+                title: 'Picadillo (Ground Beef)',
+                description:
+                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                price: '$5',
+                img: "GUAC AND CHIPS.png"
+            }, {
+                title: 'Asada (Steak)',
+                description:
+                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                price: '$5',
+                img: "GUAC AND CHIPS.png"
+            },
+            {
+                title: 'Pollo (Chicken)',
+                description:
+                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                price: '$5',
+                img: "GUAC AND CHIPS.png"
+            }, {
+                title: 'Barbacoa (House Special)',
+                description:
+                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                price: '$5',
+                img: "GUAC AND CHIPS.png"
+            }, {
+                title: 'AL Pastor (Pork)',
+                description:
+                    'Mexican sandwiches served with lettuce, tomato, avocado, beans, cheese & sour cream. (Extra Topping $0.25 each – ADD Extra Meat $3.00)',
+                price: '$5',
+                img: "GUAC AND CHIPS.png"
+            },
+        ],
+    },
+    {
+        category: 'Quesadilla',
+        menuIcon: 'quesadilla.png',
+        image: 'quesadilla.png',
+        menuTitle: 'Quesadilla',
+        dishes: [
+            {
+                title: 'Nachos Supreme',
+                description:
+                    'Sour cream with a hint of queso fresco',
+                price: '$10',
+                img: "GUAC AND CHIPS.png"
+            },
+            {
+                title: 'Chips & Salsa',
+                description:
+                    'Chips with freshly made salsa.',
+                price: '$9',
+                img: "GUAC AND CHIPS.png"
+            },
+            {
+                title: 'Quesadilla (Chicken, Steak or Ground beef)',
+                description:
+                    'Flour tortilla with side of lettuce, tomato, and sour cream. (Extra Topping $0.25 each)',
+                price: '$9',
+                img: "GUAC AND CHIPS.png"
+            }, {
+                title: 'French Fries with Nacho Cheese',
+                description:
+                    'Chicken, Steak or Ground beef – ADD $1',
+                price: '$9',
+                img: "GUAC AND CHIPS.png"
+            }, {
+                title: 'Mexican French Fries Supreme',
+                description:
+                    'tomato, guacamole, sour cream, nacho cheese with a hint of queso fresco',
+                price: '$9',
+                img: "GUAC AND CHIPS.png"
+            }
+            , {
+                title: 'Cheese Quesadilla (Flour Tortilla)',
+                description:
+                    'Melted C​hihuahua cheese with Mexican Sausage.',
+                price: '$9',
+                img: "GUAC AND CHIPS.png"
+            }, {
+                title: 'Chips & Guacamole',
+                description:
+                    'Chips with freshly made guacamole.',
+                price: '$9',
+                img: "GUAC AND CHIPS.png"
+            }, {
+                title: 'Elote (corn)',
+                description:
+                    ' ',
+                price: '$9',
+                img: "GUAC AND CHIPS.png"
+            },
+            {
+                title: 'Chips & Queso',
+                description:
+                    ' ',
+                price: '$9',
+                img: "GUAC AND CHIPS.png"
+            }
+
+
         ],
     },
     {
@@ -278,7 +395,8 @@ const menuItems = [
                 img: "GUAC AND CHIPS.png"
             }
         ],
-    }, {
+    }, 
+    {
         category: 'DESSERTS',
         menuIcon: 'i-7.png',
         image: 'i-7.png',
@@ -292,7 +410,8 @@ const menuItems = [
                 img: "GUAC AND CHIPS.png"
             }
         ],
-    }, {
+    }, 
+    {
         category: 'DRINKS',
         menuIcon: 'tp aguas fresca.webp',
         image: 'tp aguas fresca.webp',
@@ -371,7 +490,8 @@ const menuItems = [
 
 
         ],
-    }, {
+    }, 
+    {
         category: 'SIDES',
         menuIcon: 'GUAC.png',
         image: 'GUAC.png',
@@ -424,54 +544,7 @@ const menuItems = [
 
         ],
     },
-    {
-        category: 'PROTEIN BOWL',
-        menuIcon: 'pro.png',
-        image: 'pro.png',
-        menuTitle: 'Protein Bowl',
-        dishes: [
-            {
-                title: 'Veggie',
-                description:
-                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
-                price: '$6',
-                img: "GUAC AND CHIPS.png"
-            },
-            {
-                title: 'Asada (Steak)',
-                description:
-                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
-                price: '$5',
-                img: "GUAC AND CHIPS.png"
-            },
-            {
-                title: 'Ground Beef (Picadillo)',
-                description:
-                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
-                price: '$5',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: 'Pollo (Chicken)',
-                description:
-                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
-                price: '$5',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: 'AL Pastor (Pork)',
-                description:
-                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
-                price: '$5',
-                img: "GUAC AND CHIPS.png"
-            },
-            {
-                title: 'Barbacoa (House Special)',
-                description:
-                    'Served with rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn & avocado.',
-                price: '$5',
-                img: "GUAC AND CHIPS.png"
-            }
-        ],
-    }
+   
 ];
 
 const cateringItems = [

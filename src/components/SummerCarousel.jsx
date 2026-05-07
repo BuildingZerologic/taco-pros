@@ -10,8 +10,7 @@ const SummerCarousel = () => {
         {
             id: 1,
             title: "New Dish Alert",
-            desc: `You asked, we made it happen.
-Try our new loaded birria burritos—just $12.99`,
+            desc: `Bigger Better Pro Burritos Starting at $10 `,
             img: "/tp mob offer new dish alert (1).jpg"
         },
         {
@@ -24,14 +23,12 @@ $5 margaritas from 4–8 PM - no excuses needed.`,
         {
             id: 3,
             title: "Lunch Special",
-            desc: `Lunch break’s tight, cravings aren’t.
-Grab a $9.99 taco combo and get back before your boss notices.`,
+            desc: `2 Tacos and a Drink $7.99 (11am – 4pm)`,
             img: "/tp mob offer lunch spl.jpg"
         }, {
             id: 4,
             title: "New Dish Alert",
-            desc: `You asked, we made it happen.
-Try our new loaded birria burritos—just $12.99`,
+            desc: `Bigger Better Pro Burritos Starting at $10`,
             img: "/tp mob offer new dish alert (1).jpg"
         },
         {
@@ -44,8 +41,7 @@ $5 margaritas from 4–8 PM - no excuses needed.`,
         {
             id: 6,
             title: "Lunch Special",
-            desc: `Lunch break’s tight, cravings aren’t.
-Grab a $9.99 taco combo and get back before your boss notices.`,
+            desc: `2 Tacos and a Drink $7.99 (11am – 4pm)`,
             img: "/tp mob offer lunch spl.jpg"
         },
 
