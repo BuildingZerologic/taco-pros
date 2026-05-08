@@ -13,8 +13,7 @@ export default function Rewards() {
                         <div className="batman-step-number">1</div>
                         <h3 className="batman-step-title">CREATE AN ACCOUNT</h3>
                         <p className="batman-step-text">
-                            To get started, join now. New members receive an automatic gift of $5 in
-                            their TACO PROS Rewards account.
+                            Sign up now and kick off your membership with an instant $5 reward in your TACO PROS account.
                         </p>
                     </div>
                     <div className="batman-reward-card">

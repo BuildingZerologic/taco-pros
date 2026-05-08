@@ -29,12 +29,12 @@ const data = [
     },
     {
         type: "video",
-        src: "2.mp4",
+        src: "tacopros1.mp4",
         link: "https://www.instagram.com/taco_pros/",
     },
     {
         type: "video",
-        src: "2.mp4",
+        src: "tacopros2.mp4",
         link: "https://www.instagram.com/taco_pros/",
     },
 
@@ -83,7 +83,7 @@ const ReelCarousel = () => {
                 data={data}
                 direction="left"
                 speed={12000}
-                pauseOnHover={true}
+                pauseOnHover={false}
                 size="clamp(130px, 16vw, 210px)"
             />
 

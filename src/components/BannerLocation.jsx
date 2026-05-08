@@ -15,10 +15,10 @@ const BannerLocation = () => {
         
 
           <TacoButton text=" Find a TacoPros"
-            width="clamp(155px, 22vw, 302px)"
-            height="clamp(51px, 5vw, 57px)" 
+            width="clamp(185px, 32vw, 302px)"
+            height="clamp(54px, 6vw, 62px)" 
              styleType = "1"
-             fontSize="clamp(18px, 2vw, 24px)"
+             fontSize="clamp(18px, 3vw, 24px)"
              link="/locations"
             />
 
@@ -42,10 +42,10 @@ const BannerLocation = () => {
 
           <a href="/locations" className="find-button2">
            <TacoButton text=" Find a TacoPros"
-            width="clamp(155px, 22vw, 302px)"
-            height="clamp(51px, 5vw, 57px)" 
+            width="clamp(185px, 32vw, 302px)"
+            height="clamp(54px, 6vw, 62px)" 
              styleType = "1"
-             fontSize="clamp(18px, 2vw, 24px)"
+             fontSize="clamp(18px, 3vw, 24px)"
              link="/locations"
             />
           </a>

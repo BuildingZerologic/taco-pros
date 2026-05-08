@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import './CateringMenu.css';
+import { useLocation } from "react-router-dom";
 import TacoButton from '../components/TacoButton';
 
+const CATERING_TABS = ['party-trays', 'live-catering', 'individual-packs', 'sides'];
+
 const CateringMenu = () => {
+    const location = useLocation();
     const [activeTab, setActiveTab] = useState('party-trays');
 
     const renderContent = () => {
@@ -41,12 +45,20 @@ const CateringMenu = () => {
             return () => document.body.classList.remove("catering-page");
         }, []);
 
+        useEffect(() => {
+            const categoryId = new URLSearchParams(location.search).get("category");
+
+            if (CATERING_TABS.includes(categoryId)) {
+                setActiveTab(categoryId);
+            }
+        }, [location.search]);
+
     return (
         <>
         <div className="superman-container">
             {/* Scrollable Tabs Header */}
             <div className={`superman-tabs-header ${isSticky ? "is-fixed" : ""}`}>
-                {['party-trays', 'live-catering', 'individual-packs', 'sides'].map((tab) => (
+                {CATERING_TABS.map((tab) => (
                     <button
                         key={tab}
                         className={`superman-tab-btn ${activeTab === tab ? 'active' : ''}`}
@@ -114,7 +126,7 @@ const PartyTraysSection = () => (
                 </div>
             </div>
 
-            <TacoButton text="CATER NOW"
+            <TacoButton text="Order now"
                 width={window.innerWidth < 768 ? "100%" : "100%"}
                 height={window.innerWidth < 768 ? "51px" : "57px"}
                 styleType="1"

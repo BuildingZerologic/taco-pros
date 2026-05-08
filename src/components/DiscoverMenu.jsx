@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import "./Disk.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import TacoButton from "./TacoButton";
 
@@ -552,7 +552,7 @@ const cateringItems = [
         category: 'PARTY TRAYS',
         menuIcon: 'PARTY TRAYS.png',
         image: 'PARTY TRAYS.png',
-        menuTitle: 'PARTY TRAYS',
+        menuTitle: 'Party Trays',
         dishes: [
             {
                 title: `<b>Taco Trays <b> <br> <div class="subitem"> (20 Tacos) </div>`,
@@ -591,7 +591,7 @@ const cateringItems = [
         category: 'LIVE CATERING',
         menuIcon: 'LIVE CATERING.png',
         image: 'LIVE CATERING.png',
-        menuTitle: 'LIVE CATERING',
+        menuTitle: 'Live Catering',
         dishes: [
             {
                 title: `
@@ -620,79 +620,79 @@ const cateringItems = [
             }
         ], orderNow: 'link'
     },
-    {
-        category: 'BUFFET STYLE CATERING',
-        menuIcon: 'INDIVISUAL CATERING.png',
-        image: 'INDIVISUAL CATERING.png',
-        menuTitle: 'BUFFET STYLE CATERING',
-        dishes: [
-            {
-                title: '',
-                description: ` <div class="mkjkj">
-                   Half Tray of Meat, 9×9 Topping Tray, 50 Tortillas, Side of Rice & Beans, Serves 15-20 People for $240 <br>
-                   <div class="kkikp">
-(Starting At $12 Per Person)
-                   </div>
-                </div>`,
-                price: '',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: '<b> Meat Trays </b>',
-                description: "Chicken Chipotle, Steak, Barbacoa, Pork, Groundbeef",
-                price: '',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: 'Half Tray',
-                description: "",
-                price: '$132',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: 'Full Tray',
-                description: "",
-                price: '$240',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: '<b> Topping Trays </b>',
-                description: "Lettuce, Tomatoes, Onion, Cilantro, Cheese",
-                price: '',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: '9x9 Tray',
-                description: "",
-                price: '$36',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: 'Half Tray',
-                description: "",
-                price: '$72',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: '<b> Tortillas </b>',
-                description: "Lettuce, Tomatoes, Onion, Cilantro, Cheese",
-                price: '',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: '50 Tortillas',
-                description: "",
-                price: '$24',
-                img: "GUAC AND CHIPS.png"
-            }, {
-                title: '100 Tortillas',
-                description: "",
-                price: '$48',
-                img: "GUAC AND CHIPS.png"
-            }
-        ], orderNow: 'link'
-    },
+//     {
+//         category: 'BUFFET STYLE CATERING',
+//         menuIcon: 'INDIVISUAL CATERING.png',
+//         image: 'INDIVISUAL CATERING.png',
+//         menuTitle: 'BUFFET STYLE CATERING',
+//         dishes: [
+//             {
+//                 title: '',
+//                 description: ` <div class="mkjkj">
+//                    Half Tray of Meat, 9×9 Topping Tray, 50 Tortillas, Side of Rice & Beans, Serves 15-20 People for $240 <br>
+//                    <div class="kkikp">
+// (Starting At $12 Per Person)
+//                    </div>
+//                 </div>`,
+//                 price: '',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: '<b> Meat Trays </b>',
+//                 description: "Chicken Chipotle, Steak, Barbacoa, Pork, Groundbeef",
+//                 price: '',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: 'Half Tray',
+//                 description: "",
+//                 price: '$132',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: 'Full Tray',
+//                 description: "",
+//                 price: '$240',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: '<b> Topping Trays </b>',
+//                 description: "Lettuce, Tomatoes, Onion, Cilantro, Cheese",
+//                 price: '',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: '9x9 Tray',
+//                 description: "",
+//                 price: '$36',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: 'Half Tray',
+//                 description: "",
+//                 price: '$72',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: '<b> Tortillas </b>',
+//                 description: "Lettuce, Tomatoes, Onion, Cilantro, Cheese",
+//                 price: '',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: '50 Tortillas',
+//                 description: "",
+//                 price: '$24',
+//                 img: "GUAC AND CHIPS.png"
+//             }, {
+//                 title: '100 Tortillas',
+//                 description: "",
+//                 price: '$48',
+//                 img: "GUAC AND CHIPS.png"
+//             }
+//         ], orderNow: 'link'
+//     },
     {
         category: 'INDIVIDUAL CATERING PACKS',
         menuIcon: 'BUFFET STYLE CATERING.png',
         image: 'BUFFET STYLE CATERING.png',
-        menuTitle: 'INDIVIDUAL CATERING PACKS',
+        menuTitle: 'Individual Catering Packs',
         dishes: [
             {
                 title: '',
-                description: ` <div class="mkjkj">Starting At $13 <br>
+                description: ` <div class="mkjkj">Starting At $14 <br>
                    <div class="kkikp">
 
 (Minimum of 25 Orders)
@@ -703,10 +703,10 @@ const cateringItems = [
             }
         ], orderNow: 'link'
     }, {
-        category: 'PRO KIT',
-        menuIcon: 'tp pro kit.webp',
-        image: 'tp pro kit.webp',
-        menuTitle: 'Pro kit',
+        category: 'SIDES',
+        menuIcon: '/600px_tp chips.png',
+        image: '/600px_tp chips.png',
+        menuTitle: 'Sides',
         dishes: [
             {
                 title: '',
@@ -726,6 +726,7 @@ const cateringItems = [
 
 export default function DiscoverMenu() {
     const location = useLocation();
+    const navigate = useNavigate();
     const menuScrollRef = useRef(null);
     const autoScrollRef = useRef(null);
 
@@ -789,13 +790,29 @@ export default function DiscoverMenu() {
         }
     };
 
+    const getMenuCategoryId = (item) => {
+        const categoryId = item.menuTitle.toLowerCase().replace(/\s+/g, "-");
+        return categoryId === "appetizers" ? "appetizer" : categoryId;
+    };
+
+    const getCateringCategoryId = (item) => {
+        const categoryId = item.menuTitle.toLowerCase().replace(/\s+/g, "-");
+        const categoryMap = {
+            "individual-catering-packs": "individual-packs",
+            "buffet-style-catering": "individual-packs",
+            "pro-kit": "individual-packs",
+        };
+
+        return categoryMap[categoryId] || categoryId;
+    };
+
      useEffect(() => {
         startAutoScroll();
         return () => stopAutoScroll();
     }, []);
 
     useEffect(() => {
-        if (location.pathname === "/catering-menu") {
+        if (location.pathname === "/catering") {
             setMenuType("catering");
             setActiveTab(0);
         } else {
@@ -810,6 +827,14 @@ export default function DiscoverMenu() {
 
         // remove animation after it plays (so it can replay next click)
         setTimeout(() => setAnimateIndex(null), 700);
+
+        const selectedItem = currentItems[idx];
+
+        if (menuType === "discover") {
+            navigate(`/menu?category=${getMenuCategoryId(selectedItem)}`);
+        } else {
+            navigate(`/catering?category=${getCateringCategoryId(selectedItem)}`);
+        }
     };
 
      const scrollMenu = (direction) => {

@@ -5,6 +5,7 @@
     padding: 40px 0;
     text-align: center;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .ox-drinks {
@@ -81,8 +82,8 @@
 @media screen and (min-width: 1024px) {
 
     .ox-carousel-container {
-        padding: 56px 20px;
-        max-width: 1180px;
+        padding: 56px 0;
+        max-width: none;
         margin: 0 auto;
     }
 

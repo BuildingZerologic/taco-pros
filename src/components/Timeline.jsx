@@ -6,6 +6,49 @@ import { Link } from "react-router-dom";
 import CounterSection from "../components/CounterSection"
 import TacoButton from "./TacoButton";
 
+const storyParagraphs = [
+    "In Mexico, food isn't polished or perfect - it's alive. It's fire, hands, noise, and instinct. It's born in the streets, shaped in the markets, and carried in the memories of the people who make it.",
+    "That's where Mercedes comes in.",
+    "She grew up in the tianguis, Mexico's openair markets, working beside her parents as they cooked for crowds that wanted flavor with personality. As a kid, she learned everything the real way - grinding chiles on stone, pressing tortillas by hand, tasting until it felt right. No recipes. No shortcuts. Just skill, repetition, and heart.",
+    "Over time, Mercedes built her own style - bold, colorful, unmistakably hers. Her tortillas, her salsas, her touch... people lined up for it. Not because it was fancy, but because it was real. Her stall became a spot where strangers turned into regulars and regulars turned into family.",
+    "Her sons, Victor and Cesar, grew up in that world - waking up to the smell of roasted chiles, falling asleep to the sounds of the market shutting down. They didn't learn Mexican cooking from a book. They learned it from watching their mother work, grind, hustle, and create.",
+    "When they came to Chicago, they didn't come emptyhanded. They brought the tianguis with them. They opened Taco Pros in Oak Park, building it on the same things Mercedes taught them: slowcrafted marinades, firekissed chiles, salsas with attitude, and flavors that don't apologize for being bold.",
+    "The shop didn't take off because it was trendy - it took off because it tasted like something real, something livedin, something passed down.",
+    "What started generations ago in a streetmarket stall now lives here - in every taco, every salsa, every bite.",
+    "At Taco Pros, you're not just eating. You're tasting a story carried across borders, shaped by family hands, and sharpened through years of craft.",
+    "Welcome to Taco Pros - where the streets of Mexico meet the heart of Chicago, and every bite carries a piece of our family's history.",
+];
+
+const StoryCopy = ({ paragraphs }) => (
+    <>
+        {paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+        ))}
+    </>
+);
+
+const missionCta = {
+    eyebrow: "THE MISSION STAYS THE SAME",
+    headlines: ["KEEP IT BOLD", "KEEP IT REAL", "KEEP IT COMING!"],
+    body: "No fluff. No shortcuts. Just real food, made by real pros, with real flavor that hits every time.",
+    image: "/tp taqueria only uncle.webp",
+};
+
+const MissionHeadline = ({ className = "", lineBreaks = false }) => (
+    <>
+        {missionCta.headlines.map((headline, index) => (
+            lineBreaks ? (
+                <React.Fragment key={headline}>
+                    {headline}
+                    {index < missionCta.headlines.length - 1 && <br />}
+                </React.Fragment>
+            ) : (
+                <h2 key={headline} className={className}>{headline}</h2>
+            )
+        ))}
+    </>
+);
+
 const ScrollCard = ({ children, className = "", triggerY = 0 }) => {
 
     const ref = useRef(null);
@@ -16,7 +59,6 @@ const ScrollCard = ({ children, className = "", triggerY = 0 }) => {
 
         if (triggerY === 0) {
             node.classList.add("show");
-            return undefined;
         }
 
         const observer = new IntersectionObserver(
@@ -26,7 +68,7 @@ const ScrollCard = ({ children, className = "", triggerY = 0 }) => {
                     observer.unobserve(node);
                 }
             },
-            { threshold: 0.25, rootMargin: "0px 0px -8% 0px" }
+            { threshold: 0.12, rootMargin: "0px 0px -18% 0px" }
         );
 
         observer.observe(node);
@@ -57,50 +99,32 @@ export default function TimelineLayout() {
 
                 <ScrollCard className="card-red card-1" triggerY={0}>
                     <div className="cardOne">
-                        <img src="a1.png" className="cardOneImg" alt="Mexican street food preparation scene" />
+                        <img src="a1.png" className="cardOneImg" />
                         <div className="cardOneContent">
                             <span>OUR STORY</span>
                             <h2>WHERE IT STARTED</h2>
-                            <p>
-                                In Mexico, food isn't polished or perfect - it's alive. It's fire,
-                                hands, noise, and instinct. It's born in the streets, shaped in the
-                                markets, and carried in the memories of the people who make it.
-                                That's where Mercedes comes in.
-                            </p>
+                            <StoryCopy paragraphs={storyParagraphs.slice(0, 3)} />
                         </div>
                     </div>
                 </ScrollCard>
 
-                <ScrollCard className="card-yellow card-2" triggerY={100}>
-                    <div className="cardTwoContent">
-                        <img src="./a2.png" className="cardTwoLeft" />
-                        <img src="./a3.png" className="cardTwoRight" />
-                    </div>
-                </ScrollCard>
-
-                <ScrollCard className="card-cyan card-3" triggerY={400}>
+                <ScrollCard className="card-cyan card-3" triggerY={100}>
 
                     <div className="cardThree">
                         <div className="cardThreeLeft">
+                            <img src="./a2.png" />
+                            <img src="./a3.png" />
                             <img src="/a4.jpg" />
                             <img src="/a5.jpg" />
                         </div>
                         <div className="cardThreeRight">
-                            <p>
-                                She grew up in the tianguis, Mexico's open-air markets, working
-                                beside her parents as they cooked for crowds that wanted flavor with
-                                personality. As a kid, she learned everything the real way - grinding
-                                chiles on stone, pressing tortillas by hand, tasting until it felt
-                                right. No recipes. No shortcuts. Just skill, repetition, and heart.
-                                Over time, Mercedes built her own style - bold, colorful, and
-                                unmistakably hers.
-                            </p>
+                            <StoryCopy paragraphs={storyParagraphs.slice(3, 6)} />
                         </div>
                     </div>
 
                 </ScrollCard>
 
-                <ScrollCard className="card-pink card-4" triggerY={600}>
+                <ScrollCard className="card-pink card-4" triggerY={300}>
                     <div className="cardFour" style={{ flexDirection: "row-reverse" }}>
                         <div className="cardFourLeft">
                             <img src="./a6.jpg" />
@@ -108,14 +132,7 @@ export default function TimelineLayout() {
                             <img src="./a8.jpg" />
                         </div>
                         <div className="cardFourRight">
-                            <p>
-                                Her sons, Victor and Cesar, grew up in that world. When they came to
-                                Chicago, they brought the tianguis with them. They opened Taco Pros
-                                in Oak Park on the same things Mercedes taught them: slow-crafted
-                                marinades, fire-kissed chiles, salsas with attitude, and flavors that
-                                don't apologize for being bold. Welcome to Taco Pros - where the
-                                streets of Mexico meet the heart of Chicago.
-                            </p>
+                            <StoryCopy paragraphs={storyParagraphs.slice(6)} />
 
                         </div>
                     </div>
@@ -129,17 +146,17 @@ export default function TimelineLayout() {
                             <p className="mapH">Find A Tacopros </p>
 
                             <Link to="/locations" data-discover="true">
-
+                               
 
                                 <TacoButton text="Our Locations"
-                                    width="clamp(155px, 22vw, 302px)"
-                                    height="clamp(51px, 5vw, 57px)"
+                                    width={window.innerWidth < 768 ? "155px" : "302px"}
+                                    height={window.innerWidth < 768 ? "51px" : "57px"}
                                     styleType="2"
-                                    fontSize="clamp(18px, 2vw, 24px)"
+                                    fontSize={window.innerWidth < 768 ? "18px" : "24px"}
                                     link="/locations"
                                 />
 
-
+                        
 
                             </Link>
                         </div>
@@ -149,35 +166,30 @@ export default function TimelineLayout() {
                 <ScrollCard className="card-orange card-5" triggerY={1200}>
                     <div className="cardFive">
                         <div className="cardfiveLeft">
-                            <span>THE MISSION STAYS THE SAME</span>
+                            <span>{missionCta.eyebrow}</span>
                             <h2>
-                                KEEP IT BOLD
-                                KEEP IT REAL
-                                KEEP IT COMING!
+                                <MissionHeadline lineBreaks />
                             </h2>
-                            <p>
-                                No fluff. No shortcuts. Just real food, made by
-                                real pros, with real flavor that hits every time.
-                            </p>
+                            <p>{missionCta.body}</p>
 
+                
 
-
-                            <TacoButton text="Order Now"
-                                width="clamp(155px, 22vw, 302px)"
-                                height="clamp(51px, 5vw, 57px)"
-                                styleType="1"
-                                fontSize="clamp(18px, 2vw, 24px)"
-                                link="/locations"
-                            />
-                            <div className="bottomTile"></div>
+                             <TacoButton text="Order Now"
+                                    width={window.innerWidth < 768 ? "155px" : "302px"}
+                                    height={window.innerWidth < 768 ? "51px" : "57px"}
+                                    styleType="1"
+                                    fontSize={window.innerWidth < 768 ? "18px" : "24px"}
+                                    link="/locations"
+                                />
+                                 <div className="bottomTile"></div>
                         </div>
 
                         <div className="cardfiveRight">
-                            <img src="tp taqueria only uncle.webp" />
+                            <img src={missionCta.image}/>
                         </div>
                     </div>
 
-
+                   
                 </ScrollCard>
 
             </section>
@@ -205,12 +217,9 @@ export default function TimelineLayout() {
                         </div>
                     </div>
                     <div className="jhv-content-section">
-                        <p className="jhv-body-text">
-                            In Mexico, food isn't polished or perfect - it's alive. It's fire,
-                            hands, noise, and instinct. It's born in the streets, shaped in the
-                            markets, and carried in the memories of the people who make it.
-                            That's where Mercedes comes in.
-                        </p>
+                        <div className="jhv-body-text">
+                            <StoryCopy paragraphs={storyParagraphs.slice(0, 3)} />
+                        </div>
                     </div>
                 </div>
 
@@ -237,14 +246,9 @@ export default function TimelineLayout() {
                         />
                     </div>
                     <div className="jhv-footer-content">
-                        <p className="jhv-footer-text">
-                            She grew up in the tianguis, Mexico's open-air markets, working beside
-                            her parents as they cooked for crowds that wanted flavor with
-                            personality. As a kid, she learned everything the real way - grinding
-                            chiles on stone, pressing tortillas by hand, tasting until it felt right.
-                            No recipes. No shortcuts. Just skill, repetition, and heart. Over time,
-                            Mercedes built her own style - bold, colorful, and unmistakably hers.
-                        </p>
+                        <div className="jhv-footer-text">
+                            <StoryCopy paragraphs={storyParagraphs.slice(3, 6)} />
+                        </div>
                     </div>
                 </div>
 
@@ -271,14 +275,9 @@ export default function TimelineLayout() {
                         />
                     </div>
                     <div className="jhv-footer-content">
-                        <p className="jhv-footer-text">
-                            Her sons, Victor and Cesar, grew up in that world. When they came to
-                            Chicago, they brought the tianguis with them. They opened Taco Pros in
-                            Oak Park on the same things Mercedes taught them: slow-crafted marinades,
-                            fire-kissed chiles, salsas with attitude, and flavors that don't
-                            apologize for being bold. Welcome to Taco Pros - where the streets of
-                            Mexico meet the heart of Chicago.
-                        </p>
+                        <div className="jhv-footer-text">
+                            <StoryCopy paragraphs={storyParagraphs.slice(6)} />
+                        </div>
                     </div>
                     <div className="jhv-img-row">
                         <img
@@ -309,21 +308,16 @@ export default function TimelineLayout() {
 
 
                 <div className="jhv-cta-container">
-                    <span className="jhv-cta-subheadline">THE MISSION STAYS THE SAME</span>
+                    <span className="jhv-cta-subheadline">{missionCta.eyebrow}</span>
                     <div className="jhv-headline-stack">
-                        <h2 className="jhv-bold-title">KEEP IT BOLD</h2>
-                        <h2 className="jhv-bold-title">KEEP IT REAL</h2>
-                        <h2 className="jhv-bold-title">KEEP IT COMING!</h2>
+                        <MissionHeadline className="jhv-bold-title" />
                     </div>
-                    <p className="jhv-cta-body">
-                        No fluff. No shortcuts. Just real food, made by real pros, with real flavor
-                        that hits every single time.
-                    </p>
+                    <p className="jhv-cta-body">{missionCta.body}</p>
                     <a href="#" className="jhv-cta-button">
                         ORDER NOW
                     </a>
                     <img
-                        src="/tp taqueria only uncle.webp"
+                        src={missionCta.image}
                         alt=""
                         className="jhv-cta-img"
                     />

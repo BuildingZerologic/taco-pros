@@ -15,10 +15,9 @@ const SummerCarousel = () => {
         },
         {
             id: 2,
-            title: "Happy Hours",
-            desc: `Clock out, pull up, and unwind.
-$5 margaritas from 4–8 PM - no excuses needed.`,
-            img: "/tp mob offer happy hr.jpg"
+            title: "Sandia Splash",
+            desc: `Cool down & chill out with the all-new Sandia Splash, available only at Taco Pros.`,
+            img: "/tp mob offer sandia.jpg"
         },
         {
             id: 3,
@@ -33,10 +32,9 @@ $5 margaritas from 4–8 PM - no excuses needed.`,
         },
         {
             id: 5,
-            title: "Happy Hours",
-            desc: `Clock out, pull up, and unwind.
-$5 margaritas from 4–8 PM - no excuses needed.`,
-            img: "/tp mob offer happy hr.jpg"
+            title: "Protein Bowl",
+            desc: `Add some flavor to your fitness journey. Get your Pro-tein on now!`,
+            img: "/tp mob offer protein.jpg"
         },
         {
             id: 6,

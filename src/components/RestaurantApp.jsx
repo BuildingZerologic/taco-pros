@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import "./menu.css";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import TacoButton from "./TacoButton";
 
 // Yeh aapka provide kiya hua raw data hai
@@ -152,9 +153,7 @@ const menuItems = [
      combo: {
       title: 'TACO TRIO COMBO',
       description:
-        <>3 TACOS SERVED WITH ONE SIDE OPTION: <br />
-          1: Rice & Beans <br />
-          2: Fries and 1 can of Soda
+        <>Cheese in a flour tortilla with your choice of meat, with lettuce, tomatoes and sour cream on side.
         </>
 
     },
@@ -173,9 +172,7 @@ const menuItems = [
      combo: {
       title: 'TACO TRIO COMBO',
       description:
-        <>3 TACOS SERVED WITH ONE SIDE OPTION: <br />
-          1: Rice & Beans <br />
-          2: Fries and 1 can of Soda
+        <>Three soft corn tortillas rolled with your choice of protein, topped with our signature green salsa or smoky red salsa.
         </>
 
     },
@@ -286,8 +283,42 @@ const categoriesData = menuItems.map(item => ({
 
 const ORDER_LINK = "https://tacopros.toast.site/";
 
+const comboStyleContent = {
+  tacos: {
+    title: "Style Options For Tacos",
+    description: (
+      <>
+        American Style: Lettuce and Tomatoes <br />
+        Mexican Style: Onion and Cilantro <br />
+        Pro: Lettuce, Tomato, Cheese, Sour Cream & Avocado
+      </>
+    ),
+  },
+  "protein-bowl": {
+    title: "Served With",
+    description: "Rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn and avocado",
+  },
+  tortas: {
+    title: "Served With",
+    description: "Lettuce, tomato, avocado, beans, cheese and sour cream",
+  },
+  burritos: {
+    title: "Served With",
+    description: "Lettuce, tomato, avocado, beans and cheese",
+  },
+  quesadilla: {
+    title: "Quesadilla",
+    description: "Cheese in a flour tortilla with your choice of meat, with lettuce, tomatoes and sour cream on side.",
+  },
+  "enchiladas-dinner": {
+    title: "Enchiladas Dinner",
+    description: "Three soft corn tortillas rolled with your choice of protein, topped with our signature green salsa or smoky red salsa.",
+  },
+};
+
 export default function RestaurantApp() {
 
+  const location = useLocation();
   const [activeCategory, setActiveCategory] = useState(categoriesData[0]);
   const [isSticky, setIsSticky] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -301,6 +332,18 @@ export default function RestaurantApp() {
   }, [activeCategory]);
 
   const isTacosCategory = activeCategory.id === "tacos";
+  const activeComboStyle = comboStyleContent[activeCategory.id] || comboStyleContent.tacos;
+  const hideComboSection = ["appetizer", "kids", "desserts", "drinks", "sides"].includes(activeCategory.id);
+  const showComboSection = activeCategory.combo && !hideComboSection;
+
+  useEffect(() => {
+    const categoryId = new URLSearchParams(location.search).get("category");
+    const selectedCategory = categoriesData.find((cat) => cat.id === categoryId);
+
+    if (selectedCategory) {
+      setActiveCategory(selectedCategory);
+    }
+  }, [location.search]);
 
   // ✅ FIX: safe responsive detection (no window.innerWidth in render)
   useEffect(() => {
@@ -413,13 +456,12 @@ export default function RestaurantApp() {
         </div>
 
         {/* COMBO SECTION */}
-        {activeCategory.combo && (
+        {showComboSection && (
           <section className="cds-card">
             <div className="cds-panel cds-style-panel">
-              <h2 className="cds-title">Style Options For Tacos</h2>
+              <h2 className="cds-title">{activeComboStyle.title}</h2>
               <p className="cds-description">
-                American Style: Lettuce and Tomatoes <br />
-                Mexican Style: Onion and Cilantro
+                {activeComboStyle.description}
               </p>
             </div>
 

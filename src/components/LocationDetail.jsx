@@ -53,7 +53,7 @@ const LocationDetail = () => {
   const addressLines = getAddressLines(location.address);
   const faqs = content.faqs;
   const menuUrl = 'https://tacopros.com/menu/';
-  const cateringUrl = 'https://tacopros.com/catering-menu/';
+  const cateringUrl = 'https://tacopros.com/catering';
 
   return (
     <div className="location-detail-page">

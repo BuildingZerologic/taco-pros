@@ -18,6 +18,19 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 810px;
+  overflow: hidden;
+}
+
+.billboard-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(90px, 14vw, 190px);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 88%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Content centered over the white part of the billboard */
@@ -77,6 +90,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
 }
 
 .find-button2 {
@@ -119,10 +134,10 @@
 
 /* Mobile Version with car.gif */
 @media (max-width: 768px) {
- 
+  .banner-location {
+    align-items: stretch;
+  }
 
-  /* If the GIF doesn't have the billboard frame, 
-     you might need to adjust the text colors for visibility */
   .location-text {
     color: #000;
   }
@@ -133,31 +148,67 @@
 
   .billboard-content {
     position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    width: 64%;
+    width: min(94%, 560px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 330px;
-    justify-content: flex-start;
-    display: block;
+    justify-content: center;
+    padding: 0 16px;
+    z-index: 2;
   }
 
   .billboard-container {
-        background-image: url(/car2.gif);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    height: clamp(500px, 110vw, 760px);
+    background-color: #fff;
+    background-image: url(/car2.gif);
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 
-    .location-text {
+  .billboard-container::after {
+    height: clamp(80px, 20vw, 150px);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 82%);
+  }
+
+  .location-number {
+    font-size: clamp(96px, 23vw, 156px);
+    margin-right: 0;
+  }
+
+  .location-text {
     font-family: 'Houseofcards', sans-serif;
-    font-size: clamp(32px, 6vw, 2.5rem);
+    font-size: clamp(38px, 10vw, 64px);
     color: #000;
     line-height: 1.1;
-    margin: 10px 0 62px 0;
+    margin: 8px 0 clamp(22px, 5vw, 42px) 0;
     text-transform: uppercase;
+  }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .billboard-container {
+    height: clamp(640px, 92vw, 710px);
+    background-size: auto 100%;
+  }
+
+  .billboard-content {
+    top: 43%;
+  }
+}
+
+@media (max-width: 480px) {
+  .billboard-container {
+    height: clamp(560px, 136vw, 650px);
+    background-size: auto 100%;
+    background-position: center top;
+  }
+
+  .billboard-content {
+    top: 44%;
+  }
 }

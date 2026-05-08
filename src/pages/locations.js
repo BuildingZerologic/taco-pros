@@ -187,16 +187,104 @@ const makeLocationDetails = (location) => {
 
 const rawLocations = [
   {
-    name: "Huntley, IL",
-    address: "12902 IL-47, Huntley, IL 60142",
-    phone: "(847) 802-4358",
-    orderLink: "https://order.toasttab.com/online/taco-pros-huntley-il-wqcmd",
-    country: "US",
-    dir: "https://maps.app.goo.gl/hL1UH4b4HyubozSu9",
-    mapSrc: "https://maps.google.com/maps?q=12902+IL-47+Huntley+IL+60142&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Huntley",
+  "address": "12902 Route 47, Huntley, IL 60142",
+  "phone": "(630) 674-5912",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-huntley-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=12902+Route+47+Huntley+IL+60142",
+  "mapSrc": "https://maps.google.com/maps?q=12902+Route+47+Huntley+IL+60142&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Huntley IL | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in Huntley, IL serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-huntley-il/",
+    "ogTitle": "Taco Pros Huntley IL | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in Huntley, IL. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-huntley-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in Huntley, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Huntley, IL",
+    "introText": "Looking for a Mexican restaurant in Huntley, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Perfect for dine-in, takeout, and family meals.",
+    "whyTitle": "Why Taco Pros in Huntley",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Huntley",
+    "cateringText": "Taco Pros offers Mexican catering services across Huntley, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Huntley",
+    "googleMapsText": "12902 Route 47, Huntley, IL 60142",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros in Huntley good for family dining?",
+        "a": "Yes, it's a great option for family meals and casual dining."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services for events and gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online in Huntley?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Huntley",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-huntley-il/",
+    "telephone": "+1-630-674-5912",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12902 Route 47",
+      "addressLocality": "Huntley",
+      "addressRegion": "IL",
+      "postalCode": "60142",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "42.168400",
+      "longitude": "-88.428900"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "22:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
   },
   {
-  "name": "Rogers Park, Chicago, IL",
+  "name": "Taco Pros - Rogers Park",
   "address": "2321 W Howard St, Chicago, IL 60645",
   "phone": "(847) 905-0241",
   "orderLink": "https://tacopros.com/menu/",
@@ -286,25 +374,104 @@ const rawLocations = [
   }
   },
   {
-    name: "Elburn, IL",
-    address: "780 N Main St., Elburn, IL 60119",
-    phone: "(630) 206-3956",
-    orderLink: "https://order.toasttab.com/online/taco-pros-elburn-il",
-    country: "US",
-    dir: "https://maps.app.goo.gl/q4Au98NWRAjzJtgx8",
-    mapSrc: "https://maps.google.com/maps?q=780+N+Main+St+Elburn+IL+60119&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Elburn",
+  "address": "780 N Main St, Elburn, IL 60119",
+  "phone": "(630) 365-6955",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-elburn-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=780+N+Main+St+Elburn+IL+60119",
+  "mapSrc": "https://maps.google.com/maps?q=780+N+Main+St+Elburn+IL+60119&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Elburn IL | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in Elburn, IL serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-elburn-il/",
+    "ogTitle": "Taco Pros Elburn IL | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in Elburn, IL. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-elburn-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in Elburn, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Elburn, IL",
+    "introText": "Looking for a Mexican restaurant in Elburn, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Ideal for dine-in, takeout, and everyday meals.",
+    "whyTitle": "Why Taco Pros in Elburn",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Elburn",
+    "cateringText": "Taco Pros offers Mexican catering services across Elburn, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Elburn",
+    "googleMapsText": "780 N Main St, Elburn, IL 60119",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros in Elburn good for family dining?",
+        "a": "Yes, it's a great option for family meals and casual dining."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services for events and gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online in Elburn?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Elburn",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-elburn-il/",
+    "telephone": "+1-630-365-6955",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "780 N Main St",
+      "addressLocality": "Elburn",
+      "addressRegion": "IL",
+      "postalCode": "60119",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.891700",
+      "longitude": "-88.469800"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Sunday"
+        ],
+        "opens": "10:30",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:30",
+        "closes": "22:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
   },
   {
-    name: "Suwanee, GA",
-    address: "3155 Peachtree Parkway, Suite 170, Suwanee Georgia 30024",
-    phone: "(470) 239-3255",
-    orderLink: "https://order.toasttab.com/online/taco-pros-suwanee-ga",
-    country: "US",
-    dir: "https://maps.app.goo.gl/dAM7EFG16uBcHpcE9",
-    mapSrc: "https://maps.google.com/maps?q=3155+Peachtree+Parkway+Suwanee+GA+30024&t=&z=15&ie=UTF8&iwloc=&output=embed"
-  },
-  {
-  "name": "Tinley Park, IL",
+  "name": "Taco Pros - Tinley Park",
   "address": "15943 S Harlem Ave Unit B, Tinley Park, IL 60477",
   "phone": "(708) 904-4691",
   "orderLink": "https://tacopros.com/menu/",
@@ -382,7 +549,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "Old Town, Chicago, IL",
+  "name": "Taco Pros - Old Town",
   "address": "1435 N Wells St, Chicago, IL 60610",
   "phone": "(630) 855-6562",
   "orderLink": "https://tacopros.com/menu/",
@@ -467,8 +634,8 @@ const rawLocations = [
   }
   },
   {
-  "name": "Carol Stream, IL",
-  "address": "772 W Army Trail Rd, Carol Stream, IL 60188",
+  "name": "Taco Pros - Carol Stream",
+  "address": "772 Army Trail Rd, Carol Stream, IL 60188",
   "phone": "(630) 855-6562",
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-carol-stream-il",
@@ -477,7 +644,7 @@ const rawLocations = [
   "mapSrc": "https://maps.google.com/maps?q=772+W+Army+Trail+Rd+Carol+Stream+IL+60188&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Carol Stream | Mexican Restaurant & Tacos",
-    "description": "Taco Pros in Carol Stream, IL serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "description": "Taco Pros in Carol Stream serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
     "canonical": "https://tacopros.com/locations/mexican-restaurant-carol-stream-il/",
     "ogTitle": "Taco Pros Carol Stream | Mexican Restaurant",
     "ogDescription": "Fresh tacos, burritos & Mexican food in Carol Stream. Order online or visit Taco Pros today.",
@@ -485,14 +652,14 @@ const rawLocations = [
     "ogType": "website"
   },
   "pageContent": {
-    "h1": "Mexican Restaurant in Carol Stream, IL | Taco Pros",
-    "introTitle": "Authentic Mexican Food in Carol Stream, IL",
-    "introText": "Looking for a Mexican restaurant in Carol Stream, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and bold, freshly prepared dishes. Whether you're dining in, ordering takeout, or planning catering, Taco Pros delivers a fast and satisfying experience.",
+    "h1": "Mexican Restaurant in Taco Pros - Carol Stream | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Taco Pros - Carol Stream",
+    "introText": "Looking for a Mexican restaurant in Taco Pros - Carol Stream? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and bold, freshly prepared dishes. Whether you're dining in, ordering takeout, or planning catering, Taco Pros delivers a fast and satisfying experience.",
     "whyTitle": "Why Taco Pros in Carol Stream",
     "cateringTitle": "Mexican Catering in Carol Stream",
-    "cateringText": "Taco Pros offers Mexican catering services across Carol Stream, IL:",
-    "locationName": "Taco Pros - Carol Stream, IL",
-    "googleMapsText": "772 W Army Trail Rd, Carol Stream, IL 60188"
+    "cateringText": "Taco Pros offers Mexican catering services across Taco Pros - Carol Stream:",
+    "locationName": "Taco Pros - Taco Pros - Carol Stream",
+    "googleMapsText": "772 W Army Trail Rd, Taco Pros - Carol Stream 60188"
   },
   "schema": {
     "@context": "https://schema.org",
@@ -538,7 +705,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "Marysville, OH",
+  "name": "Taco Pros - Marysville",
   "address": "15710 US-36, Marysville, OH 43040",
   "phone": "(937) 553-9097",
   "orderLink": "https://tacopros.com/menu/",
@@ -627,16 +794,104 @@ const rawLocations = [
   }
   },
   {
-    name: "Valparaiso, IN",
-    address: "2005 Morthland Drive, Valparaiso, IN 46383",
-    phone: "(219)242-8055",
-    orderLink: "https://www.toasttab.com/taco-pros-valparaiso-in",
-    country: "US",
-    dir: "https://maps.app.goo.gl/UrNUDUhiXwudo1gb8",
-    mapSrc: "https://maps.google.com/maps?q=2005+Morthland+Drive+Valparaiso+IN+46383&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Valparaiso",
+  "address": "2005 E Morthland Dr, Valparaiso, IN 46383",
+  "phone": "(219) 242-8055",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-valparaiso-in",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=2005+E+Morthland+Dr+Valparaiso+IN+46383",
+  "mapSrc": "https://maps.google.com/maps?q=2005+E+Morthland+Dr+Valparaiso+IN+46383&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Valparaiso IN | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in Valparaiso, IN serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-valparaiso-in/",
+    "ogTitle": "Taco Pros Valparaiso IN | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in Valparaiso, IN. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-valparaiso-in/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in Valparaiso, IN | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Valparaiso, IN",
+    "introText": "Looking for a Mexican restaurant in Valparaiso, IN? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Ideal for dine-in, takeout, and everyday dining.",
+    "whyTitle": "Why Taco Pros in Valparaiso",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Valparaiso",
+    "cateringText": "Taco Pros offers Mexican catering services across Valparaiso, IN including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Valparaiso",
+    "googleMapsText": "2005 E Morthland Dr, Valparaiso, IN 46383",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros in Valparaiso good for family dining?",
+        "a": "Yes, it's a great option for family meals and casual dining."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services for events and gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online in Valparaiso?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Valparaiso",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-valparaiso-in/",
+    "telephone": "+1-219-242-8055",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2005 E Morthland Dr",
+      "addressLocality": "Valparaiso",
+      "addressRegion": "IN",
+      "postalCode": "46383",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.466200",
+      "longitude": "-87.031900"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Thursday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Tuesday",
+          "Friday"
+        ],
+        "opens": "11:00",
+        "closes": "22:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
   },
   {
-  "name": "87th & Stony (Chatham), Chicago, IL",
+  "name": "Taco Pros - 87th & Stoney",
   "address": "1515 E 87th St, Chicago, IL 60619",
   "phone": "(773) 437-3735",
   "orderLink": "https://tacopros.com/menu/",
@@ -726,7 +981,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "Hyde Park, Chicago, IL",
+  "name": "Taco Pros - Hyde Park",
   "address": "1400 E 47th St, Chicago, IL 60653",
   "phone": "(872) 731-2101",
   "orderLink": "https://tacopros.com/menu/",
@@ -816,7 +1071,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "West Milwaukee, WI",
+  "name": "Taco Pros - Miller Park",
   "address": "2068 Miller Park Way Ste B, West Milwaukee, WI 53219",
   "phone": "(414) 210-4034",
   "orderLink": "https://tacopros.com/menu/",
@@ -894,16 +1149,104 @@ const rawLocations = [
   }
   },
   {
-    name: "Edgewater, IL",
-    address: "5310 N Broadway, Chicago, IL 60640",
-    phone: "(224) 814-0200",
-    orderLink: "https://www.toasttab.com/taco-pros-edgewater",
-    country: "US",
-    dir: "https://maps.app.goo.gl/XYhpLutpHHgGu8oRA",
-    mapSrc: "https://maps.google.com/maps?q=5310+N+Broadway+Chicago+IL+60640&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Edgewater",
+  "address": "5310 N Broadway, Chicago, IL 60640",
+  "phone": "(224) 814-0200",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-edgewater-chicago-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=5310+N+Broadway+Chicago+IL+60640",
+  "mapSrc": "https://maps.google.com/maps?q=5310+N+Broadway+Chicago+IL+60640&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Edgewater Chicago | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in Edgewater Chicago serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-edgewater-chicago-il/",
+    "ogTitle": "Taco Pros Edgewater Chicago | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in Edgewater Chicago. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-edgewater-chicago-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in Edgewater, Chicago, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Edgewater, Chicago, IL",
+    "introText": "Looking for a Mexican restaurant in Edgewater, Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Perfect for dine-in, takeout, and casual meals.",
+    "whyTitle": "Why Taco Pros in Edgewater",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Chicago",
+    "cateringText": "Taco Pros offers Mexican catering services across Chicago, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Edgewater",
+    "googleMapsText": "5310 N Broadway, Chicago, IL 60640",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros in Edgewater good for casual dining?",
+        "a": "Yes, it's perfect for casual meals, takeout, and quick bites."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services across Chicago."
+      },
+      {
+        "q": "Can I order Taco Pros online in Edgewater?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Edgewater Chicago",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-edgewater-chicago-il/",
+    "telephone": "+1-224-814-0200",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5310 N Broadway",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "postalCode": "60640",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.979600",
+      "longitude": "-87.659900"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "23:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
   },
   {
-  "name": "North Ave, Oak Park, IL",
+  "name": "Taco Pros - North & Narragansett",
   "address": "6427 W North Ave, Oak Park, IL 60302",
   "phone": "(708) 665-3172",
   "orderLink": "https://tacopros.com/menu/",
@@ -981,7 +1324,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "Glen Ellyn, IL",
+  "name": "Taco Pros - Glen Ellyn",
   "address": "850 Roosevelt Rd, Glen Ellyn, IL 60137",
   "phone": "(262) 344-3312",
   "orderLink": "https://tacopros.com/menu/",
@@ -1059,16 +1402,111 @@ const rawLocations = [
   }
   },
   {
-    name: "Milwaukee (Capitol Dr), WI",
-    address: "242 East Capitol Drive, Milwaukee, WI 53212",
-    phone: "(414)-269-8317",
-    orderLink: "https://www.toasttab.com/taco-pros-milwaukee",
-    country: "US",
-    dir: "https://maps.app.goo.gl/kKuq2gci7PL7Xspg9",
-    mapSrc: "https://maps.google.com/maps?q=242+East+Capitol+Drive+Milwaukee+WI+53212&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Capitol",
+  "address": "242 E Capitol Dr, Milwaukee, WI 53212",
+  "phone": "(414) 268-6999",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-capitol-dr-milwaukee-wi",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=242+E+Capitol+Dr+Milwaukee+WI+53212",
+  "mapSrc": "https://maps.google.com/maps?q=242+E+Capitol+Dr+Milwaukee+WI+53212&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Capitol Dr Milwaukee | Mexican Restaurant & Tacos",
+    "description": "Taco Pros on Capitol Dr in Milwaukee serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-capitol-dr-milwaukee-wi/",
+    "ogTitle": "Taco Pros Capitol Dr Milwaukee | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food on Capitol Dr Milwaukee. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-capitol-dr-milwaukee-wi/",
+    "ogType": "website"
   },
+  "pageContent": {
+    "h1": "Mexican Restaurant on Capitol Dr, Milwaukee, WI | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Milwaukee, WI",
+    "introText": "Looking for a Mexican restaurant on Capitol Dr in Milwaukee, WI? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Ideal for dine-in, takeout, and casual dining.",
+    "whyTitle": "Why Taco Pros on Capitol Dr",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Milwaukee",
+    "cateringText": "Taco Pros offers catering services across Milwaukee, WI including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Capitol Dr",
+    "googleMapsText": "242 E Capitol Dr, Milwaukee, WI 53212",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros on Capitol Dr good for casual dining?",
+        "a": "Yes, it's perfect for casual meals, takeout, and quick bites."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services in Milwaukee."
+      },
+      {
+        "q": "Can I order Taco Pros online from this location?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Capitol Dr Milwaukee",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-capitol-dr-milwaukee-wi/",
+    "telephone": "+1-414-268-6999",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "242 E Capitol Dr",
+      "addressLocality": "Milwaukee",
+      "addressRegion": "WI",
+      "postalCode": "53212",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.090500",
+      "longitude": "-87.909000"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "opens": "10:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
+  }, 
   {
-  "name": "Franklin, WI",
+  "name": "Taco Pros - Franklin",
   "address": "7730 S Lovers Lane Rd Ste 300, Franklin, WI 53132",
   "phone": "(414) 235-3117",
   "orderLink": "https://tacopros.com/menu/",
@@ -1157,16 +1595,104 @@ const rawLocations = [
   }
   },
   {
-    name: "Milwaukee (Wells St), WI",
-    address: "1400 W Wells St, Milwaukee, WI 53233",
-    phone: "(414)-249-3197",
-    orderLink: "https://www.toasttab.com/taco-pros-wells-st",
-    country: "US",
-    dir: "https://maps.app.goo.gl/D7cmZw2EoNUn7bJz9",
-    mapSrc: "https://maps.google.com/maps?q=1400+W+Wells+St+Milwaukee+WI+53233&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Marquette",
+  "address": "1400 W Wells St, Milwaukee, WI 53233",
+  "phone": "(414) 226-6466",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-wells-st-milwaukee-wi",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=1400+W+Wells+St+Milwaukee+WI+53233",
+  "mapSrc": "https://maps.google.com/maps?q=1400+W+Wells+St+Milwaukee+WI+53233&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Wells St Milwaukee | Late Night Mexican Food & Tacos",
+    "description": "Taco Pros on Wells St in Milwaukee serves fresh tacos, burritos & Mexican street food open late. Perfect for late-night food, dine-in & takeout. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-wells-st-milwaukee-wi/",
+    "ogTitle": "Taco Pros Wells St Milwaukee | Late Night Mexican Food",
+    "ogDescription": "Late-night tacos, burritos & Mexican food on Wells St Milwaukee. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-wells-st-milwaukee-wi/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Late Night Mexican Restaurant on Wells St, Milwaukee, WI | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Milwaukee, WI",
+    "introText": "Looking for late-night tacos in Milwaukee, WI? Taco Pros on Wells St serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals. Whether you're out late, grabbing dinner, or ordering takeout, this location is a go-to spot.",
+    "whyTitle": "Why Taco Pros on Wells St",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Milwaukee",
+    "cateringText": "Taco Pros offers catering services across Milwaukee, WI including student events, corporate gatherings, and parties and celebrations.",
+    "locationName": "Taco Pros - Wells St",
+    "googleMapsText": "1400 W Wells St, Milwaukee, WI 53233",
+    "faq": [
+      {
+        "q": "Is Taco Pros Wells St open late?",
+        "a": "Yes, this location stays open until 2:00 AM on weekdays and 2:30 AM on weekends."
+      },
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, and combo meals."
+      },
+      {
+        "q": "Is this location good for late-night food in Milwaukee?",
+        "a": "Yes, it's one of the go-to spots for late-night Mexican food in Milwaukee."
+      },
+      {
+        "q": "Can I order online from this location?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Wells St Milwaukee",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-wells-st-milwaukee-wi/",
+    "telephone": "+1-414-226-6466",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1400 W Wells St",
+      "addressLocality": "Milwaukee",
+      "addressRegion": "WI",
+      "postalCode": "53233",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.038900",
+      "longitude": "-87.929400"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "02:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "11:00",
+        "closes": "02:30"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
   },
   {
-  "name": "79th & Cicero, Chicago, IL",
+  "name": "Taco Pros - 79th & Cicero",
   "address": "7959 S Cicero Ave, Chicago, IL 60652",
   "phone": "(872) 301-8078",
   "orderLink": "https://tacopros.com/menu/",
@@ -1184,13 +1710,13 @@ const rawLocations = [
     "ogType": "website"
   },
   "pageContent": {
-    "h1": "Mexican Restaurant near 79th & Cicero, Chicago, IL | Taco Pros",
+    "h1": "Mexican Restaurant near Taco Pros - 79th & Cicero | Taco Pros",
     "introTitle": "Authentic Mexican Food in Chicago, IL (79th & Cicero)",
     "introText": "Looking for tacos near 79th & Cicero in Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and bold, freshly prepared dishes. Whether you're dining in, grabbing takeout, or looking for late-night food, Taco Pros is a go-to spot in the area.",
     "whyTitle": "Why Taco Pros near 79th & Cicero",
     "cateringTitle": "Mexican Catering in Chicago",
     "cateringText": "Taco Pros offers Mexican catering services across Chicago, IL:",
-    "locationName": "Taco Pros - 79th & Cicero, Chicago, IL",
+    "locationName": "Taco Pros - Taco Pros - 79th & Cicero",
     "googleMapsText": "7959 S Cicero Ave, Chicago, IL 60652"
   },
   "schema": {
@@ -1244,16 +1770,104 @@ const rawLocations = [
   }
   },
   {
-    name: "Dyer, IN",
-    address: "1078-80 Joliet Street, Dyer, IN 46311",
-    phone: "(219)-515-6953",
-    orderLink: "https://www.toasttab.com/taco-pros-dyer-indiana",
-    country: "US",
-    dir: "https://maps.app.goo.gl/Tr29pyKdoA1TRmfB7",
-    mapSrc: "https://maps.google.com/maps?q=1078+Joliet+Street+Dyer+IN+46311&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Dyer",
+  "address": "1080 Joliet St, Dyer, IN 46311",
+  "phone": "(219) 515-6953",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-dyer-in",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=1080+Joliet+St+Dyer+IN+46311",
+  "mapSrc": "https://maps.google.com/maps?q=1080+Joliet+St+Dyer+IN+46311&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Dyer IN | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in Dyer, IN serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-dyer-in/",
+    "ogTitle": "Taco Pros Dyer IN | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in Dyer, IN. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-dyer-in/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in Dyer, IN | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Dyer, IN",
+    "introText": "Looking for a Mexican restaurant in Dyer, IN? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Ideal for dine-in, takeout, and casual dining.",
+    "whyTitle": "Why Taco Pros in Dyer",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Dyer",
+    "cateringText": "Taco Pros offers Mexican catering services across Dyer, IN including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Dyer",
+    "googleMapsText": "1080 Joliet St, Dyer, IN 46311",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros in Dyer good for family dining?",
+        "a": "Yes, it's a great option for family meals and casual dining."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services for events and gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online in Dyer?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Dyer",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-dyer-in/",
+    "telephone": "+1-219-515-6953",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1080 Joliet St",
+      "addressLocality": "Dyer",
+      "addressRegion": "IN",
+      "postalCode": "46311",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.495800",
+      "longitude": "-87.520900"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "11:00",
+        "closes": "22:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
   },
   {
-    name: "Green Oaks, IL",
+    name: "Taco Pros - Green Oaks",
     address: "14010 W Rockland Rd, Green Oaks, IL 60044",
     phone: "(224) 842-1260",
     orderLink: "https://order.toasttab.com/online/taco-pros-libertyville-il",
@@ -1300,7 +1914,7 @@ const rawLocations = [
     }
   },
   {
-  "name": "Naperville, IL",
+  "name": "Taco Pros - Naperville",
   "address": "2860 Showplace Dr, Suite 114, Naperville, IL 60564",
   "phone": "(331) 226-2186",
   "orderLink": "https://tacopros.com/menu/",
@@ -1399,7 +2013,7 @@ const rawLocations = [
     mapSrc: "https://maps.google.com/maps?q=7959+S+Cicero+Ave+Chicago+IL+60652&t=&z=15&ie=UTF8&iwloc=&output=embed"
   },
   {
-  "name": "Mequon, WI",
+  "name": "Taco Pros - Mequon",
   "address": "10942 N Port Washington Rd, Mequon, WI 53092",
   "phone": "(262) 643-4003",
   "orderLink": "https://tacopros.com/menu/",
@@ -1489,7 +2103,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "Franklin Park, IL",
+  "name": "Taco Pros - Franklin Park",
   "address": "2830 Mannheim Rd, Franklin Park, IL 60131",
   "phone": "(773) 377-6531",
   "orderLink": "https://tacopros.com/menu/",
@@ -1553,7 +2167,7 @@ const rawLocations = [
         "closes": "21:00"
       },
       {
-  "name": "Damen Ave, Chicago, IL",
+  "name": "Taco Pros - Damen & Chicago",
   "address": "1959 W Chicago Ave, Chicago, IL 60622",
   "phone": "(312) 666-5941",
   "orderLink": "https://tacopros.com/menu/",
@@ -1645,7 +2259,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "Merrillville, IN",
+  "name": "Taco Pros - Merrillville",
   "address": "8160 Mississippi St, Merrillville, IN 46410",
   "phone": "(219) 472-8193",
   "orderLink": "https://tacopros.com/menu/",
@@ -1734,7 +2348,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "71st & Western, Chicago, IL",
+  "name": "Taco Pros - 71st & Western",
   "address": "7108 S Western Ave, Chicago, IL 60636",
   "phone": "(872) 267-7178",
   "orderLink": "https://tacopros.com/menu/",
@@ -1752,14 +2366,14 @@ const rawLocations = [
     "ogType": "website"
   },
   "pageContent": {
-    "h1": "Mexican Restaurant near 71st & Western, Chicago, IL | Taco Pros",
-    "introTitle": "Authentic Mexican Food near 71st & Western, Chicago, IL",
+    "h1": "Mexican Restaurant near Taco Pros - 71st & Western | Taco Pros",
+    "introTitle": "Authentic Mexican Food near Taco Pros - 71st & Western",
     "introText": "Looking for tacos near 71st & Western in Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Whether you're dining in, grabbing takeout, or looking for late-night food, Taco Pros is a go-to spot in the area.",
     "whyTitle": "Why Taco Pros near 71st & Western",
     "popularItemsTitle": "Popular Menu Items",
     "cateringTitle": "Mexican Catering in South Chicago",
     "cateringText": "Taco Pros offers Mexican catering services across the South Side of Chicago, IL including family gatherings, community events, office lunches, and private parties.",
-    "locationName": "Taco Pros - 71st & Western, Chicago, IL",
+    "locationName": "Taco Pros - Taco Pros - 71st & Western",
     "googleMapsText": "7108 S Western Ave, Chicago, IL 60636",
     "faq": [
       {
@@ -1824,8 +2438,8 @@ const rawLocations = [
   }
   },
   {
-  "name": "Montrose Ave, Chicago, IL",
-  "address": "4126 W Montrose Ave, Chicago, IL 60641",
+  "name": "Taco Pros - Montrose & N Elston",
+  "address": "4130 W Montrose Ave, Chicago, IL 60641",
   "phone": "(773) 930-3815",
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-montrose-chicago-il",
@@ -1902,7 +2516,7 @@ const rawLocations = [
   }
   },
   {
-    name: "Niles, IL",
+    name: "Taco Pros - Niles",
     address: "7870 N Milwaukee Ave, Niles, IL 60714",
     phone: "(847) 230-0050",
     orderLink: "https://www.toasttab.com/taco-pros-niles-7870-north-milwaukee-avenue",
@@ -1911,7 +2525,7 @@ const rawLocations = [
     mapSrc: "https://maps.google.com/maps?q=7870+N+Milwaukee+Ave+Niles+IL+60714&t=&z=15&ie=UTF8&iwloc=&output=embed"
   },
   {
-  "name": "Gurnee, IL",
+  "name": "Taco Pros - Gurnee",
   "address": "6681 Grand Ave, Unit A1, Gurnee, IL 60031",
   "phone": "(224) 656-5607",
   "orderLink": "https://tacopros.com/menu/",
@@ -2094,7 +2708,7 @@ const rawLocations = [
   }
   },
   {
-  "name": "Austin / Diversey, Chicago, IL",
+  "name": "Taco Pros - Diversey & Austin",
   "address": "5959 W Diversey Ave, Chicago, IL 60639",
   "phone": "(773) 377-6402",
   "orderLink": "https://tacopros.com/menu/",
@@ -2119,7 +2733,7 @@ const rawLocations = [
     "popularItemsTitle": "Popular Menu Items",
     "cateringTitle": "Mexican Catering in West Chicago",
     "cateringText": "Taco Pros offers Mexican catering services across the West Side of Chicago, IL including office lunches, family gatherings, community events, and private parties.",
-    "locationName": "Taco Pros - Austin / Diversey, Chicago, IL",
+    "locationName": "Taco Pros - Taco Pros - Diversey & Austin",
     "googleMapsText": "5959 W Diversey Ave, Chicago, IL 60639",
     "faq": [
       {
@@ -2184,41 +2798,490 @@ const rawLocations = [
   }
   },
   {
-    name: "Taylor/Ogden, IL",
-    address: "2200 W Taylor St, Chicago, IL 60612",
-    phone: "(312) 877-5600",
-    orderLink: "https://www.toasttab.com/taco-pros-chicago-taylor-2200-west-taylor-street",
-    country: "US",
-    dir: "https://maps.app.goo.gl/NFwCzdsnmTmGMZtB9",
-    mapSrc: "https://maps.google.com/maps?q=2200+W+Taylor+St+Chicago+IL+60612&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Pulaski & Belmont",
+  "address": "3029 N Pulaski Rd, Chicago, IL 60641",
+  "phone": "(773) 580-9569",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-pulaski-belmont-chicago-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=3029+N+Pulaski+Rd+Chicago+IL+60641",
+  "mapSrc": "https://maps.google.com/maps?q=3029+N+Pulaski+Rd+Chicago+IL+60641&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant & Tacos",
+    "description": "Taco Pros near Pulaski & Belmont in Chicago serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
+    "ogTitle": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food near Pulaski & Belmont, Chicago. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
+    "ogType": "website"
   },
-  {
-    name: "Damen/Chicago, IL",
-    address: "1959 W Chicago Ave, Chicago, IL 60622",
-    phone: "(312) 666-5941",
-    orderLink: "https://order.online/store/taco-pros-chicago-29531102/",
-    country: "US",
-    dir: "https://maps.app.goo.gl/wihEBnC65SnSkv6C6",
-    mapSrc: "https://maps.google.com/maps?q=1959+W+Chicago+Ave+Chicago+IL+60622&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "pageContent": {
+    "h1": "Mexican Restaurant near Pulaski & Belmont, Chicago, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Chicago, IL",
+    "introText": "Looking for a Mexican restaurant near Pulaski & Belmont in Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Perfect for dine-in, quick takeout, or group orders.",
+    "whyTitle": "Why Taco Pros in Pulaski & Belmont",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Chicago",
+    "cateringText": "Taco Pros offers Mexican catering services across Chicago, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Pulaski & Belmont",
+    "googleMapsText": "3029 N Pulaski Rd, Chicago, IL 60641",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros near Pulaski & Belmont good for quick meals?",
+        "a": "Yes, it’s ideal for quick bites, takeout, and casual dining."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services across Chicago."
+      },
+      {
+        "q": "Can I order online from this location?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
   },
-  {
-    name: "Halsted/Chicago, IL",
-    address: "833 W Chicago Ave, Chicago, IL 60642",
-    phone: "(312) 285-2992",
-    orderLink: "https://www.toasttab.com/taco-pros-chicago-halsted-833-west-chicago-avenue",
-    country: "US",
-    dir: "https://maps.app.goo.gl/cku8ukw7FeUDPWuU9",
-    mapSrc: "https://maps.google.com/maps?q=833+W+Chicago+Ave+Chicago+IL+60642&t=&z=15&ie=UTF8&iwloc=&output=embed"
-  },
-  {
-    name: "Oak Park, IL",
-    address: "2 Chicago Ave, Oak Park, IL 60302",
-    phone: "(708) 613-5384",
-    orderLink: "https://www.toasttab.com/taco-pros-oak-park-2-chicago-avenue",
-    country: "US",
-    dir: "https://maps.app.goo.gl/yCc34E7Kj5ym6jkt9",
-    mapSrc: "https://maps.google.com/maps?q=2+Chicago+Ave+Oak+Park+IL+60302&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Pulaski & Belmont Chicago",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
+    "telephone": "+1-773-580-9569",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3029 N Pulaski Rd",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "postalCode": "60641",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.935600",
+      "longitude": "-87.727200"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "opens": "10:30",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:30",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "21:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
   }
+  },
+  {
+  "name": "Taco Pros - Taylor & Ogden",
+  "address": "2200 W Taylor St, Chicago, IL 60612",
+  "phone": "(312) 877-5600",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-taylor-st-chicago-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=2200+W+Taylor+St+Chicago+IL+60612",
+  "mapSrc": "https://maps.google.com/maps?q=2200+W+Taylor+St+Chicago+IL+60612&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Taylor St Chicago | Late Night Mexican Food & Tacos",
+    "description": "Taco Pros on Taylor St in Chicago serves fresh tacos, burritos & Mexican street food open late. Perfect for late-night food, dine-in & takeout. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-taylor-st-chicago-il/",
+    "ogTitle": "Taco Pros Taylor St Chicago | Late Night Mexican Food",
+    "ogDescription": "Late-night tacos, burritos & Mexican food on Taylor St Chicago. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-taylor-st-chicago-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Late Night Mexican Restaurant on Taylor St, Chicago, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Chicago, IL",
+    "introText": "Looking for late-night tacos in Chicago, IL? Taco Pros on Taylor St serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Ideal for late dinners, quick bites, and takeout.",
+    "whyTitle": "Why Taco Pros on Taylor St",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Chicago",
+    "cateringText": "Taco Pros offers catering services across Chicago, IL including corporate events, student events, and parties and celebrations.",
+    "locationName": "Taco Pros - Taylor St",
+    "googleMapsText": "2200 W Taylor St, Chicago, IL 60612",
+    "faq": [
+      {
+        "q": "Is Taco Pros Taylor St open late?",
+        "a": "Yes, this location is open until 2:00 AM on weekdays and 2:30 AM on weekends."
+      },
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, and combo meals."
+      },
+      {
+        "q": "Is this location good for late-night food in Chicago?",
+        "a": "Yes, it's a go-to spot for late-night Mexican food in Chicago."
+      },
+      {
+        "q": "Can I order Taco Pros online from Taylor St?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Taylor St Chicago",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-taylor-st-chicago-il/",
+    "telephone": "+1-312-877-5600",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2200 W Taylor St",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "postalCode": "60612",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.869800",
+      "longitude": "-87.681200"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "02:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "11:00",
+        "closes": "02:30"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
+  },
+  {
+  "name": "Taco Pros - Damen & Chicago",
+  "address": "1959 W Chicago Ave, Chicago, IL 60622",
+  "phone": "(312) 666-5941",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-damen-chicago-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=1959+W+Chicago+Ave+Chicago+IL+60622",
+  "mapSrc": "https://maps.google.com/maps?q=1959+W+Chicago+Ave+Chicago+IL+60622&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Damen Chicago | Late Night Mexican Restaurant",
+    "description": "Taco Pros on Damen Ave in Chicago serves late-night tacos, burritos & Mexican street food. Open till 3 AM. Dine-in, takeout & catering available.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-damen-chicago-il/",
+    "ogTitle": "Taco Pros Damen Chicago | Late Night Mexican Food",
+    "ogDescription": "Late-night tacos & burritos on Damen Ave, Chicago. Open till 3 AM. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-damen-chicago-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Late Night Mexican Restaurant on Damen Ave, Chicago | Taco Pros",
+    "introTitle": "Late-Night Mexican Food in Chicago, IL (Damen Ave)",
+    "introText": "Looking for late-night tacos in Chicago, IL? Taco Pros on Damen Ave serves authentic Mexican street food including tacos, burritos, quesadillas, and bold, freshly prepared meals — perfect for late-night cravings, quick bites, or dine-in experiences.",
+    "whyTitle": "Why Taco Pros on Damen Ave",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Chicago",
+    "cateringText": "Taco Pros offers Mexican catering services across Chicago, IL including corporate events, private parties, office lunches, and group gatherings.",
+    "locationName": "Taco Pros - Damen Ave",
+    "googleMapsText": "1959 W Chicago Ave, Chicago, IL 60622",
+    "faq": [
+      {
+        "q": "Is Taco Pros Damen open late?",
+        "a": "Yes, Taco Pros on Damen Ave in Chicago is open until 3:00 AM Monday through Saturday."
+      },
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Does Taco Pros in Chicago offer catering?",
+        "a": "Yes, Taco Pros provides catering services across Chicago for events and gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online on Damen Ave?",
+        "a": "Yes, online ordering is available for pickup and takeout."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Damen Chicago",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-damen-chicago-il/",
+    "telephone": "+1-312-666-5941",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1959 W Chicago Ave",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "postalCode": "60622",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.895800",
+      "longitude": "-87.676300"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "03:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "23:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
+  },
+  {
+  "name": "Taco Pros - Chicago & Halsted",
+  "address": "833 W Chicago Ave, Chicago, IL 60642",
+  "phone": "(312) 285-2992",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-river-west-chicago-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=833+W+Chicago+Ave+Chicago+IL+60642",
+  "mapSrc": "https://maps.google.com/maps?q=833+W+Chicago+Ave+Chicago+IL+60642&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros River West Chicago | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in River West, Chicago serves tacos, burritos & Mexican street food. Perfect for lunch, dinner & takeout. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-river-west-chicago-il/",
+    "ogTitle": "Taco Pros River West Chicago | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in River West Chicago. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-river-west-chicago-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in River West, Chicago, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in River West, Chicago, IL",
+    "introText": "Looking for tacos in River West, Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Whether you're stopping in for lunch, grabbing dinner after work, or ordering takeout, Taco Pros is a go-to spot in River West.",
+    "whyTitle": "Why Taco Pros in River West",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in River West",
+    "cateringText": "Taco Pros offers Mexican catering services across River West and downtown areas of Chicago, IL including corporate events, office lunches, team gatherings, and private events.",
+    "locationName": "Taco Pros - River West",
+    "googleMapsText": "833 W Chicago Ave, Chicago, IL 60642",
+    "faq": [
+      {
+        "q": "Is Taco Pros River West good for office lunch?",
+        "a": "Yes, Taco Pros is a popular choice for office lunches and quick meals in River West."
+      },
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Does Taco Pros in River West offer catering?",
+        "a": "Yes, Taco Pros provides catering services for corporate events and group gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online in River West?",
+        "a": "Yes, online ordering is available for pickup and takeout."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros River West Chicago",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-river-west-chicago-il/",
+    "telephone": "+1-312-285-2992",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "833 W Chicago Ave",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "postalCode": "60642",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.896800",
+      "longitude": "-87.648600"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "22:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
+  },
+  {
+  "name": "Taco Pros - Oak Park",
+  "address": "2 Chicago Ave, Oak Park, IL 60302",
+  "phone": "(708) 613-5384",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-oak-park-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=2+Chicago+Ave+Oak+Park+IL+60302",
+  "mapSrc": "https://maps.google.com/maps?q=2+Chicago+Ave+Oak+Park+IL+60302&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Oak Park IL | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in Oak Park, IL serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-oak-park-il/",
+    "ogTitle": "Taco Pros Oak Park IL | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in Oak Park, IL. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-oak-park-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in Oak Park, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Oak Park, IL",
+    "introText": "Looking for a Mexican restaurant in Oak Park, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Ideal for dine-in, takeout, and casual dining.",
+    "whyTitle": "Why Taco Pros in Oak Park",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Oak Park",
+    "cateringText": "Taco Pros offers Mexican catering services across Oak Park, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Oak Park",
+    "googleMapsText": "2 Chicago Ave, Oak Park, IL 60302",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros in Oak Park good for casual dining?",
+        "a": "Yes, it's perfect for casual meals, takeout, and quick bites."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services for events and gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online in Oak Park?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Oak Park",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-oak-park-il/",
+    "telephone": "+1-708-613-5384",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2 Chicago Ave",
+      "addressLocality": "Oak Park",
+      "addressRegion": "IL",
+      "postalCode": "60302",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.885600",
+      "longitude": "-87.784500"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Sunday"
+        ],
+        "opens": "12:00",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "12:00",
+        "closes": "24:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
+  },
 ];
 
 const locations = rawLocations.map(makeLocationDetails);

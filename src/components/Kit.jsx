@@ -19,7 +19,7 @@ function Kit() {
                         purest flavors of Mexico.
                     </p>
 
-                  
+                    <div>
                         <TacoButton text="Order now"
                             width="clamp(115px, 15vw, 191px)"
                             height="clamp(51px, 5vw, 57px)"
@@ -29,6 +29,7 @@ function Kit() {
                             textColor ="#538C42"
                         
                         />
+                    </div>
 
                         
 
