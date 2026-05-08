@@ -105,7 +105,7 @@
 .cx-card-title {
     color: #e4531e;
     text-align: left;
-    font-family: 'Houseofcards';
+    font-family: 'RobotoSlab';
     font-style: normal;
     font-weight: 600;
     line-height: 30px;
@@ -113,11 +113,12 @@
     display: flex;
     width: 350px;
     font-size: 30px ;
-    flex-direction: column;
-    height: 85px;
-    justify-content: flex-start;
     text-transform: unset ;
     margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .cx-date {
     font-weight: bold;
@@ -217,14 +218,14 @@
         font-weight: 700;
         line-height: 28.5px;
         letter-spacing: -2.4px;
-        display: flex;
+        display: -webkit-box;
         width: 320px;
         font-size: 32px ;
-        flex-direction: column;
-        height: 85px;
-        justify-content: flex-start;
         text-transform: unset ;
         margin: 0;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
 .cx-description {
@@ -304,14 +305,14 @@
         font-weight: 700;
         line-height: 1;
         letter-spacing: -1px;
-        display: flex;
+        display: -webkit-box;
         width: auto;
         font-size: 22px ;
-        flex-direction: column;
-        height: 50px;
-        justify-content: flex-start;
         text-transform: unset ;
         margin: 0 0 10px;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
     .card-holder {
@@ -384,6 +385,10 @@
         height: 60px;
         min-height: 60px;
         line-height: 1.2;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
     .cx-description {

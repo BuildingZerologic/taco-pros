@@ -101,11 +101,12 @@ function Contact() {
             alt="Contact Taco Pros"
             className="contact-banner-img"
           />
-          <div className="contact-banner-overlay">
-            <h1>CONTACT US</h1>
-          </div>
         </div>
       </section>
+
+      <div className="Heading-main">
+        <h1>CONTACT US</h1>
+      </div>
 
 
 

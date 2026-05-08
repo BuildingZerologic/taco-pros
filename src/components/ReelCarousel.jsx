@@ -11,8 +11,8 @@ import Marquee from './Marquee';
 const MENU_DATA = [
     { id: 1, video: "1.mp4" },
     { id: 2, video: "2.mp4" },
-    { id: 3, video: "1.mp4" },
-    { id: 4, video: "2.mp4" },
+    { id: 3, video: "tacopros1.mp4" },
+    { id: 4, video: "tacopros2.mp4" },
 ];
 
 

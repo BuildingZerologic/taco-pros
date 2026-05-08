@@ -29,11 +29,12 @@ function Hiring() {
                         alt="Contact Taco Pros"
                         className="contact-banner-img"
                     />
-                    <div className="contact-banner-overlay">
-                        <h1>WE ARE HIRING</h1>
-                    </div>
                 </div>
             </section>
+
+            <div className="Heading-main">
+                <h1>WE ARE HIRING</h1>
+            </div>
 
 
           

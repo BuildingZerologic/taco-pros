@@ -9,6 +9,9 @@ export default function Marquee({
 }) {
     const isRight = direction === "right";
     const reelSize = typeof size === "number" ? `${size}px` : size;
+    const repeatedData = data.length > 0
+        ? Array.from({ length: Math.ceil(8 / data.length) }, () => data).flat()
+        : [];
 
     return (
         <div
@@ -21,9 +24,9 @@ export default function Marquee({
         >
             {[...Array(2)].map((_, groupIndex) => (
                 <div className="marquee__group" key={groupIndex}>
-                    {data.map((item, index) => (
+                    {repeatedData.map((item, index) => (
                         <a
-                            key={index}
+                            key={`${groupIndex}-${index}`}
                             href={item.link || "https://www.instagram.com/taco_pros/"}
                             target="_blank"
                             rel="noopener noreferrer"

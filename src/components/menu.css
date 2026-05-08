@@ -423,10 +423,10 @@
 
     .cat-tabs-wrapper {
         /* top: 95px; */
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 12px 0;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding: 12px 24px;
         margin-bottom: 10px;
     }
 

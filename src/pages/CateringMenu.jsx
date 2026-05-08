@@ -3,7 +3,7 @@ import './CateringMenu.css';
 import { useLocation } from "react-router-dom";
 import TacoButton from '../components/TacoButton';
 
-const CATERING_TABS = ['party-trays', 'live-catering', 'individual-packs', 'sides'];
+const CATERING_TABS = ['party-trays', 'live-catering', 'individual-packs','prokit', 'sides'];
 
 const CateringMenu = () => {
     const location = useLocation();
@@ -19,6 +19,8 @@ const CateringMenu = () => {
             //     return <BuffetStyleSection />;
             case 'individual-packs':
                 return <IndividualPacksSection />;
+            case 'prokit':
+                return <ProkitCateringSection/>;
             case 'sides':
                 return <SidesSection />;
             default:
@@ -280,6 +282,65 @@ const IndividualPacksSection = () => (
                     <div className="superman-price-row"><span>Torta Combo</span><span className="superman-price">$13</span></div>
                     <div className="superman-price-row"><span>Quesadilla Combo</span><span className="superman-price">$13</span></div>
                      <div className="superman-price-row"><span>Enchiladas Combo</span><span className="superman-price">$13</span></div>
+                </div>
+            </div>
+            <TacoButton text="CATER NOW"
+                width={window.innerWidth < 768 ? "100%" : "100%"}
+                height={window.innerWidth < 768 ? "51px" : "57px"}
+                styleType="1"
+                fontSize={window.innerWidth < 768 ? "18px" : "24px"}
+                link="https://www.ezcater.com/brand/pvt/taco-pros"
+                textColor={"#E3501d"}
+            />
+        </div>
+    </div>
+);
+
+const ProkitCateringSection = () => (
+    <div className="superman-grid-layout">
+        <h1 className="superman-title">Prokit</h1>
+        <div className="superman-media-col">
+            <div className="superman-sticky-wrapper">
+                <div className="superman-hero-img-wrapper">
+                    <img src="tp pro kit.png" alt="Live Catering" className="superman-hero-img" />
+                </div>
+                <div className="ddnone">
+                    <TacoButton text="CATER NOW"
+                        width={window.innerWidth < 768 ? "100%" : "100%"}
+                        height={window.innerWidth < 768 ? "51px" : "57px"}
+                        styleType="1"
+                        fontSize={window.innerWidth < 768 ? "18px" : "24px"}
+                        link="https://www.ezcater.com/brand/pvt/taco-pros"
+                        textColor={"#E3501d"}
+                    />
+                </div>
+
+            </div>
+        </div>
+        <div className="superman-info-col">
+            <div className="superman-live-card">
+                <h2 className="superman-main-price">Build Your Own Pro Kit</h2>
+                <h3 className="superman-min-people">91.99 $ ($11.50 / person) Serves 8</h3>
+                <p className="superman-server-info">A complete, customizable taco bar experience. Everything you need to build the perfect meal for your group, including your choices of 2 proteins, style & tortillas, 3 salsas , a traditional duo (Mexican rice & savory beans, 28oz each), and 3 sides.</p>
+                <div className="superman-info-box">
+                    <h4>PROTEIN OPTIONS : </h4>
+                    <ul>
+                        <li>Regular Protein,Signature Protein</li>
+                    </ul>
+                </div>
+                <div className="superman-info-box">
+                    <h4>STYLE OPTIONS :  </h4>
+                    <ul>
+                        <li>American Style,Mexican Style</li>
+                    </ul>
+                </div>
+                <div className="superman-info-box">
+                    <h4>TORTILLA OPTIONS : </h4>
+                    <p>Flour Tortillas,Corn Tortillas,Mix & Match</p>
+                </div>
+                <div className="superman-info-box">
+                    <h4>ADD EXTRA SIDES, TOPPINGS, DESSERT & BEVERAGES AS PER YOUR CHOICE. CHARGES APPLY.</h4>
+                    {/* <p>*Utensils — $1 per person</p> */}
                 </div>
             </div>
             <TacoButton text="CATER NOW"

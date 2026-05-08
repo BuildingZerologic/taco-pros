@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 170px;
+    height: 110px;
 }
 .Heading-main h1 {
     font-size: 5rem;
@@ -27,10 +27,14 @@
 
 .bhjk {
     max-width: 1024px;
-    margin: 40px auto;
+    margin: 12px auto 40px;
     padding: 40px;
     font-family: 'RobotoSlab', sans-serif;
  
+}
+
+.bhjk.my-5 {
+    margin-top: 12px !important;
 }
 
 .bhjk h4 {

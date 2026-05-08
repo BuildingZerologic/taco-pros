@@ -39,10 +39,23 @@
     color: white;
 }
 
+.Heading-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+}
+
+.Heading-main h1 {
+    font-size: 5rem;
+    letter-spacing: 4px;
+    margin: 2;
+}
+
 
 .form-mix-wrapper {
 
-    padding: 40px 20px;
+    padding: 12px 20px 40px;
     font-family: 'Arial Narrow', sans-serif;
 }
 

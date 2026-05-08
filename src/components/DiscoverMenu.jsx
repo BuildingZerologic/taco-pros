@@ -703,6 +703,25 @@ const cateringItems = [
             }
         ], orderNow: 'link'
     }, {
+        category: 'PROKIT',
+        menuIcon: 'tp pro kit b.png',
+        image: 'tp pro kit b.png',
+        menuTitle: 'Pro Kit',
+        dishes: [
+            {
+                title: '',
+                description: ` <div class="mkjkj">Starting At $ <br>
+                   <div class="kkikp">
+
+(Minimum of 25 Orders)
+                   </div>
+                </div>`,
+                price: '',
+                img: "GUAC AND CHIPS.png"
+            }
+        ], orderNow: 'link'
+    },
+     {
         category: 'SIDES',
         menuIcon: '/600px_tp chips.png',
         image: '/600px_tp chips.png',
@@ -799,8 +818,7 @@ export default function DiscoverMenu() {
         const categoryId = item.menuTitle.toLowerCase().replace(/\s+/g, "-");
         const categoryMap = {
             "individual-catering-packs": "individual-packs",
-            "buffet-style-catering": "individual-packs",
-            "pro-kit": "individual-packs",
+            "pro-kit": "prokit",
         };
 
         return categoryMap[categoryId] || categoryId;
