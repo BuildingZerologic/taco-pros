@@ -35,10 +35,11 @@ export default function Rewards() {
 
                 <div className="batman-rewards-btn">
                     <TacoButton text="CLICK TO LOGIN OR REGISTER"
-                        width={window.innerWidth < 768 ? "155px" : "302px"}
-                        height={window.innerWidth < 768 ? "51px" : "57px"}
+                        width="100%"
+                        height="100%"
                         styleType="1"
-                        fontSize={window.innerWidth < 768 ? "18px" : "24px"}
+                        fontSize="inherit"
+                        styleClass="batman-rewards-login-btn"
                         link="https://www.toasttab.com/taco-pros-chicago-taylor-2200-west-taylor-street/rewardsSignup"
                     />
                 </div>

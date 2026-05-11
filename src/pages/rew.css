@@ -110,16 +110,22 @@
 /* --- Button Styling --- */
 .batman-rewards-btn {
     display: inline-block;
-
+    width: 302px;
+    height: 57px;
+    font-size: 24px;
     color: white;
     text-decoration: none;
-
-
     text-transform: uppercase;
     transition: all 0.3s ease;
     margin-bottom: 12px;
     font-family: 'Houseofcards';
     margin-top: 14px;
+}
+
+.batman-rewards-login-btn .taco-btn-top {
+    font-size: inherit;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .batman-rewards-btn:active {
@@ -330,6 +336,9 @@
     .batman-rewards-btn {
         margin-top: 10px;
         margin-bottom: 8px;
+        width: min(302px, calc(100vw - 48px));
+        height: 51px;
+        font-size: clamp(16px, 5.1vw, 18px);
     }
 }
 
