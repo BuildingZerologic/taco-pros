@@ -843,6 +843,12 @@ export default function DiscoverMenu() {
         }
     }, [location.pathname]);
 
+    useEffect(() => {
+        if (menuScrollRef.current) {
+            menuScrollRef.current.scrollTo({ left: 0, behavior: "auto" });
+        }
+    }, [menuType]);
+
     const handleClick = (idx) => {
         setActiveTab(idx);
         setAnimateIndex(idx);
