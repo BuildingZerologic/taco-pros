@@ -912,8 +912,10 @@ export default function DiscoverMenu() {
 
                         {/* Left Arrow */}
                         <button
+                            type="button"
                             className="mdx-scroll-arrow mdx-left"
                             onClick={() => scrollMenu("left")}
+                            aria-label="Scroll menu left"
                         >
                             ❮
                         </button>
@@ -921,7 +923,7 @@ export default function DiscoverMenu() {
                         {/* Scrollable Menu */}
                         <div
                             ref={menuScrollRef}
-                            className={`menuDiscover mdx-menu-scroll ${menuType === "catering" ? "justify-center" : "justify-start"
+                            className={`menuDiscover mdx-menu-scroll ${menuType === "catering" ? "justify-center catering-mode" : "justify-start"
                                 }`}
                              onMouseEnter={stopAutoScroll}
                         onMouseLeave={startAutoScroll}
@@ -952,8 +954,10 @@ export default function DiscoverMenu() {
 
                         {/* Right Arrow */}
                         <button
+                            type="button"
                             className="mdx-scroll-arrow mdx-right"
                             onClick={() => scrollMenu("right")}
+                            aria-label="Scroll menu right"
                         >
                             ❯
                         </button>

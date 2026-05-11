@@ -21,10 +21,40 @@ const HeroSlider = ({ images, video }) => {
     return () => clearInterval(interval);
   }, [isSlider, images?.length]);
 
+  useEffect(() => {
+    if (!showVideo || !videoRef.current) return;
+
+    const heroVideo = videoRef.current;
+
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.setAttribute('muted', '');
+    heroVideo.setAttribute('playsinline', '');
+    heroVideo.setAttribute('webkit-playsinline', '');
+
+    const playHeroVideo = () => {
+      const playPromise = heroVideo.play();
+      if (playPromise) {
+        playPromise.catch(() => {
+          // Safari may still block autoplay in Low Power Mode or strict user settings.
+        });
+      }
+    };
+
+    heroVideo.load();
+    playHeroVideo();
+    heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
+
+    return () => {
+      heroVideo.removeEventListener('canplay', playHeroVideo);
+    };
+  }, [showVideo, video]);
+
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
       setIsMuted(videoRef.current.muted);
+      videoRef.current.play().catch(() => {});
     }
   };
 
@@ -35,11 +65,13 @@ const HeroSlider = ({ images, video }) => {
         <div className="cfx-video-wrapper">
           <video
             ref={videoRef}
+            key={video}
             autoPlay
             muted
+            defaultMuted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             className="cfx-hero-video"
           >
             <source src={video} type="video/mp4" />

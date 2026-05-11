@@ -52,7 +52,7 @@ const PartyTraysSection = () => (
         <div className="superman-hero-img-wrapper">
           <img src="/PARTY TRAYS.png" alt="Party Trays" className="superman-hero-img" />
         </div>
-        <button className="superman-cta-btn ddnone">CATER NOW</button>
+        <button className="superman-cta-btn ddnone">ORDER NOW</button>
       </div>
     </div>
     <div className="superman-info-col">
@@ -80,7 +80,7 @@ const PartyTraysSection = () => (
           <span className="superman-price">$65</span>
         </div>
       </div>
-      <button className="superman-cta-btn mnone">CATER NOW</button>
+      <button className="superman-cta-btn mnone">ORDER NOW</button>
     </div>
   </div>
 );
@@ -94,7 +94,7 @@ const LiveCateringSection = () => (
         <div className="superman-hero-img-wrapper">
           <img src="/fffff.png" alt="Live Catering" className="superman-hero-img" />
         </div>
-        <button className="superman-cta-btn ddnone">CATER NOW</button>
+        <button className="superman-cta-btn ddnone">ORDER NOW</button>
       </div>
     </div>
     <div className="superman-info-col">
@@ -117,7 +117,7 @@ const LiveCateringSection = () => (
           <p>*Utensils — $1 per person</p>
         </div>
       </div>
-        <button className="superman-cta-btn mnone">CATER NOW</button>
+        <button className="superman-cta-btn mnone">ORDER NOW</button>
     </div>
   </div>
 );
@@ -131,7 +131,7 @@ const BuffetStyleSection = () => (
         <div className="superman-hero-img-wrapper">
           <img src="/BUFFET STYLE CATERING.png" alt="Buffet Style" className="superman-hero-img" />
         </div>
-        <button className="superman-cta-btn ddnone">CATER NOW</button>
+        <button className="superman-cta-btn ddnone">ORDER NOW</button>
       </div>
     </div>
     <div className="superman-info-col">
@@ -149,7 +149,7 @@ const BuffetStyleSection = () => (
         <div className="superman-price-row"><span>9x9 Tray</span><span className="superman-price">$36</span></div>
         <div className="superman-price-row"><span>Half Tray</span><span className="superman-price">$72</span></div>
       </div>
-        <button className="superman-cta-btn mnone">CATER NOW</button>
+        <button className="superman-cta-btn mnone">ORDER NOW</button>
     </div>
   </div>
 );
@@ -163,7 +163,7 @@ const IndividualPacksSection = () => (
         <div className="superman-hero-img-wrapper">
           <img src="/INDIVISUAL CATERING.png" alt="Individual Packs" className="superman-hero-img" />
         </div>
-        <button className="superman-cta-btn ddnone">CATER NOW</button>
+        <button className="superman-cta-btn ddnone">ORDER NOW</button>
       </div>
     </div>
     <div className="superman-info-col">
@@ -179,7 +179,7 @@ const IndividualPacksSection = () => (
           <div className="superman-price-row"><span>Torta Combo</span><span className="superman-price">$13</span></div>
         </div>
       </div>
-        <button className="superman-cta-btn mnone">CATER NOW</button>
+        <button className="superman-cta-btn mnone">ORDER NOW</button>
     </div>
   </div>
 );
@@ -255,7 +255,7 @@ const SidesSection = () => (
         </div>
       </div>
 
-      <button className="superman-cta-btn" style={{ marginTop: '30px', maxWidth: '100%' }}>CATER NOW</button>
+      <button className="superman-cta-btn" style={{ marginTop: '30px', maxWidth: '100%' }}>ORDER NOW</button>
     </div>
   </div>
 );

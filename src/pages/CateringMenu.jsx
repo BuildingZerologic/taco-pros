@@ -91,7 +91,7 @@ const PartyTraysSection = () => (
                     <img src="/PARTY TRAYS.png" alt="Party Trays" className="superman-hero-img" />
                 </div>
                 <div className='ddnone'>
-                    <TacoButton text="CATER NOW"
+                    <TacoButton text="ORDER NOW"
                         width={window.innerWidth < 768 ? "100%" : "100%"}
                         height={window.innerWidth < 768 ? "51px" : "57px"}
                         styleType="1"
@@ -150,7 +150,7 @@ const LiveCateringSection = () => (
                     <img src="/fffff.png" alt="Live Catering" className="superman-hero-img" />
                 </div>
                 <div className="ddnone">
-                    <TacoButton text="CATER NOW"
+                    <TacoButton text="ORDER NOW"
                         width={window.innerWidth < 768 ? "100%" : "100%"}
                         height={window.innerWidth < 768 ? "51px" : "57px"}
                         styleType="1"
@@ -182,7 +182,7 @@ const LiveCateringSection = () => (
                     <p>*Utensils — $1 per person</p>
                 </div>
             </div>
-            <TacoButton text="CATER NOW"
+            <TacoButton text="ORDER NOW"
                 width={window.innerWidth < 768 ? "100%" : "100%"}
                 height={window.innerWidth < 768 ? "51px" : "57px"}
                 styleType="1"
@@ -258,7 +258,7 @@ const IndividualPacksSection = () => (
                     <img src="/INDIVISUAL CATERING.png" alt="Individual Packs" className="superman-hero-img" />
                 </div>
                 <div className="ddnone">
-                     <TacoButton text="CATER NOW"
+                     <TacoButton text="ORDER NOW"
                     width={window.innerWidth < 768 ? "100%" : "100%"}
                     height={window.innerWidth < 768 ? "51px" : "57px"}
                     styleType="1"
@@ -284,7 +284,7 @@ const IndividualPacksSection = () => (
                      <div className="superman-price-row"><span>Enchiladas Combo</span><span className="superman-price">$13</span></div>
                 </div>
             </div>
-            <TacoButton text="CATER NOW"
+            <TacoButton text="ORDER NOW"
                 width={window.innerWidth < 768 ? "100%" : "100%"}
                 height={window.innerWidth < 768 ? "51px" : "57px"}
                 styleType="1"
@@ -305,7 +305,7 @@ const ProkitCateringSection = () => (
                     <img src="tp pro kit.png" alt="Live Catering" className="superman-hero-img" />
                 </div>
                 <div className="ddnone">
-                    <TacoButton text="CATER NOW"
+                    <TacoButton text="ORDER NOW"
                         width={window.innerWidth < 768 ? "100%" : "100%"}
                         height={window.innerWidth < 768 ? "51px" : "57px"}
                         styleType="1"
@@ -343,7 +343,7 @@ const ProkitCateringSection = () => (
                     {/* <p>*Utensils — $1 per person</p> */}
                 </div>
             </div>
-            <TacoButton text="CATER NOW"
+            <TacoButton text="ORDER NOW"
                 width={window.innerWidth < 768 ? "100%" : "100%"}
                 height={window.innerWidth < 768 ? "51px" : "57px"}
                 styleType="1"
@@ -564,7 +564,7 @@ const SidesSection = () => (
 
 
 
-                <TacoButton text="CATER NOW"
+                <TacoButton text="ORDER NOW"
                     width={window.innerWidth < 768 ? "100%" : "100%"}
                     height={window.innerWidth < 768 ? "51px" : "57px"}
                     styleType="1"

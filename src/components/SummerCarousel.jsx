@@ -1,23 +1,25 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import "./burrito.css"; // reuse same CSS
 import TacoButton from './TacoButton';
 
 const SummerCarousel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
+    const swipeStartX = useRef(null);
+    const swipeDeltaX = useRef(0);
 
     const data = useMemo(() => [
         {
             id: 1,
-            title: "New Dish Alert",
-            desc: `Bigger Better Pro Burritos Starting at $10 `,
-            img: "/tp mob offer new dish alert (1).jpg"
-        },
-        {
-            id: 2,
             title: "Sandia Splash",
             desc: `Cool down & chill out with the all-new Sandia Splash, available only at Taco Pros.`,
             img: "/tp mob offer sandia.jpg"
+        },
+        {
+            id: 2,
+            title: "New Dish Alert",
+            desc: `Bigger Better Pro Burritos Starting at $10 `,
+            img: "/tp mob offer new dish alert (1).jpg"
         },
         {
             id: 3,
@@ -53,6 +55,33 @@ const SummerCarousel = () => {
 
     const goToNext = () => {
         setActiveIndex((current) => (current === lastIndex ? 0 : current + 1));
+    };
+
+    const startSwipe = (clientX) => {
+        swipeStartX.current = clientX;
+        swipeDeltaX.current = 0;
+        setIsPaused(true);
+    };
+
+    const moveSwipe = (clientX) => {
+        if (swipeStartX.current === null) return;
+        swipeDeltaX.current = clientX - swipeStartX.current;
+    };
+
+    const endSwipe = () => {
+        if (swipeStartX.current === null) return;
+
+        const swipeThreshold = 36;
+
+        if (swipeDeltaX.current > swipeThreshold) {
+            goToPrev();
+        } else if (swipeDeltaX.current < -swipeThreshold) {
+            goToNext();
+        }
+
+        swipeStartX.current = null;
+        swipeDeltaX.current = 0;
+        setIsPaused(false);
     };
 
     useEffect(() => {
@@ -96,6 +125,16 @@ const SummerCarousel = () => {
                 className="summer-offer-swiper"
                 aria-roledescription="carousel"
                 aria-label="Summer offers"
+                onPointerDown={(event) => {
+                    event.currentTarget.setPointerCapture?.(event.pointerId);
+                    startSwipe(event.clientX);
+                }}
+                onPointerMove={(event) => moveSwipe(event.clientX)}
+                onPointerUp={(event) => {
+                    event.currentTarget.releasePointerCapture?.(event.pointerId);
+                    endSwipe();
+                }}
+                onPointerCancel={endSwipe}
             >
                 <div className="summer-slider-stage">
                     {slides.map((item) => (
@@ -141,6 +180,7 @@ const SummerCarousel = () => {
                 width="clamp(155px, 22vw, 302px)"
                 height="clamp(51px, 5vw, 57px)"
                 styleType="1"
+                link="https://tacopros.toast.site/"
                 fontSize="clamp(18px, 2vw, 24px)"
             />
 

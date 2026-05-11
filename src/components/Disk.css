@@ -145,6 +145,19 @@
     aspect-ratio: 1 / 1;
 }
 
+.menuDiscover.catering-mode .menuDiscoverCard {
+    padding: 20px 16px 18px;
+}
+
+.menuDiscover.catering-mode .MenuCage {
+    height: 118px;
+}
+
+.menuDiscover.catering-mode .menuDiscoverCard > .MenuCage > img {
+    width: 112px;
+    height: 112px;
+}
+
 img, svg {
     vertical-align: middle;
 }
@@ -171,11 +184,26 @@ img, svg {
     border: none;
     cursor: pointer;
     z-index: 5;
-    font-size: 18px;
+    font-size: 0;
+    line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.2s;
+}
+
+.mdx-scroll-arrow::before {
+    font-size: 28px;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+}
+
+.mdx-left::before {
+    content: "\2039";
+}
+
+.mdx-right::before {
+    content: "\203A";
 }
 
 .mdx-scroll-arrow:hover {
@@ -263,6 +291,19 @@ img, svg {
     .menuDiscoverCard img {
         width: 110px;
         height: 110px;
+    }
+
+    .menuDiscover.catering-mode .menuDiscoverCard {
+        padding: 14px 12px;
+    }
+
+    .menuDiscover.catering-mode .MenuCage {
+        height: 88px;
+    }
+
+    .menuDiscover.catering-mode .menuDiscoverCard > .MenuCage > img {
+        width: 82px;
+        height: 82px;
     }
 
     .menuDiscoverCard span {

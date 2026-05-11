@@ -13,6 +13,9 @@ const MENU_DATA = [
     { id: 2, video: "2.mp4" },
     { id: 3, video: "tacopros1.mp4" },
     { id: 4, video: "tacopros2.mp4" },
+    { id: 5, video: "tacopros3.mp4" },
+    { id: 6, video: "tacopros4.mp4" },
+    { id: 7, video: "tacopros5.mp4" },
 ];
 
 
@@ -37,10 +40,21 @@ const data = [
         src: "tacopros2.mp4",
         link: "https://www.instagram.com/taco_pros/",
     },
-
-
-
-
+    {
+        type: "video",
+        src: "tacopros3.mp4",
+        link: "https://www.instagram.com/taco_pros/",
+    },
+    {
+        type: "video",
+        src: "tacopros4.mp4",
+        link: "https://www.instagram.com/taco_pros/",
+    },
+    {
+        type: "video",
+        src: "tacopros5.mp4",
+        link: "https://www.instagram.com/taco_pros/",
+    },
 ];
 
 

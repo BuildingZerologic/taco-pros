@@ -179,7 +179,7 @@ export default function TimelineLayout() {
                                     height={window.innerWidth < 768 ? "51px" : "57px"}
                                     styleType="1"
                                     fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                                    link="/locations"
+                                    link=" https://tacopros.toast.site/"
                                 />
                                  <div className="bottomTile"></div>
                         </div>
@@ -313,7 +313,7 @@ export default function TimelineLayout() {
                         <MissionHeadline className="jhv-bold-title" />
                     </div>
                     <p className="jhv-cta-body">{missionCta.body}</p>
-                    <a href="#" className="jhv-cta-button">
+                    <a href="https://tacopros.toast.site/" className="jhv-cta-button">
                         ORDER NOW
                     </a>
                     <img

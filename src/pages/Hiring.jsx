@@ -42,7 +42,7 @@ function Hiring() {
 
           
             <section className='form-mix-wrapper hirew'>
-                <h1>JOIN OUR TEAM</h1>
+                <h2 className='form-mix-heading'>JOIN OUR TEAM</h2>
                 <p>We Are An Equal Opportunity Employer. <br /> <br />
 
                     All applicants are considered for all positions without regard to race, color, religion, disability, sex, national origin, age, marital status, veteran or military status, sexual orientation, or any other basis prohibited by state, federal or local law.</p>

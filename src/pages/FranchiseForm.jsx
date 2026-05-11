@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import axios from "axios";
 import "./FranchiseForm.css";
 
 function FranchiseForm() {
@@ -129,7 +130,7 @@ function FranchiseForm() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (submitted) return;
@@ -143,10 +144,25 @@ function FranchiseForm() {
       return;
     }
 
-    console.log("Franchise application JSON:", formData);
-    setSubmitted(true);
-    setSubmitStatus('success');
-    setStep(steps.length);
+    try {
+      const response = await axios.post("/franchise_api.php", formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.data?.success) {
+        setSubmitted(true);
+        setSubmitStatus('success');
+        setStep(steps.length);
+        return;
+      }
+
+      setSubmitStatus('idle');
+      alert(`Error: ${response.data?.message || "Unable to submit application."}`);
+    } catch (err) {
+      console.error("Submission Error:", err);
+      setSubmitStatus('idle');
+      alert("An error occurred while sending the application.");
+    }
   };
 
   const svg = (

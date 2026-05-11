@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import "./Disc.css";
 import TacoButton from "./TacoButton";
+import ResponsiveImage from "./ResponsiveImage";
 
 function Kit() {
     return (
@@ -35,7 +36,13 @@ function Kit() {
 
                 </div>
                 <div className="ox-image-container">
-                    <img src="/culture.jpg" alt="Authentic Mexican Food" className="ox-image" />
+                    <ResponsiveImage
+                        mobileSrc="/old dudes mobile.jpg"
+                        tabletSrc="/culture.jpg"
+                        desktopSrc="/tp site landscape desktop old dudes.jpg"
+                        alt="Authentic Mexican Food"
+                        className="ox-image"
+                    />
                 </div>
             </div>
         </>

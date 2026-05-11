@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import "./Disc.css";
 import TacoButton from "./TacoButton";
+import ResponsiveImage from "./ResponsiveImage";
 
 
 function Disc() {
@@ -26,6 +27,7 @@ function Disc() {
                             height="clamp(51px, 5vw, 57px)"
                             fontSize="clamp(16px, 2vw, 24px)"
                             styleType="2"
+                            link="https://tacopros.toast.site/"
                             textColor ="#e4531e"
                         
                         />
@@ -36,7 +38,13 @@ function Disc() {
                    
                 </div>
                 <div className="ox-image-container">
-                    <img src="/tp site square nachos.jpg" alt="Authentic Mexican Food" className="ox-image" />
+                    <ResponsiveImage
+                        mobileSrc="/nachos mobile.jpg"
+                        tabletSrc="/tp site square nachos.jpg"
+                        desktopSrc="/tp site landscape desktop nacho.jpg"
+                        alt="Authentic Mexican Food"
+                        className="ox-image"
+                    />
                 </div>
             </div>
         </>

@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import "./Disc.css";
 import TacoButton from "./TacoButton";
+import ResponsiveImage from "./ResponsiveImage";
 
 function ProK() {
     return (
@@ -34,7 +35,13 @@ function ProK() {
 
                 </div>
                 <div className="ox-image-container">
-                    <img src="/tp site pro kit square.jpg" alt="Authentic Mexican Food" className="ox-image" />
+                    <ResponsiveImage
+                        mobileSrc="/pro kit mobile.jpg"
+                        tabletSrc="/tp site pro kit square.jpg"
+                        desktopSrc="/tp site landscape desktop pro kit.jpg"
+                        alt="Authentic Mexican Food"
+                        className="ox-image"
+                    />
                 </div>
             </div>
         </>

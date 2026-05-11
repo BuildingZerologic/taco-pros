@@ -87,10 +87,17 @@ function Location() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn2 primary2"
+                        onClick={(e) => e.stopPropagation()}
                       >
                         <span className="nbhh">Directions</span>
                       </a>
-                      <a href={loc.orderLink} target="_blank" rel="noreferrer" className="btn2 btn-3">
+                      <a
+                        href={loc.orderLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn2 btn-3"
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         <span className="nbh">Order Online</span>
                       </a>
                     </div>

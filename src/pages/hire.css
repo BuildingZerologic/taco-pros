@@ -26,11 +26,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 110px;
+    min-height: 110px;
+    padding: 18px 16px;
+    text-align: center;
+    box-sizing: border-box;
 }
 .Heading-main h1 {
-    font-size: 5rem;
-    letter-spacing: 4px;
-    margin: 2;
+    font-size: clamp(2.4rem, 8vw, 5rem);
+    letter-spacing: clamp(1px, 0.5vw, 4px);
+    line-height: 1;
+    margin: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
    
+}
+
+@media (max-width: 768px) {
+    .Heading-main {
+        min-height: 76px;
+        padding: 14px 12px 8px;
+    }
+
+    .Heading-main h1 {
+        font-size: clamp(2.6rem, 12vw, 3.6rem);
+        letter-spacing: 1px;
+        line-height: 0.95;
+    }
+
+    .hirew > h1 {
+        text-align: center;
+        font-size: clamp(1.8rem, 9vw, 2.4rem);
+        line-height: 1;
+        margin: 0 0 8px;
+    }
 }
