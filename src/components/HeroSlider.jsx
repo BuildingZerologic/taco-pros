@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './HeroSlider.css';
-import { Link } from 'react-router-dom';
 import TacoButton from './TacoButton';
+
+const ORDER_LINK = 'https://tacopros.toast.site/';
 
 const HeroSlider = ({ images, video }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -109,7 +110,7 @@ const HeroSlider = ({ images, video }) => {
 
       {/* Hero Overlay Content */}
       <div className="cfx-hero-overlay">
-        <Link to="/menu">
+        <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer">
           {/* <button className="cfx-hero-button">ORDER NOW</button> */}
 
           <TacoButton text="ORDER NOW"
@@ -121,7 +122,7 @@ const HeroSlider = ({ images, video }) => {
 
             
 
-        </Link>
+        </a>
       </div>
 
       {isSlider && (

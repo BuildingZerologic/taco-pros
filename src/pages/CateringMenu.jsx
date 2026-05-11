@@ -3,7 +3,7 @@ import './CateringMenu.css';
 import { useLocation } from "react-router-dom";
 import TacoButton from '../components/TacoButton';
 
-const CATERING_TABS = ['party-trays', 'live-catering', 'individual-packs','prokit', 'sides'];
+const CATERING_TABS = ['party-trays', 'live-catering', 'individual-packs','pro-kit', 'sides'];
 
 const CateringMenu = () => {
     const location = useLocation();
@@ -19,7 +19,7 @@ const CateringMenu = () => {
             //     return <BuffetStyleSection />;
             case 'individual-packs':
                 return <IndividualPacksSection />;
-            case 'prokit':
+            case 'pro-kit':
                 return <ProkitCateringSection/>;
             case 'sides':
                 return <SidesSection />;
@@ -96,7 +96,7 @@ const PartyTraysSection = () => (
                         height={window.innerWidth < 768 ? "51px" : "57px"}
                         styleType="1"
                         fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                        link="https://www.ezcater.com/brand/pvt/taco-pros"
+                        link="https://tacopros.toast.site/"
                         textColor={"#E3501d"}
                     />
                 </div>
@@ -133,7 +133,7 @@ const PartyTraysSection = () => (
                 height={window.innerWidth < 768 ? "51px" : "57px"}
                 styleType="1"
                 fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                link="https://www.ezcater.com/brand/pvt/taco-pros"
+                link="https://tacopros.toast.site/"
                 textColor={"#E3501d"}
             />
         </div>
@@ -155,7 +155,7 @@ const LiveCateringSection = () => (
                         height={window.innerWidth < 768 ? "51px" : "57px"}
                         styleType="1"
                         fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                        link="https://www.ezcater.com/brand/pvt/taco-pros"
+                        link="https://tacopros.toast.site/"
                         textColor={"#E3501d"}
                     />
                 </div>
@@ -187,7 +187,7 @@ const LiveCateringSection = () => (
                 height={window.innerWidth < 768 ? "51px" : "57px"}
                 styleType="1"
                 fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                link="https://www.ezcater.com/brand/pvt/taco-pros"
+                link="https://tacopros.toast.site/"
                 textColor={"#E3501d"}
             />
         </div>
@@ -209,7 +209,7 @@ const LiveCateringSection = () => (
 //                         height={window.innerWidth < 768 ? "51px" : "57px"}
 //                         styleType="1"
 //                         fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-//                         link="https://www.ezcater.com/brand/pvt/taco-pros"
+//                         link="https://tacopros.toast.site/"
 //                         textColor={"#E3501d"}
 //                     />
 //                 </div>
@@ -241,7 +241,7 @@ const LiveCateringSection = () => (
 //                 height={window.innerWidth < 768 ? "51px" : "57px"}
 //                 styleType="1"
 //                 fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-//                 link="https://www.ezcater.com/brand/pvt/taco-pros"
+//                 link="https://tacopros.toast.site/"
 //                 textColor={"#E3501d"}
 //             />
 //         </div>
@@ -263,7 +263,7 @@ const IndividualPacksSection = () => (
                     height={window.innerWidth < 768 ? "51px" : "57px"}
                     styleType="1"
                     fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                    link="https://www.ezcater.com/brand/pvt/taco-pros"
+                    link="https://tacopros.toast.site/"
                     textColor={"#E3501d"}
                 />
                 </div>
@@ -289,7 +289,7 @@ const IndividualPacksSection = () => (
                 height={window.innerWidth < 768 ? "51px" : "57px"}
                 styleType="1"
                 fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                link="https://www.ezcater.com/brand/pvt/taco-pros"
+                link="https://tacopros.toast.site/"
                 textColor={"#E3501d"}
             />
         </div>
@@ -298,7 +298,7 @@ const IndividualPacksSection = () => (
 
 const ProkitCateringSection = () => (
     <div className="superman-grid-layout">
-        <h1 className="superman-title">Prokit</h1>
+        <h1 className="superman-title">Pro kit</h1>
         <div className="superman-media-col">
             <div className="superman-sticky-wrapper">
                 <div className="superman-hero-img-wrapper">
@@ -310,7 +310,7 @@ const ProkitCateringSection = () => (
                         height={window.innerWidth < 768 ? "51px" : "57px"}
                         styleType="1"
                         fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                        link="https://www.ezcater.com/brand/pvt/taco-pros"
+                        link="https://tacopros.toast.site/"
                         textColor={"#E3501d"}
                     />
                 </div>
@@ -348,7 +348,7 @@ const ProkitCateringSection = () => (
                 height={window.innerWidth < 768 ? "51px" : "57px"}
                 styleType="1"
                 fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                link="https://www.ezcater.com/brand/pvt/taco-pros"
+                link="https://tacopros.toast.site/"
                 textColor={"#E3501d"}
             />
         </div>
@@ -569,7 +569,7 @@ const SidesSection = () => (
                     height={window.innerWidth < 768 ? "51px" : "57px"}
                     styleType="1"
                     fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                    link="https://www.ezcater.com/brand/pvt/taco-pros"
+                    link="https://tacopros.toast.site/"
                     textColor={"#E3501d"}
                 />
 

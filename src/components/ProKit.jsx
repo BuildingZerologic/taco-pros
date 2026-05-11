@@ -27,7 +27,7 @@ const MexSection = () => {
                             Everything you need for your fiest, all in
                             one beautiful kit.
                         </p>
-                        <button className="mex-button">
+                        <button className="mex-button" onClick={() => window.open('https://tacopros.toast.site/', '_blank', 'noopener,noreferrer')}>
                             ORDER NOW
                         </button>
                     </div>

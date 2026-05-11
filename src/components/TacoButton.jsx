@@ -9,7 +9,10 @@ const TacoButton = ({
   width = "100%",   // default now responsive
   height = "60px",
   fontSize = "1.2rem",
-  textColor
+  textColor,
+  type = "button",
+  disabled = false,
+  onClick
 }) => {
   
   const containerStyle = {
@@ -25,6 +28,8 @@ const TacoButton = ({
   };
 
   const handleClick = (event) => {
+    if (disabled) return;
+
     if (!link || link === "#") return;
 
     event.preventDefault();
@@ -40,10 +45,11 @@ const TacoButton = ({
 
   return (
     <button 
-      type="button"
+      type={type}
       className={`taco-btn-container taco-btn-style-${styleType} ${styleClass}`.trim()} 
       style={containerStyle}
-      onClick={handleClick}
+      onClick={onClick || handleClick}
+      disabled={disabled}
     >
       <div className="taco-btn-shadow"></div>
       <div className="taco-btn-top" style={topStyle}>

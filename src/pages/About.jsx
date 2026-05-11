@@ -2,6 +2,8 @@ import './About.css';
 import ScrollSVG from './ScrollSVG';
 
 export default function About() {
+    const ORDER_LINK = 'https://tacopros.toast.site/';
+
     return (
         <>
 
@@ -73,7 +75,12 @@ export default function About() {
                         real pros, with real flavor that hits every time.
                     </p>
 
-                    <button className="cfx-hero-button">ORDER NOW</button>
+                    <button
+                        className="cfx-hero-button"
+                        onClick={() => window.open(ORDER_LINK, '_blank', 'noopener,noreferrer')}
+                    >
+                        ORDER NOW
+                    </button>
                 </div>
 
             </section>

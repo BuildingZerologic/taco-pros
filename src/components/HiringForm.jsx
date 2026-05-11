@@ -2,6 +2,7 @@ import React, { useMemo, useRef, useState } from 'react';
 import axios from 'axios';
 import './HiringForm.css';
 import './HiringLayout.css';
+import TacoButton from './TacoButton';
 
 const svg = (
     <svg
@@ -354,13 +355,15 @@ const HiringForm = () => {
                             Thank you for applying. Our team will review your application and get back to you soon.
                         </p>
 
-                        <button
-                            type="button"
-                            className="btn btn-primary mt-3"
+                        <TacoButton
+                            text="Submit Another Response"
+                            width="clamp(230px, 28vw, 330px)"
+                            height="clamp(51px, 5vw, 57px)"
+                            fontSize="clamp(14px, 1.6vw, 18px)"
+                            styleType="2"
+                            styleClass="taco-btn-form-green"
                             onClick={() => window.location.reload()}
-                        >
-                            Submit Another Response
-                        </button>
+                        />
                     </div>
                 )}
             </div>
@@ -368,30 +371,40 @@ const HiringForm = () => {
         
             <div className="d-flex justify-content-between mt-4">
                 {step > 1 && step <= lastFormStep && !submitted ? (
-                    <button
-                        type="button"
-                        className="btn btn-outline-secondary"
+                    <TacoButton
+                        text="Previous"
+                        width="clamp(130px, 14vw, 170px)"
+                        height="clamp(51px, 5vw, 57px)"
+                        fontSize="clamp(15px, 1.8vw, 20px)"
+                        styleType="2"
+                        styleClass="taco-btn-form-green"
                         onClick={prevStep}
-                    >
-                        Previous
-                    </button>
+                    />
                 ) : (
                     <div></div>
                 )}
                 {step < lastFormStep && !submitted ? (
-                    <button
-                        type="button"
-                      
-                        className={` btn btn-primary ${step === 1 ? 'full-width' : 'next'}`}
+                    <TacoButton
+                        text="Next"
+                        width={step === 1 ? "clamp(180px, 24vw, 260px)" : "clamp(130px, 14vw, 170px)"}
+                        height="clamp(51px, 5vw, 57px)"
+                        fontSize="clamp(15px, 1.8vw, 20px)"
+                        styleType="2"
+                        styleClass="taco-btn-form-green"
                         onClick={nextStep}
-                    >
-                        Next
-                    </button>
+                    />
                 ) : null}
                 {step === lastFormStep && !submitted && (
-                    <button type="submit" className="btn btn-primary  mt-3" disabled={submitStatus === 'loading'}>
-                        {submitStatus === 'loading' ? 'Submitting...' : 'Submit Application'}
-                    </button>
+                    <TacoButton
+                        type="submit"
+                        text={submitStatus === 'loading' ? 'Submitting...' : 'Submit Application'}
+                        width="clamp(220px, 26vw, 310px)"
+                        height="clamp(51px, 5vw, 57px)"
+                        fontSize="clamp(14px, 1.6vw, 18px)"
+                        styleType="2"
+                        styleClass="taco-btn-form-green"
+                        disabled={submitStatus === 'loading'}
+                    />
                 )}
             </div>
         </form>

@@ -289,10 +289,40 @@
 } */
 
 .main-wrapper {
+    --story-border-width: 40px;
     width: 100%;
-    background-image: url("/taco pros about us green border desktop right.svg");
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-wrapper::before,
+.main-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    width: var(--story-border-width);
+    background-image: url("/taco pros about us green border desktop right.svg");
+    background-repeat: repeat-y;
+    background-size: var(--story-border-width) auto;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.main-wrapper::before {
+    left: 0;
+    transform: scaleX(-1);
+}
+
+.main-wrapper::after {
+    right: 0;
+}
+
+.main-wrapper > * {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -383,6 +413,13 @@
 
 @media (min-width: 1025px) {
     .container-x {
+        width: calc(100% - (var(--story-border-width) * 2));
+        max-width: none;
+        margin-left: var(--story-border-width);
+        margin-right: var(--story-border-width);
+    }
+
+    .container-x {
         padding-top: 120px;
         min-height: 1950px;
     }
@@ -436,7 +473,19 @@
 
 /* MOBILE */
 
-@media (max-width: 1024px) {
+@media (max-width: 690px) {
+
+    .main-wrapper {
+        --story-border-width: 18px;
+        padding-inline: var(--story-border-width);
+        box-sizing: border-box;
+    }
+
+    .main-wrapper::before,
+    .main-wrapper::after {
+        display: block;
+        bottom: 100px;
+    }
 
     .container {
         padding: 20px;
@@ -668,13 +717,14 @@
         align-items: center;
         /* Center everything horizontally */
         text-align: center;
-        padding: 60px 25px;
+        padding: 60px 25px 0;
         gap: 30px;
+        overflow: hidden;
     }
 
     /* Subheadline styling */
     .jhv-cta-subheadline {
-        font-family: 'Georgia', serif;
+        /* font-family: 'Georgia', serif; */
         color: #3b5a34;
         font-weight: bold;
         letter-spacing: 1.5px;
@@ -716,12 +766,28 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+    .jhv-cta-container .taco-btn-container,
+    .mapcontent .taco-btn-container {
+        margin-top: 10px;
+    }
+
     .jhv-cta-img {
         display: block;
         width: min(88vw, 360px);
-        margin: 10px auto 0;
+        margin: 10px auto -30px;
         object-fit: contain;
         order: 5;
+        position: relative;
+        z-index: 1;
+    }
+
+    .jhv-cta-container .bottomTile {
+        width: 100vw;
+        height: 58px;
+        margin: 0 calc(50% - 50vw);
+        order: 6;
+        background-repeat: repeat-x;
+        background-size: auto 100%;
     }
 
     .mapBoxv {
@@ -743,9 +809,7 @@
         line-height: 1.5;
     }
 
-    .map-new {
-        margin: 50px 0px;
-    }
+   
 
     .jhv-cta-button-2 {
 
@@ -776,7 +840,19 @@
 
 }
 
-@media (min-width: 425px) and (max-width: 1024px) {
+@media (min-width: 691px) and (max-width: 1024px) {
+    .main-wrapper {
+        --story-border-width: 22px;
+        padding-inline: var(--story-border-width);
+        box-sizing: border-box;
+    }
+
+    .main-wrapper::before,
+    .main-wrapper::after {
+        display: block;
+        bottom: 100px;
+    }
+
     .dnone {
         display: none;
     }
@@ -942,4 +1018,73 @@
         height: clamp(42px, 8vw, 62px);
         margin-top: 22px;
     } */
+}
+
+@media (min-width: 691px) and (max-width: 1024px) {
+    .card-5 {
+        min-height: clamp(300px, 40vw, 430px);
+        margin-top: clamp(42px, 6vw, 80px);
+    }
+
+    .cardFive {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 0;
+        padding: 0 clamp(24px, 6vw, 72px);
+    }
+
+    .cardfiveLeft {
+        width: 50%;
+        max-width: 520px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardfiveLeft>span {
+        font-size: clamp(12px, 1.6vw, 16px);
+        line-height: 1.2;
+    }
+
+    .cardfiveLeft>h2 {
+        width: min(100%, 420px);
+        font-size: clamp(26px, 5.4vw, 54px);
+        line-height: 0.95;
+        margin: clamp(10px, 2vw, 24px) 0;
+    }
+
+    .cardfiveLeft p {
+        width: min(100%, 456px);
+        max-width: 456px;
+        font-size: clamp(11px, 1.55vw, 17px);
+        line-height: 1.25;
+        margin-bottom: clamp(12px, 2vw, 22px);
+    }
+
+    .cardfiveLeft .taco-btn-container {
+        width: clamp(155px, 24vw, 302px) !important;
+        height: clamp(51px, 5vw, 57px) !important;
+    }
+
+    .cardfiveRight {
+        width: 50%;
+        max-width: 520px;
+        height: auto;
+        overflow: visible;
+        align-items: flex-end;
+    }
+
+    .cardfiveRight>img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+    }
+
+    .cardfiveLeft .bottomTile {
+        width: 100%;
+        height: clamp(34px, 5.4vw, 67px);
+        margin-top: clamp(14px, 2.4vw, 28px);
+    }
 }

@@ -340,8 +340,8 @@ const menuItems = [
     },
     {
         category: 'ENCHILADAS DINNER',
-        menuIcon: 'i-5.png',
-        image: 'i-5.png',
+        menuIcon: '1_red enchillada_slider.png',
+        image: '1_red enchillada_slider.png',
         menuTitle: 'Enchiladas Dinner',
         dishes: [
             {
@@ -765,7 +765,7 @@ export default function DiscoverMenu() {
 
 
     const [menuType, setMenuType] = useState('discover'); // 'discover' or 'catering'
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = useState(null);
    
 
     const currentItems = menuType === 'discover' ? menuItems : cateringItems;
@@ -773,7 +773,7 @@ export default function DiscoverMenu() {
 
     // ✅ Dynamic URL nikalne ka logic
 
-    const DYNAMIC_ORDER_LINK = "https://order.toasttab.com/online/taco-pros-chicago-halsted-833-west-chicago-avenue";
+    const DYNAMIC_ORDER_LINK = "https://tacopros.toast.site/";
 
     const [animateIndex, setAnimateIndex] = useState(null);
 
@@ -832,10 +832,10 @@ export default function DiscoverMenu() {
     useEffect(() => {
         if (location.pathname === "/catering") {
             setMenuType("catering");
-            setActiveTab(0);
+            setActiveTab(null);
         } else {
             setMenuType("discover");
-            setActiveTab(0);
+            setActiveTab(null);
         }
     }, [location.pathname]);
 
@@ -888,7 +888,7 @@ export default function DiscoverMenu() {
                     <button
                         onClick={() => {
                             setMenuType('discover');
-                            setActiveTab(0);
+                            setActiveTab(null);
                         }}
                         className={menuType === 'discover' ? 'activeTab' : ''}
                     >
@@ -897,7 +897,7 @@ export default function DiscoverMenu() {
                     <button
                         onClick={() => {
                             setMenuType('catering');
-                            setActiveTab(0);
+                            setActiveTab(null);
                         }}
                         className={menuType === 'catering' ? 'activeTab' : ''}
                     >
@@ -941,7 +941,7 @@ export default function DiscoverMenu() {
                                         <img
                                             src={item.menuIcon}
                                             alt={`${item.category} icon`}
-                                            className={`menuIcon ${animateIndex === idx ? "bounce" : ""
+                                            className={`menuIcon ${menuType === "catering" && item.category === "SIDES" ? "sidesIcon" : ""} ${animateIndex === idx ? "bounce" : ""
                                                 }`}
                                         />
 

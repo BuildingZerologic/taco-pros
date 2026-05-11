@@ -1,4 +1,5 @@
 const SITE_URL = "https://tacopros.com";
+const ORDER_LINK = "https://tacopros.toast.site/";
 
 export const createLocationSlug = (name) =>
   name
@@ -63,6 +64,7 @@ const makeLocationDetails = (location) => {
 
   const defaultDetails = {
     ...location,
+    orderLink: ORDER_LINK,
     slug,
     phoneE164,
     displayPhone,

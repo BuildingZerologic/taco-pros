@@ -52,8 +52,9 @@ const LocationDetail = () => {
   const city = location.name;
   const addressLines = getAddressLines(location.address);
   const faqs = content.faqs;
-  const menuUrl = 'https://tacopros.com/menu/';
-  const cateringUrl = 'https://tacopros.com/catering';
+const menuUrl = 'https://tacopros.com/menu/';
+const cateringUrl = 'https://tacopros.com/catering';
+const orderUrl = 'https://tacopros.toast.site/';
 
   return (
     <div className="location-detail-page">
@@ -79,7 +80,7 @@ const LocationDetail = () => {
         <div className="hero-content">
           <h1>{content.h1}</h1>
           <p className="subtitle">{content.introTitle}</p>
-          <a href={location.orderLink} target="_blank" rel="noreferrer" className="tp-action-button">
+          <a href={orderUrl} target="_blank" rel="noreferrer" className="tp-action-button">
             Order Now
           </a>
         </div>
@@ -145,7 +146,7 @@ const LocationDetail = () => {
                 <a href={`tel:${location.phoneE164}`}>{location.displayPhone || location.phone}</a>
               </div>
 
-              <a href={location.orderLink} target="_blank" rel="noreferrer" className="tp-action-button btn-order-sidebar">
+              <a href={orderUrl} target="_blank" rel="noreferrer" className="tp-action-button btn-order-sidebar">
                 Order Online
               </a>
 

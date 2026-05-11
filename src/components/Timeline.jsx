@@ -179,7 +179,7 @@ export default function TimelineLayout() {
                                     height={window.innerWidth < 768 ? "51px" : "57px"}
                                     styleType="1"
                                     fontSize={window.innerWidth < 768 ? "18px" : "24px"}
-                                    link=" https://tacopros.toast.site/"
+                                    link="https://tacopros.toast.site/"
                                 />
                                  <div className="bottomTile"></div>
                         </div>
@@ -296,11 +296,14 @@ export default function TimelineLayout() {
                         <div className="mapcontent">
                             <p className="mapH">Find A Tacopros  </p>
 
-                            <Link to="/locations" data-discover="true">
-                                <div className="jhv-cta-button-2">
-                                    Our Locations
-                                </div>
-                            </Link>
+                            <TacoButton
+                                text="Our Locations"
+                                width="155px"
+                                height="51px"
+                                styleType="2"
+                                fontSize="18px"
+                                link="/locations"
+                            />
                         </div>
                     </div>
                 </section>
@@ -313,14 +316,20 @@ export default function TimelineLayout() {
                         <MissionHeadline className="jhv-bold-title" />
                     </div>
                     <p className="jhv-cta-body">{missionCta.body}</p>
-                    <a href="https://tacopros.toast.site/" className="jhv-cta-button">
-                        ORDER NOW
-                    </a>
+                    <TacoButton
+                        text="ORDER NOW"
+                        width="155px"
+                        height="51px"
+                        styleType="1"
+                        fontSize="18px"
+                        link="https://tacopros.toast.site/"
+                    />
                     <img
                         src={missionCta.image}
                         alt=""
                         className="jhv-cta-img"
                     />
+                    <div className="bottomTile"></div>
                 </div>
 
 

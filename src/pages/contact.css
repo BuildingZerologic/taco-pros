@@ -270,3 +270,8 @@
     }
 }
 
+@media (max-width: 599px) {
+    .contact-submit-button {
+        height: 46px !important;
+    }
+}

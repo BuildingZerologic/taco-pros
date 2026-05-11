@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { countryCodes } from './countryCodes';
 import "./contact.css";
 import { Helmet } from 'react-helmet-async';
+import TacoButton from '../components/TacoButton';
 
 function Contact() {
   useEffect(() => {
@@ -113,7 +114,6 @@ function Contact() {
       
       <section className='form-mix-wrapper'>
         <div className='form-mix-container'>
-          <h2 className='form-mix-heading'>LEAVE US A MESSAGE</h2>
           <form onSubmit={handleSubmit} className="form-mix-body">
             <div className="form-mix-group">
               <label>First Name <span className="required-star">*</span></label>
@@ -154,9 +154,16 @@ function Contact() {
             {status === "missing_fields" && <p className="form-mix-error">Please fill in all required fields.</p>}
             {status === "success" && <p className="form-mix-success">Message sent successfully!</p>}
             {status === "error" && <p className="form-mix-error">Something went wrong. Please try again.</p>}
-            <button type="submit" className="form-mix-submit" disabled={status === "loading"}>
-              {status === "loading" ? "SENDING..." : "SEND MESSAGE"}
-            </button>
+            <TacoButton
+              type="submit"
+              text={status === "loading" ? "SENDING..." : "SEND MESSAGE"}
+              width="100%"
+              height="clamp(51px, 5vw, 57px)"
+              fontSize="clamp(16px, 2vw, 22px)"
+              styleType="2"
+              styleClass="taco-btn-form-green contact-submit-button"
+              disabled={status === "loading"}
+            />
           </form>
         </div>
       </section>

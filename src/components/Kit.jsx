@@ -26,7 +26,7 @@ function Kit() {
                             height="clamp(51px, 5vw, 57px)"
                             fontSize="clamp(16px, 2vw, 24px)"
                             styleType="2"
-                            link ="/catering"
+                            link ="https://tacopros.toast.site/"
                             textColor ="#538C42"
                         
                         />

@@ -4,6 +4,8 @@ import './LocationCards.css';
 import { useNavigate } from 'react-router-dom';
 import locationsData from './locations';
 
+const ORDER_LINK = 'https://tacopros.toast.site/';
+
 function Location() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCountry] = useState('US');
@@ -92,7 +94,7 @@ function Location() {
                         <span className="nbhh">Directions</span>
                       </a>
                       <a
-                        href={loc.orderLink}
+                        href={ORDER_LINK}
                         target="_blank"
                         rel="noreferrer"
                         className="btn2 btn-3"

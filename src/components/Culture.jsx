@@ -29,7 +29,11 @@ ensure our customers get the great taste we’re
 famous for, because our vision is to present the
 purest flavors of Mexico.
             </p>
-            <button className="mex-button" style={{background : "#6a724a"}}>
+            <button
+              className="mex-button"
+              style={{background : "#6a724a"}}
+              onClick={() => window.open('https://tacopros.toast.site/', '_blank', 'noopener,noreferrer')}
+            >
               ORDER NOW
             </button>
           </div>
