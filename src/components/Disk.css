@@ -194,17 +194,20 @@ img, svg {
 }
 
 .mdx-scroll-arrow::before {
-    font-size: 28px;
-    line-height: 1;
-    font-family: Arial, sans-serif;
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-top: 3px solid currentColor;
+    border-right: 3px solid currentColor;
+    display: block;
 }
 
 .mdx-left::before {
-    content: "\2039";
+    transform: translateX(2px) rotate(-135deg);
 }
 
 .mdx-right::before {
-    content: "\203A";
+    transform: translateX(-2px) rotate(45deg);
 }
 
 .mdx-scroll-arrow:hover {

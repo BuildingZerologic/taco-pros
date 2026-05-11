@@ -29,7 +29,12 @@ const HeroSlider = ({ images, video }) => {
 
     heroVideo.muted = true;
     heroVideo.defaultMuted = true;
+    heroVideo.autoplay = true;
+    heroVideo.loop = true;
+    heroVideo.playsInline = true;
     heroVideo.setAttribute('muted', '');
+    heroVideo.setAttribute('autoplay', '');
+    heroVideo.setAttribute('loop', '');
     heroVideo.setAttribute('playsinline', '');
     heroVideo.setAttribute('webkit-playsinline', '');
 
@@ -42,12 +47,23 @@ const HeroSlider = ({ images, video }) => {
       }
     };
 
-    heroVideo.load();
     playHeroVideo();
+    const retryOnVisible = () => {
+      if (!document.hidden) playHeroVideo();
+    };
+
+    heroVideo.addEventListener('loadedmetadata', playHeroVideo, { once: true });
     heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
+    document.addEventListener('visibilitychange', retryOnVisible);
+    window.addEventListener('touchstart', playHeroVideo, { once: true, passive: true });
+    window.addEventListener('pointerdown', playHeroVideo, { once: true });
 
     return () => {
+      heroVideo.removeEventListener('loadedmetadata', playHeroVideo);
       heroVideo.removeEventListener('canplay', playHeroVideo);
+      document.removeEventListener('visibilitychange', retryOnVisible);
+      window.removeEventListener('touchstart', playHeroVideo);
+      window.removeEventListener('pointerdown', playHeroVideo);
     };
   }, [showVideo, video]);
 
@@ -85,12 +101,12 @@ const HeroSlider = ({ images, video }) => {
             aria-label="Toggle Mute"
           >
             {isMuted ? (
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6" strokeLinecap="round" strokeLinejoin="round" />
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke="#e4531e">
+                <path d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6" stroke="#e4531e" />
               </svg>
             ) : (
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" strokeLinecap="round" strokeLinejoin="round" />
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke="#e4531e">
+                <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" stroke="#e4531e" />
               </svg>
             )}
           </button>

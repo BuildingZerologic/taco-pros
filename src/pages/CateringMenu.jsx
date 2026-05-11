@@ -320,7 +320,7 @@ const ProkitCateringSection = () => (
         <div className="superman-info-col">
             <div className="superman-live-card">
                 <h2 className="superman-main-price">Build Your Own Pro Kit</h2>
-                <h3 className="superman-min-people">91.99 $ ($11.50 / person) Serves 8</h3>
+                <h3 className="superman-min-people">$ 91.99($11.50 / person) Serves 8</h3>
                 <p className="superman-server-info">A complete, customizable taco bar experience. Everything you need to build the perfect meal for your group, including your choices of 2 proteins, style & tortillas, 3 salsas , a traditional duo (Mexican rice & savory beans, 28oz each), and 3 sides.</p>
                 <div className="superman-info-box">
                     <h4>PROTEIN OPTIONS : </h4>

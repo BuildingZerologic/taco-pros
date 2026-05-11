@@ -790,6 +790,10 @@ export default function DiscoverMenu() {
                 container.scrollLeft + container.clientWidth >=
                 container.scrollWidth - 10
             ) {
+                if (window.innerWidth <= 767) {
+                    stopAutoScroll();
+                    return;
+                }
                 container.scrollTo({
                     left: 0,
                     behavior: "smooth",
@@ -855,15 +859,21 @@ export default function DiscoverMenu() {
         }
     };
 
-     const scrollMenu = (direction) => {
+    const scrollMenu = (direction) => {
         if (!menuScrollRef.current) return;
 
         stopAutoScroll();
 
+        const container = menuScrollRef.current;
         const scrollAmount = 220;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+        const nextScrollLeft =
+            direction === "left"
+                ? Math.max(0, container.scrollLeft - scrollAmount)
+                : Math.min(maxScrollLeft, container.scrollLeft + scrollAmount);
 
-        menuScrollRef.current.scrollBy({
-            left: direction === "left" ? -scrollAmount : scrollAmount,
+        container.scrollTo({
+            left: nextScrollLeft,
             behavior: "smooth",
         });
 
