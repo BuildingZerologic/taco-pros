@@ -488,7 +488,7 @@ export default function RestaurantApp() {
         </section>
 
         {/* ORDER BUTTON */}
-        <a href={ORDER_LINK} style={{ width: "99%" }}>
+        <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" style={{ width: "99%" }}>
           <TacoButton
             text="Order now"
             width={isMobile ? "155px" : "100%"}

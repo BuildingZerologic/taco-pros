@@ -72,8 +72,7 @@ const orderUrl = 'https://tacopros.toast.site/';
       <section
         className="hero-section"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1600&q=80')",
+          backgroundImage: "url('/tp pg banners franchise op 2.jpg')",
         }}
       >
         <div className="hero-overlay" />

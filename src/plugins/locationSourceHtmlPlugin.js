@@ -68,7 +68,7 @@ const renderLocationHtml = (location) => {
         <p><strong>${escapeHtml(content.locationName)}</strong></p>
         <p><strong>Address:</strong><br>${escapeHtml(address.streetAddress || location.address)}<br>${escapeHtml(formatCityStateZip(address))}<br>United States</p>
         <p><strong>Phone:</strong> <a href="tel:${escapeHtml(phoneHref(location.phoneE164 || location.phone))}">${escapeHtml(location.displayPhone || location.phone)}</a></p>
-        <p><strong>Order Online:</strong> <a href="${escapeHtml(location.orderLink)}">Order here</a></p>
+        <p><strong>Order Online:</strong> <a href="${escapeHtml(location.orderLink)}" target="_blank" rel="noopener noreferrer">Order here</a></p>
         <p><strong>Google Maps:</strong> ${escapeHtml(content.googleMapsText)}</p>
       </section>
 

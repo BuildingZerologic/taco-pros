@@ -166,8 +166,10 @@ font-family: 'RobotoSlab';
     font-weight: 800;
 }
 
-.superman-info-box >p {
+.superman-info-box>p,
+.superman-info-box>ul {
     color: #00000099;
+    margin: 0 0 5px;
 }
 
 .superman-price {
@@ -241,8 +243,12 @@ h3 {
 }
 
 .superman-info-box>ul{
-    margin: 0;
     padding: 0;
+}
+
+.superman-info-box>p:last-child,
+.superman-info-box>ul:last-child {
+    margin-bottom: 0;
 }
 
 .superman-hero-img-wrapper2 {
