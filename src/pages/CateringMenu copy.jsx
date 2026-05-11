@@ -12,7 +12,7 @@ const CateringMenu = () => {
         return <LiveCateringSection />;
       case 'buffet-style':
         return <BuffetStyleSection />;
-      case 'individual-packs':
+      case 'individual-catering-packs':
         return <IndividualPacksSection />;
       case 'sides':
         return <SidesSection />;
@@ -25,7 +25,7 @@ const CateringMenu = () => {
     <div className="superman-container">
       {/* Scrollable Tabs Header */}
       <div className="superman-tabs-header">
-        {['party-trays', 'live-catering', 'buffet-style', 'individual-packs', 'sides'].map((tab) => (
+        {['party-trays', 'live-catering', 'buffet-style', 'individual-catering-packs', 'sides'].map((tab) => (
           <button
             key={tab}
             className={`superman-tab-btn ${activeTab === tab ? 'active' : ''}`}

@@ -221,7 +221,7 @@ const menuItems = [
 
     },
     dishes: [
-      { title: 'Churro', description: 'Covered in cinnamon sugar, fried to perfection, these are crispy on the outside and tender on the inside.', price: '$6', img: "GUAC AND CHIPS.png" }
+      { title: 'Churros', description: 'Covered in cinnamon sugar, fried to perfection, these are crispy on the outside and tender on the inside.', price: '$6', img: "GUAC AND CHIPS.png" }
     ],
   },
   {
@@ -488,12 +488,13 @@ export default function RestaurantApp() {
         </section>
 
         {/* ORDER BUTTON */}
-        <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" style={{ width: "99%" }}>
+        <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="cat-order-link">
           <TacoButton
             text="Order now"
-            width={isMobile ? "155px" : "100%"}
+            width="100%"
             height={isMobile ? "51px" : "57px"}
             styleType="1"
+            styleClass="cat-order-taco-btn"
             fontSize={isMobile ? "18px" : "24px"}
           />
         </a>

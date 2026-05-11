@@ -350,6 +350,15 @@
 }
 
 /* Order Button */
+.cat-order-link {
+    display: block;
+    width: 100%;
+}
+
+.cat-order-link .cat-order-taco-btn {
+    width: 100% !important;
+}
+
 .cat-order-btn {
     background-color: var(--btn-green);
     color: white;

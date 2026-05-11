@@ -403,7 +403,7 @@ const menuItems = [
         menuTitle: 'Desserts',
         dishes: [
             {
-                title: 'Churro',
+                title: 'Churros',
                 description:
                     `Covered in cinnamon sugar, fried to perfection, these are crispy on the outside and tender on the inside.`,
                 price: '$6',
@@ -821,7 +821,7 @@ export default function DiscoverMenu() {
     const getCateringCategoryId = (item) => {
         const categoryId = item.menuTitle.toLowerCase().replace(/\s+/g, "-");
         const categoryMap = {
-            "individual-catering-packs": "individual-packs",
+            "individual-catering-packs": "individual-catering-packs",
             "pro-kit": "prokit",
         };
 
