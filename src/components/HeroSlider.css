@@ -30,6 +30,11 @@
     /* This makes it behave like background-size: cover */
 }
 
+.hero-video {
+    object-fit: cover;
+    pointer-events: none;
+}
+
 .cfx-hero-video.is-ready {
     opacity: 1;
 }

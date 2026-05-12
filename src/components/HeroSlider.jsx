@@ -26,45 +26,59 @@ const HeroSlider = ({ images, video }) => {
   useEffect(() => {
     if (!showVideo || !videoRef.current) return;
 
-    const heroVideo = videoRef.current;
+    const video = videoRef.current;
     setIsVideoReady(false);
+    setIsMuted(true);
 
-    heroVideo.muted = true;
-    heroVideo.defaultMuted = true;
-    heroVideo.autoplay = true;
-    heroVideo.loop = true;
-    heroVideo.playsInline = true;
-    heroVideo.setAttribute('muted', '');
-    heroVideo.setAttribute('autoplay', '');
-    heroVideo.setAttribute('loop', '');
-    heroVideo.setAttribute('playsinline', '');
-    heroVideo.setAttribute('webkit-playsinline', '');
-
-    const resumePlayback = () => {
-      heroVideo.play().catch(() => {});
-      document.removeEventListener('touchstart', resumePlayback);
-      document.removeEventListener('click', resumePlayback);
-    };
+    video.muted = true;
+    video.defaultMuted = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('autoplay', '');
+    video.setAttribute('loop', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
 
     const playHeroVideo = () => {
-      const playPromise = heroVideo.play();
+      video.muted = true;
+      video.defaultMuted = true;
+      video.setAttribute('muted', '');
+
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {});
+      }
+    };
+
+    const tryPlay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+
+      const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(() => {
-          document.addEventListener('touchstart', resumePlayback, { once: true, passive: true });
-          document.addEventListener('click', resumePlayback, { once: true });
+          const resume = () => {
+            video.play().catch(() => {});
+            document.removeEventListener("touchstart", resume);
+            document.removeEventListener("click", resume);
+          };
+          document.addEventListener("touchstart", resume, { once: true });
+          document.addEventListener("click", resume, { once: true });
         });
       }
     };
 
     playHeroVideo();
-    heroVideo.addEventListener('loadeddata', handleVideoPlaying, { once: true });
-    heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
+    video.addEventListener('loadedmetadata', playHeroVideo, { once: true });
+    video.addEventListener('loadeddata', handleVideoPlaying, { once: true });
+    video.addEventListener("canplay", tryPlay);
 
     return () => {
-      heroVideo.removeEventListener('loadeddata', handleVideoPlaying);
-      heroVideo.removeEventListener('canplay', playHeroVideo);
-      document.removeEventListener('touchstart', resumePlayback);
-      document.removeEventListener('click', resumePlayback);
+      video.removeEventListener('loadedmetadata', playHeroVideo);
+      video.removeEventListener('loadeddata', handleVideoPlaying);
+      video.removeEventListener("canplay", tryPlay);
     };
   }, [showVideo, video]);
 
@@ -93,14 +107,21 @@ const HeroSlider = ({ images, video }) => {
             defaultMuted
             loop
             playsInline
-            preload="auto"
+            webkit-playsinline="true"
+            preload="metadata"
             controls={false}
             disablePictureInPicture
             controlsList="nodownload noplaybackrate noremoteplayback"
             src={video}
+            onLoadedMetadata={(event) => {
+              event.currentTarget.muted = true;
+              event.currentTarget.defaultMuted = true;
+              event.currentTarget.setAttribute('muted', '');
+              event.currentTarget.play().catch(() => {});
+            }}
             onLoadedData={handleVideoPlaying}
             onPlaying={handleVideoPlaying}
-            className={`cfx-hero-video ${isVideoReady ? 'is-ready' : ''}`}
+            className={`hero-video cfx-hero-video ${isVideoReady ? 'is-ready' : ''}`}
           />
 
           {/* Mute Toggle Button */}

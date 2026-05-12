@@ -43,32 +43,40 @@ const MarqueeVideo = ({ src }) => {
         video.setAttribute("playsinline", "");
         video.setAttribute("webkit-playsinline", "");
 
-        const resumePlayback = () => {
-            video.play().catch(() => {});
-            document.removeEventListener("touchstart", resumePlayback);
-            document.removeEventListener("click", resumePlayback);
-        };
-
         const playVideo = () => {
             const playPromise = video.play();
             if (playPromise !== undefined) {
+                playPromise.catch(() => {});
+            }
+        };
+
+        const tryPlay = () => {
+            video.muted = true;
+            video.defaultMuted = true;
+
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
                 playPromise.catch(() => {
-                    document.addEventListener("touchstart", resumePlayback, { once: true, passive: true });
-                    document.addEventListener("click", resumePlayback, { once: true });
+                    const resume = () => {
+                        video.play().catch(() => {});
+                        document.removeEventListener("touchstart", resume);
+                        document.removeEventListener("click", resume);
+                    };
+                    document.addEventListener("touchstart", resume, { once: true });
+                    document.addEventListener("click", resume, { once: true });
                 });
             }
         };
+
         const handleLoadedData = () => setIsPlaying(true);
 
         playVideo();
         video.addEventListener("loadeddata", handleLoadedData, { once: true });
-        video.addEventListener("canplay", playVideo, { once: true });
+        video.addEventListener("canplay", tryPlay);
 
         return () => {
             video.removeEventListener("loadeddata", handleLoadedData);
-            video.removeEventListener("canplay", playVideo);
-            document.removeEventListener("touchstart", resumePlayback);
-            document.removeEventListener("click", resumePlayback);
+            video.removeEventListener("canplay", tryPlay);
         };
     }, [src, shouldLoad]);
 
@@ -81,6 +89,7 @@ const MarqueeVideo = ({ src }) => {
             defaultMuted
             loop
             playsInline
+            webkit-playsinline="true"
             preload={shouldLoad ? "metadata" : "none"}
             controls={false}
             disablePictureInPicture
