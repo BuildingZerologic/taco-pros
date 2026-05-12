@@ -5,11 +5,15 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
     // Ye line screen ko top (0,0) par le jayegi
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth", // Smooth scrolling ke liye
+      behavior: "auto",
     });
   }, [pathname]); // Jab bhi path badlega, ye run hoga
 

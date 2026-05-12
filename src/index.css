@@ -95,6 +95,7 @@ body {
 .cfx-main-content {
   animation: cfxFadeIn 0.8s ease-in-out;
   overflow: hidden;
+  min-height: 100dvh;
 }
 
 .cfx-app-wrapper{
@@ -118,6 +119,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.page-loader {
+  min-height: 75dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "RobotoSlab";
 }
 
 @media (min-width: 1024px) {

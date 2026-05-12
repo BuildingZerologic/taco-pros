@@ -46,8 +46,8 @@ export default function App() {
 
       <ScrollToTop />
 
-      <Suspense fallback={<div className="page-loader">Loading...</div>}>
-        <main className="cfx-main-content">
+      <main className="cfx-main-content">
+        <Suspense fallback={<div className="page-loader">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/our-story" element={<Timeline />} />
@@ -64,8 +64,8 @@ export default function App() {
             <Route path="/blog/:slug" element={<Blog />} />
             <Route path="*" element={<Mex404 />} />
           </Routes>
-        </main>
-      </Suspense>
+        </Suspense>
+      </main>
 
       <Footer />
     </div>
