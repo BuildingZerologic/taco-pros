@@ -3,6 +3,7 @@ import "./marquee.css";
 
 const nudgeScrollForAutoplay = () => {
     if (typeof window === "undefined") return;
+    
 
     const initialX = window.scrollX;
     const initialY = window.scrollY;
