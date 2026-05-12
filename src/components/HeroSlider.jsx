@@ -41,44 +41,39 @@ const HeroSlider = ({ images, video }) => {
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
 
-    const playHeroVideo = () => {
+    const tryPlay = async () => {
       video.muted = true;
       video.defaultMuted = true;
       video.setAttribute('muted', '');
 
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {});
+      try {
+        await video.play();
+      } catch {
+        // Browser may defer autoplay until media is visible or ready.
       }
     };
 
-    const tryPlay = () => {
-      video.muted = true;
-      video.defaultMuted = true;
-
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          const resume = () => {
-            video.play().catch(() => {});
-            document.removeEventListener("touchstart", resume);
-            document.removeEventListener("click", resume);
-          };
-          document.addEventListener("touchstart", resume, { once: true });
-          document.addEventListener("click", resume, { once: true });
-        });
-      }
-    };
-
-    playHeroVideo();
-    video.addEventListener('loadedmetadata', playHeroVideo, { once: true });
+    tryPlay();
+    video.addEventListener('loadedmetadata', tryPlay, { once: true });
     video.addEventListener('loadeddata', handleVideoPlaying, { once: true });
     video.addEventListener("canplay", tryPlay);
 
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          tryPlay();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(video);
+
     return () => {
-      video.removeEventListener('loadedmetadata', playHeroVideo);
+      video.removeEventListener('loadedmetadata', tryPlay);
       video.removeEventListener('loadeddata', handleVideoPlaying);
       video.removeEventListener("canplay", tryPlay);
+      observer.disconnect();
     };
   }, [showVideo, video]);
 
