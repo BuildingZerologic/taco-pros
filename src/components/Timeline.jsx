@@ -87,6 +87,26 @@ const ScrollCard = ({ children, className = "", triggerY = 0 }) => {
 };
 
 export default function TimelineLayout() {
+    useEffect(() => {
+        const nodes = document.querySelectorAll(".mobile-scroll-reveal");
+        if (!nodes.length) return undefined;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -14% 0px" }
+        );
+
+        nodes.forEach((node) => observer.observe(node));
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className="main-wrapper">
@@ -198,7 +218,7 @@ export default function TimelineLayout() {
 
 
             <section className="dnone">
-                <div className="jhv-container">
+                <div className="jhv-container mobile-scroll-reveal">
                     <div className="jhv-top-section">
                         <div className="jhv-image-wrapper">
                             <img
@@ -224,28 +244,28 @@ export default function TimelineLayout() {
                 </div>
 
                 <div className="jhv-gallery-container">
-                    <div className="jhv-img-row jhv-left">
+                    <div className="jhv-img-row jhv-left mobile-scroll-reveal">
                         <img
                             src="/XMLID_228_.png"
                             alt="Mexican Skulls"
                             className="da jhv-gallery-img jhv-portrait"
                         />
                     </div>
-                    <div className="jhv-img-row jhv-right">
+                    <div className="jhv-img-row jhv-right mobile-scroll-reveal">
                         <img
                             src="/XMLID_233_.png"
                             alt="Cooking on grill"
                             className="jhv-gallery-img jhv-landscape db"
                         />
                     </div>
-                    <div className="jhv-img-row jhv-left hgh">
+                    <div className="jhv-img-row jhv-left hgh mobile-scroll-reveal">
                         <img
                             src="/XMLID_5829_.png"
                             alt="Eating a taco"
                             className="jhv-gallery-img jhv-square"
                         />
                     </div>
-                    <div className="jhv-footer-content">
+                    <div className="jhv-footer-content mobile-scroll-reveal">
                         <div className="jhv-footer-text">
                             <StoryCopy paragraphs={storyParagraphs.slice(3, 6)} />
                         </div>
@@ -253,33 +273,33 @@ export default function TimelineLayout() {
                 </div>
 
                 <div className="jhv-final-section">
-                    <div className="jhv-img-row jhv-left">
+                    <div className="jhv-img-row jhv-left mobile-scroll-reveal">
                         <img
                             src="/XMLID_6684_.png"
                             alt="Taco Spread"
                             className="jhv-gallery-img jhv-wide dc"
                         />
                     </div>
-                    <div className="jhv-img-row jhv-right">
+                    <div className="jhv-img-row jhv-right mobile-scroll-reveal">
                         <img
                             src="/XMLID_6681_.png"
                             alt="Person at bar"
                             className="jhv-gallery-img jhv-portrait-small"
                         />
                     </div>
-                    <div className="jhv-img-row jhv-left">
+                    <div className="jhv-img-row jhv-left mobile-scroll-reveal">
                         <img
                             src="/XMLID_222_.png"
                             alt="Holding a sandwich"
                             className="jhv-gallery-img jhv-square-small"
                         />
                     </div>
-                    <div className="jhv-footer-content">
+                    <div className="jhv-footer-content mobile-scroll-reveal">
                         <div className="jhv-footer-text">
                             <StoryCopy paragraphs={storyParagraphs.slice(6)} />
                         </div>
                     </div>
-                    <div className="jhv-img-row">
+                    <div className="jhv-img-row mobile-scroll-reveal">
                         <img
                             src="/XMLID_227_.png"
                             alt="Large food spread"
@@ -310,7 +330,7 @@ export default function TimelineLayout() {
 
 
 
-                <div className="jhv-cta-container">
+                <div className="jhv-cta-container mobile-scroll-reveal">
                     <span className="jhv-cta-subheadline">{missionCta.eyebrow}</span>
                     <div className="jhv-headline-stack">
                         <MissionHeadline className="jhv-bold-title" />

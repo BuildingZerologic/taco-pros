@@ -14,7 +14,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #000;
 }
 
 .cfx-hero-video {
@@ -23,8 +22,17 @@
     object-fit: cover;
     display: block;
     pointer-events: none;
-    background-color: #000;
     /* This makes it behave like background-size: cover */
+}
+
+.cfx-hero-video::-webkit-media-controls,
+.cfx-hero-video::-webkit-media-controls-panel,
+.cfx-hero-video::-webkit-media-controls-start-playback-button,
+.cfx-hero-video::-webkit-media-controls-play-button,
+.cfx-hero-video::-webkit-media-controls-overlay-play-button {
+    display: none !important;
+    opacity: 0 !important;
+    -webkit-appearance: none;
 }
 
 .cfx-slide-track {

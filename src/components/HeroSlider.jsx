@@ -1,45 +1,16 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './HeroSlider.css';
 import TacoButton from './TacoButton';
 
 const ORDER_LINK = 'https://tacopros.toast.site/';
 
-const getVideoType = (src = '') => {
-  if (src.toLowerCase().endsWith('.webm')) return 'video/webm';
-  return 'video/mp4';
-};
-
-const normalizeVideoSources = (video) => {
-  if (!video) {
-    return { key: '', sources: [] };
-  }
-
-  if (typeof video === 'string') {
-    return {
-      key: video,
-      sources: [{ src: video, type: getVideoType(video) }],
-    };
-  }
-
-  const sources = [
-    video.mp4 && { src: video.mp4, type: 'video/mp4' },
-    video.webm && { src: video.webm, type: 'video/webm' },
-  ].filter(Boolean);
-
-  return {
-    key: [video.mp4, video.webm].filter(Boolean).join('|'),
-    sources,
-  };
-};
-
 const HeroSlider = ({ images, video }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
-  const videoConfig = useMemo(() => normalizeVideoSources(video), [video]);
 
   const isSlider = images && images.length > 1;
-  const showVideo = !images && videoConfig.sources.length > 0;
+  const showVideo = !images && video;
 
   useEffect(() => {
     if (!isSlider) return;
@@ -67,39 +38,39 @@ const HeroSlider = ({ images, video }) => {
     heroVideo.setAttribute('playsinline', '');
     heroVideo.setAttribute('webkit-playsinline', '');
 
-    let cancelled = false;
     const playHeroVideo = () => {
-      if (cancelled) return;
       const playPromise = heroVideo.play();
       if (playPromise) {
         playPromise.catch(() => {
-          // iOS may still block autoplay in Low Power Mode or strict user settings.
+          // Safari may still block autoplay in Low Power Mode or strict user settings.
         });
       }
     };
 
-    if (heroVideo.readyState >= 2) {
-      playHeroVideo();
-    } else {
-      heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
-    }
+    playHeroVideo();
+    const retryOnVisible = () => {
+      if (!document.hidden) playHeroVideo();
+    };
 
-    setIsMuted(true);
+    heroVideo.addEventListener('loadedmetadata', playHeroVideo, { once: true });
+    heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
+    document.addEventListener('visibilitychange', retryOnVisible);
+    window.addEventListener('touchstart', playHeroVideo, { once: true, passive: true });
+    window.addEventListener('pointerdown', playHeroVideo, { once: true });
 
     return () => {
-      cancelled = true;
+      heroVideo.removeEventListener('loadedmetadata', playHeroVideo);
       heroVideo.removeEventListener('canplay', playHeroVideo);
+      document.removeEventListener('visibilitychange', retryOnVisible);
+      window.removeEventListener('touchstart', playHeroVideo);
+      window.removeEventListener('pointerdown', playHeroVideo);
     };
-  }, [showVideo, videoConfig.key]);
+  }, [showVideo, video]);
 
   const toggleMute = () => {
     if (videoRef.current) {
-      const nextMuted = !videoRef.current.muted;
-      videoRef.current.muted = nextMuted;
-      videoRef.current.defaultMuted = nextMuted;
-      setIsMuted(nextMuted);
-
-      if (!videoRef.current.paused) return;
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
       videoRef.current.play().catch(() => {});
     }
   };
@@ -111,25 +82,27 @@ const HeroSlider = ({ images, video }) => {
         <div className="cfx-video-wrapper">
           <video
             ref={videoRef}
-            key={videoConfig.key}
+            key={video}
             autoPlay
             muted
             defaultMuted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
+            controls={false}
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate noremoteplayback"
+            webkit-playsinline="true"
             className="cfx-hero-video"
           >
-            {videoConfig.sources.map((source) => (
-              <source key={source.src} src={source.src} type={source.type} />
-            ))}
+            <source src={video} type="video/mp4" />
           </video>
 
           {/* Mute Toggle Button */}
           <button
             className={`cfx-mute-toggle ${isMuted ? 'is-muted' : 'is-active'}`}
             onClick={toggleMute}
-            aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+            aria-label="Toggle Mute"
           >
             {isMuted ? (
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke="#e4531e">

@@ -47,7 +47,7 @@ export default function App() {
       <ScrollToTop />
 
       <main className="cfx-main-content">
-        <Suspense fallback={<div className="page-loader" aria-hidden="true" />}>
+        <Suspense fallback={<div className="page-loader">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/our-story" element={<Timeline />} />
