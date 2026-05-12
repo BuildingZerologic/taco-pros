@@ -277,11 +277,11 @@ const IndividualPacksSection = () => (
                 </div>
                 <div className="superman-card2">
                     <h4>Rice And Beans (Comes With Each Order)</h4>
-                    <div className="superman-price-row"><span>3 Tacos Combo</span><span className="superman-price">$13</span></div>
-                    <div className="superman-price-row"><span>Burrito Combo</span><span className="superman-price">$13</span></div>
-                    <div className="superman-price-row"><span>Torta Combo</span><span className="superman-price">$13</span></div>
-                    <div className="superman-price-row"><span>Quesadilla Combo</span><span className="superman-price">$13</span></div>
-                     <div className="superman-price-row"><span>Enchiladas Combo</span><span className="superman-price">$13</span></div>
+                    <div className="superman-price-row"><span>3 Tacos Combo</span><span className="superman-price">$14</span></div>
+                    <div className="superman-price-row"><span>Burrito Combo</span><span className="superman-price">$14</span></div>
+                    <div className="superman-price-row"><span>Torta Combo</span><span className="superman-price">$14</span></div>
+                    <div className="superman-price-row"><span>Quesadilla Combo</span><span className="superman-price">$14</span></div>
+                     <div className="superman-price-row"><span>Enchiladas Combo</span><span className="superman-price">$14</span></div>
                 </div>
             </div>
             <TacoButton text="ORDER NOW"

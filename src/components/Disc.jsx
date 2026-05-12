@@ -11,7 +11,7 @@ function Disc() {
             <div className="ox-card row-rev">
                 <div className="ox-content">
                     {/* <span className="ox-overline">LOREM IPSUM</span> */}
-                    <h1 className="ox-title">Flavor, Pure Sabor with Zero Polish and all Corazon</h1>
+                    <h1 className="ox-title">Flavor,Pure Sabor with Zero Polish and all Corazón</h1>
                     <p className="ox-description">
                         The pros cook with straight-up mercado energy — loud, smoky, real. Comal-born smoke, sunrise-built flavor, pure mercado sabor with zero polish and all corazón.
                     </p>

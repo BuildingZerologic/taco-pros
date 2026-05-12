@@ -341,7 +341,7 @@
 }
 
 .cat-item-title {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 0px;
@@ -389,6 +389,15 @@
         /* 2 items per row */
         gap: 20px;
     }
+    .cat-item-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    font-family: 'RobotoSlab';
+
+}
+
 
 
 
@@ -495,6 +504,14 @@
         color: #2E3138;
         margin-top: 24px;
     }
+    .cat-item-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    font-family: 'RobotoSlab';
+
+}
 
     .cat-items {
         grid-template-columns: repeat(2, 1fr);

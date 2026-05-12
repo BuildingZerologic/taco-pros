@@ -68,8 +68,8 @@ const menuItems = [
   },
   {
     category: 'PROTEIN BOWL',
-    menuIcon: '/tp menu banners mobile protein bowl.jpg',
-    image: '/tp menu banners protein bowl.jpg',
+    menuIcon: '/proteinbowl.jpg',
+    image: '/proteinbowl.jpg',
     menuTitle: 'Protein Bowl',
      combo: {
       title: 'TACO TRIO COMBO',
@@ -158,8 +158,8 @@ const menuItems = [
 
     },
     dishes: [
-      { title: 'Quesadilla (Chicken, Steak or Ground beef)', description: 'Flour tortilla with side of lettuce, tomato, and sour cream. (Extra Topping $0.25 each)', price: '$9', img: "GUAC AND CHIPS.png" },
-      { title: 'Cheese Quesadilla (Flour Tortilla)', description: 'Melted C​hihuahua cheese with Mexican Sausage', price: '$9', img: "GUAC AND CHIPS.png" },
+      { title: 'Classic Protein (Pollo,Picadillo,Al Pastor,Veggie)', description: 'Flour tortilla with side of lettuce, tomato, and sour cream. (Extra Topping $0.25 each)', price: '$9', img: "GUAC AND CHIPS.png" },
+      { title: 'Signature Protein (Barbacoa,Asada,Camaron)', description: 'Melted C​hihuahua cheese with Mexican Sausage', price: '$9', img: "GUAC AND CHIPS.png" },
     ],
   },
   
@@ -200,7 +200,7 @@ const menuItems = [
     },
     dishes: [
       {
-        title: 'KIDS MEAL(Taco or Quesadilla)', description: <>
+        title: 'Rice & Beans or Fries', description: <>
           SERVED WITH ONE SIDE OPTION: <br /> 1: Rice & Beans <br /> 2: Fries & Juice
         </>, price: '$6', img: "GUAC AND CHIPS.png"
       }
@@ -288,23 +288,24 @@ const comboStyleContent = {
     title: "Style Options For Tacos",
     description: (
       <>
-        American Style: Lettuce and Tomatoes <br />
-        Mexican Style: Onion and Cilantro <br />
-        Pro: Lettuce, Tomato, Cheese, Sour Cream & Avocado
+        American: Lettuce & Tomato <br />
+        Mexican: Onion & Cilantro <br />
+        PRO: Lettuce, Tomato, Cheese, Sour Cream & Avocado
       </>
     ),
   },
   "protein-bowl": {
     title: "Served With",
-    description: "Rice, beans, lettuce, tomato, queso fresco, tortilla strips, corn and avocado",
+    description: "Rice, Beans, Lettuce, Tomato, Queso Fresco, Tortilla Strips, Corn & Avocado (with Choice of Dressing)",
   },
   tortas: {
     title: "Served With",
-    description: "Lettuce, tomato, avocado, beans, cheese and sour cream",
+    description: "Lettuce, Tomato, Avocado, Beans, Cheese & Sour Cream",
   },
   burritos: {
     title: "Served With",
-    description: "Lettuce, tomato, avocado, beans and cheese",
+    description: "Lettuce, Tomato, Avocado, Beans, Cheese & Sour Cream",
+    
   },
   quesadilla: {
     title: "Quesadilla",

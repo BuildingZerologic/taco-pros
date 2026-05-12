@@ -15,7 +15,6 @@ const storyParagraphs = [
     "When they came to Chicago, they didn't come emptyhanded. They brought the tianguis with them. They opened Taco Pros in Oak Park, building it on the same things Mercedes taught them: slowcrafted marinades, firekissed chiles, salsas with attitude, and flavors that don't apologize for being bold.",
     "The shop didn't take off because it was trendy - it took off because it tasted like something real, something livedin, something passed down.",
     "What started generations ago in a streetmarket stall now lives here - in every taco, every salsa, every bite.",
-    "At Taco Pros, you're not just eating. You're tasting a story carried across borders, shaped by family hands, and sharpened through years of craft.",
     "Welcome to Taco Pros - where the streets of Mexico meet the heart of Chicago, and every bite carries a piece of our family's history.",
 ];
 
