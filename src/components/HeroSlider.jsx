@@ -4,6 +4,11 @@ import TacoButton from './TacoButton';
 
 const ORDER_LINK = 'https://tacopros.toast.site/';
 
+const getVideoType = (src = '') => {
+  if (src.toLowerCase().endsWith('.webm')) return 'video/webm';
+  return 'video/mp4';
+};
+
 const HeroSlider = ({ images, video }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
@@ -37,6 +42,7 @@ const HeroSlider = ({ images, video }) => {
     heroVideo.setAttribute('loop', '');
     heroVideo.setAttribute('playsinline', '');
     heroVideo.setAttribute('webkit-playsinline', '');
+    heroVideo.load();
 
     const playHeroVideo = () => {
       const playPromise = heroVideo.play();
@@ -54,14 +60,18 @@ const HeroSlider = ({ images, video }) => {
 
     heroVideo.addEventListener('loadedmetadata', playHeroVideo, { once: true });
     heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
+    heroVideo.addEventListener('loadeddata', playHeroVideo, { once: true });
     document.addEventListener('visibilitychange', retryOnVisible);
+    window.addEventListener('pageshow', playHeroVideo);
     window.addEventListener('touchstart', playHeroVideo, { once: true, passive: true });
     window.addEventListener('pointerdown', playHeroVideo, { once: true });
 
     return () => {
       heroVideo.removeEventListener('loadedmetadata', playHeroVideo);
       heroVideo.removeEventListener('canplay', playHeroVideo);
+      heroVideo.removeEventListener('loadeddata', playHeroVideo);
       document.removeEventListener('visibilitychange', retryOnVisible);
+      window.removeEventListener('pageshow', playHeroVideo);
       window.removeEventListener('touchstart', playHeroVideo);
       window.removeEventListener('pointerdown', playHeroVideo);
     };
@@ -89,9 +99,10 @@ const HeroSlider = ({ images, video }) => {
             loop
             playsInline
             preload="auto"
+            src={video}
             className="cfx-hero-video"
           >
-            <source src={video} type="video/mp4" />
+            <source src={video} type={getVideoType(video)} />
           </video>
 
           {/* Mute Toggle Button */}
