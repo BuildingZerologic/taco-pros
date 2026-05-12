@@ -201,10 +201,10 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width:320px) and (max-width: 480px) {
   .billboard-container {
     height: clamp(560px, 136vw, 650px);
-    background-size: auto 100%;
+    background-size: 100%;
     background-position: center top;
   }
 

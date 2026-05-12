@@ -56,9 +56,12 @@ const HeroSlider = ({ images, video }) => {
       }
     };
 
+    playHeroVideo();
+    heroVideo.addEventListener('loadeddata', handleVideoPlaying, { once: true });
     heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
 
     return () => {
+      heroVideo.removeEventListener('loadeddata', handleVideoPlaying);
       heroVideo.removeEventListener('canplay', playHeroVideo);
       document.removeEventListener('touchstart', resumePlayback);
       document.removeEventListener('click', resumePlayback);
@@ -94,11 +97,11 @@ const HeroSlider = ({ images, video }) => {
             controls={false}
             disablePictureInPicture
             controlsList="nodownload noplaybackrate noremoteplayback"
+            src={video}
+            onLoadedData={handleVideoPlaying}
             onPlaying={handleVideoPlaying}
             className={`cfx-hero-video ${isVideoReady ? 'is-ready' : ''}`}
-          >
-            <source src={video} type="video/mp4" />
-          </video>
+          />
 
           {/* Mute Toggle Button */}
           <button

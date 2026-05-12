@@ -3,9 +3,36 @@ import "./marquee.css";
 
 const MarqueeVideo = ({ src }) => {
     const [isPlaying, setIsPlaying] = useState(false);
+    const [shouldLoad, setShouldLoad] = useState(false);
     const videoRef = useRef(null);
 
     useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return undefined;
+
+        if (!("IntersectionObserver" in window)) {
+            setShouldLoad(true);
+            return undefined;
+        }
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShouldLoad(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "600px" }
+        );
+
+        observer.observe(video);
+
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        if (!shouldLoad) return undefined;
+
         const video = videoRef.current;
         if (!video) return undefined;
 
@@ -31,26 +58,30 @@ const MarqueeVideo = ({ src }) => {
                 });
             }
         };
+        const handleLoadedData = () => setIsPlaying(true);
 
+        playVideo();
+        video.addEventListener("loadeddata", handleLoadedData, { once: true });
         video.addEventListener("canplay", playVideo, { once: true });
 
         return () => {
+            video.removeEventListener("loadeddata", handleLoadedData);
             video.removeEventListener("canplay", playVideo);
             document.removeEventListener("touchstart", resumePlayback);
             document.removeEventListener("click", resumePlayback);
         };
-    }, [src]);
+    }, [src, shouldLoad]);
 
     return (
         <video
             ref={videoRef}
-            src={src}
+            src={shouldLoad ? src : undefined}
             autoPlay
             muted
             defaultMuted
             loop
             playsInline
-            preload="metadata"
+            preload={shouldLoad ? "metadata" : "none"}
             controls={false}
             disablePictureInPicture
             controlsList="nodownload noplaybackrate noremoteplayback"

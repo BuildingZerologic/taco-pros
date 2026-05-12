@@ -1,10 +1,11 @@
-
 import './CookingSection.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import React, { useEffect } from 'react';
+import TacoButton from '../components/TacoButton';
 
 const News = () => {
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -18,31 +19,26 @@ const News = () => {
 
   const cards = [
     {
-      title: "Here are three sections following the same structure and tone, tailored for a tacos restaurant ",
-      date: "13th – 15th March",
+      title: "Taco Trends Guide | What's Hot Right Now",
+      date: "13th - 15th March",
       link: "/blog/taco-trends-guide",
-      description: `Taco Trends Guide | What’s Hot Right Now
-Discover the latest taco trends—from birria tacos and quesabirria to plant-based innovations and global fusion flavors redefining the taco scene.`,
-      image: "b1.png" 
+      description: "Discover the latest taco trends, from birria tacos and quesabirria to plant-based ideas and global fusion flavors redefining the taco scene.",
+      image: "b1.png"
     },
     {
       title: "Taco Pairing Guide | Sips & Sides",
-      date: "13th – 15th March",
+      date: "13th - 15th March",
       link: "/blog/taco-pairing-guide",
-      description: `Explore perfect pairings for your tacos, including margaritas, aguas frescas, street-style corn, and house-made salsas that elevate every bite.
-`,
-      image: "b1.jpg" 
+      description: "Explore perfect pairings for your tacos, including margaritas, aguas frescas, street-style corn, and house-made salsas that elevate every bite.",
+      image: "b1.jpg"
     },
     {
       title: "Taco Craft Guide | From Grill to Plate",
-      date: "13th – 15th March",
+      date: "13th - 15th March",
       link: "/blog/taco-craft-guide",
-      description: "Get an inside look at how your favorite tacos come together—fresh tortillas, bold marinades, slow-cooked fillings, and the art of layering flavor.",
-      image: "b3.jpg" 
+      description: "Get an inside look at how your favorite tacos come together, from fresh tortillas to bold marinades and balanced toppings.",
+      image: "b3.jpg"
     },
-
-
-
   ];
 
   return (
@@ -88,7 +84,15 @@ Discover the latest taco trends—from birria tacos and quesabirria to plant-bas
                       ? `${card.description.substring(0, 110)}...`
                       : card.description}
                   </p>
-                  <Link to={card.link} className="cx-link">FIND OUT MORE</Link>
+                  <TacoButton
+                    text="Find out more"
+                    width="168px"
+                    height="48px"
+                    styleType="1"
+                    styleClass="cx-link"
+                    fontSize="18px"
+                    onClick={() => navigate(card.link)}
+                  />
                 </div>
               </div>
             ))}
