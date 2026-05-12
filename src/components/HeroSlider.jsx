@@ -41,39 +41,52 @@ const HeroSlider = ({ images, video }) => {
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
 
-    const tryPlay = async () => {
+    const playHeroVideo = () => {
       video.muted = true;
       video.defaultMuted = true;
       video.setAttribute('muted', '');
 
-      try {
-        await video.play();
-      } catch {
-        // Browser may defer autoplay until media is visible or ready.
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {});
       }
     };
 
-    tryPlay();
-    video.addEventListener('loadedmetadata', tryPlay, { once: true });
+    const resume = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.setAttribute('muted', '');
+      video.play().catch(() => {});
+      document.removeEventListener("touchstart", resume);
+      document.removeEventListener("click", resume);
+    };
+
+    const tryPlay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          document.addEventListener("touchstart", resume, { once: true });
+          document.addEventListener("click", resume, { once: true });
+        });
+      }
+    };
+
+    playHeroVideo();
+    document.addEventListener("touchstart", resume, { once: true });
+    document.addEventListener("click", resume, { once: true });
+    video.addEventListener('loadedmetadata', playHeroVideo, { once: true });
     video.addEventListener('loadeddata', handleVideoPlaying, { once: true });
     video.addEventListener("canplay", tryPlay);
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          tryPlay();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(video);
-
     return () => {
-      video.removeEventListener('loadedmetadata', tryPlay);
+      video.removeEventListener('loadedmetadata', playHeroVideo);
       video.removeEventListener('loadeddata', handleVideoPlaying);
       video.removeEventListener("canplay", tryPlay);
-      observer.disconnect();
+      document.removeEventListener("touchstart", resume);
+      document.removeEventListener("click", resume);
     };
   }, [showVideo, video]);
 
@@ -106,6 +119,8 @@ const HeroSlider = ({ images, video }) => {
             preload="metadata"
             controls={false}
             disablePictureInPicture
+            disableRemotePlayback
+            x-webkit-airplay="deny"
             controlsList="nodownload noplaybackrate noremoteplayback"
             src={video}
             onLoadedMetadata={(event) => {

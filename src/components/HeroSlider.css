@@ -33,20 +33,36 @@
 .hero-video {
     object-fit: cover;
     pointer-events: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .cfx-hero-video.is-ready {
     opacity: 1;
 }
 
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-enclosure,
+.hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-play-button,
+.hero-video::-webkit-media-controls-overlay-play-button,
+.hero-video::-webkit-media-controls-timeline,
+.hero-video::-webkit-media-controls-current-time-display,
+.hero-video::-webkit-media-controls-time-remaining-display,
 .cfx-hero-video::-webkit-media-controls,
+.cfx-hero-video::-webkit-media-controls-enclosure,
 .cfx-hero-video::-webkit-media-controls-panel,
 .cfx-hero-video::-webkit-media-controls-start-playback-button,
 .cfx-hero-video::-webkit-media-controls-play-button,
-.cfx-hero-video::-webkit-media-controls-overlay-play-button {
+.cfx-hero-video::-webkit-media-controls-overlay-play-button,
+.cfx-hero-video::-webkit-media-controls-timeline,
+.cfx-hero-video::-webkit-media-controls-current-time-display,
+.cfx-hero-video::-webkit-media-controls-time-remaining-display {
     display: none !important;
+    visibility: hidden !important;
     opacity: 0 !important;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .cfx-slide-track {

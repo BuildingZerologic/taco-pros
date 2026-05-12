@@ -80,6 +80,7 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.35s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .marquee__item video.is-playing {
@@ -87,13 +88,19 @@
 }
 
 .marquee__item video::-webkit-media-controls,
+.marquee__item video::-webkit-media-controls-enclosure,
 .marquee__item video::-webkit-media-controls-panel,
 .marquee__item video::-webkit-media-controls-start-playback-button,
 .marquee__item video::-webkit-media-controls-play-button,
-.marquee__item video::-webkit-media-controls-overlay-play-button {
+.marquee__item video::-webkit-media-controls-overlay-play-button,
+.marquee__item video::-webkit-media-controls-timeline,
+.marquee__item video::-webkit-media-controls-current-time-display,
+.marquee__item video::-webkit-media-controls-time-remaining-display {
   display: none !important;
+  visibility: hidden !important;
   opacity: 0 !important;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 /* ============================= */

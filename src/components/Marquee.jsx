@@ -43,41 +43,48 @@ const MarqueeVideo = ({ src }) => {
         video.setAttribute("playsinline", "");
         video.setAttribute("webkit-playsinline", "");
 
-        const tryPlay = async () => {
+        const playVideo = () => {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {});
+            }
+        };
+
+        const resume = () => {
             video.muted = true;
             video.defaultMuted = true;
             video.setAttribute("muted", "");
+            video.play().catch(() => {});
+            document.removeEventListener("touchstart", resume);
+            document.removeEventListener("click", resume);
+        };
 
-            try {
-                await video.play();
-            } catch {
-                // Browser may defer autoplay until media is visible or ready.
+        const tryPlay = () => {
+            video.muted = true;
+            video.defaultMuted = true;
+
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    document.addEventListener("touchstart", resume, { once: true });
+                    document.addEventListener("click", resume, { once: true });
+                });
             }
         };
 
         const handleLoadedData = () => setIsPlaying(true);
 
-        tryPlay();
-        video.addEventListener("loadedmetadata", tryPlay, { once: true });
+        playVideo();
+        document.addEventListener("touchstart", resume, { once: true });
+        document.addEventListener("click", resume, { once: true });
         video.addEventListener("loadeddata", handleLoadedData, { once: true });
         video.addEventListener("canplay", tryPlay);
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    tryPlay();
-                }
-            },
-            { threshold: 0.3 }
-        );
-
-        observer.observe(video);
-
         return () => {
-            video.removeEventListener("loadedmetadata", tryPlay);
             video.removeEventListener("loadeddata", handleLoadedData);
             video.removeEventListener("canplay", tryPlay);
-            observer.disconnect();
+            document.removeEventListener("touchstart", resume);
+            document.removeEventListener("click", resume);
         };
     }, [src, shouldLoad]);
 
@@ -94,6 +101,8 @@ const MarqueeVideo = ({ src }) => {
             preload={shouldLoad ? "metadata" : "none"}
             controls={false}
             disablePictureInPicture
+            disableRemotePlayback
+            x-webkit-airplay="deny"
             controlsList="nodownload noplaybackrate noremoteplayback"
             onPlaying={() => setIsPlaying(true)}
             className={isPlaying ? "is-playing" : ""}
