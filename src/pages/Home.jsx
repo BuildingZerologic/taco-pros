@@ -13,9 +13,18 @@ const BannerLocation = lazy(() => import('../components/BannerLocation'));
 const ProK = lazy(() => import('../components/ProK'));
 const DiscoverMenu = lazy(() => import('../components/DiscoverMenu'));
 
+const HERO_DESKTOP_VIDEO = {
+  mp4: "/hero.mp4",
+};
+
+const HERO_MOBILE_VIDEO = {
+  mp4: "/hero-m.mp4",
+  webm: "/hero-m.webm",
+};
+
 export default function Home() {
 
-  const currentVideo = useVideoSource("/hero.mp4", "/hero-m.webm");
+  const currentVideo = useVideoSource(HERO_DESKTOP_VIDEO, HERO_MOBILE_VIDEO);
 
   const heroProps = useMemo(() => ({
     images: null,
