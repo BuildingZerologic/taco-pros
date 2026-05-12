@@ -7,6 +7,7 @@ const ORDER_LINK = 'https://tacopros.toast.site/';
 const HeroSlider = ({ images, video }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   const videoRef = useRef(null);
 
   const isSlider = images && images.length > 1;
@@ -26,6 +27,7 @@ const HeroSlider = ({ images, video }) => {
     if (!showVideo || !videoRef.current) return;
 
     const heroVideo = videoRef.current;
+    setIsVideoReady(false);
 
     heroVideo.muted = true;
     heroVideo.defaultMuted = true;
@@ -67,6 +69,10 @@ const HeroSlider = ({ images, video }) => {
     };
   }, [showVideo, video]);
 
+  const handleVideoPlaying = () => {
+    setIsVideoReady(true);
+  };
+
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
@@ -92,8 +98,8 @@ const HeroSlider = ({ images, video }) => {
             controls={false}
             disablePictureInPicture
             controlsList="nodownload noplaybackrate noremoteplayback"
-            webkit-playsinline="true"
-            className="cfx-hero-video"
+            onPlaying={handleVideoPlaying}
+            className={`cfx-hero-video ${isVideoReady ? 'is-ready' : ''}`}
           >
             <source src={video} type="video/mp4" />
           </video>

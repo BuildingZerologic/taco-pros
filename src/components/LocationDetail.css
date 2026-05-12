@@ -78,12 +78,12 @@
 
 .location-detail-page .hero-content h1 {
   margin: 0;
-  font-size: clamp(30px, 4.4vw, 46px);
+  font-size: clamp(32px, 4.4vw, 46px);
 }
 
 .location-detail-page .subtitle {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -184,6 +184,10 @@
   margin-top: 18px;
 }
 
+.location-detail-page .btn-cta {
+  box-shadow: -6px 6px 0 #000;
+}
+
 .location-detail-page aside {
   min-width: 0;
 }
@@ -216,7 +220,7 @@
   display: block;
   margin-bottom: 4px;
   color: var(--taco-text);
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -262,7 +266,7 @@
 .location-detail-page .hours-list span {
   color: var(--taco-muted);
   font-family: 'RobotoSlab', serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -273,7 +277,7 @@
 .location-detail-page .map-container span {
   display: block;
   margin-bottom: 7px;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -359,7 +363,7 @@
 .location-detail-page .cta-banner p {
   max-width: 780px;
   margin: 0 0 20px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -400,12 +404,12 @@
 
   .location-detail-page .hero-content h1 {
     max-width: 250px;
-    font-size: 23px;
+    font-size: 32px;
   }
 
   .location-detail-page .subtitle {
     max-width: 260px;
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .location-detail-page .intro-section {
@@ -438,7 +442,7 @@
   }
 
   .location-detail-page .sidebar-title {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .location-detail-page .map-container iframe {
@@ -454,6 +458,6 @@
   }
 
   .location-detail-page .cta-banner h2 {
-    font-size: 19px;
+    font-size: 24px;
   }
 }

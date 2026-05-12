@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Suspense, lazy, useMemo } from 'react';
+import { Suspense, lazy } from 'react';
 import HeroSlider from '../components/HeroSlider'; 
 import useVideoSource from './useVideoSource';
 
@@ -16,11 +16,6 @@ const DiscoverMenu = lazy(() => import('../components/DiscoverMenu'));
 export default function Home() {
 
   const currentVideo = useVideoSource("/Landscape.mp4", "/Vertical.mp4");
-
-  const heroProps = useMemo(() => ({
-    images: null,
-    video: currentVideo
-  }), [currentVideo]);
 
   return (
     <>
@@ -68,7 +63,10 @@ export default function Home() {
       </Helmet>
 
    
-      <HeroSlider {...heroProps} />
+      <HeroSlider
+        images={null}
+        video={currentVideo}
+      />
 
   
       <Suspense fallback={<div style={{ height: "400px" }} />}>

@@ -78,6 +78,22 @@
 
 .marquee__item video {
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.marquee__item video.is-playing {
+  opacity: 1;
+}
+
+.marquee__item video::-webkit-media-controls,
+.marquee__item video::-webkit-media-controls-panel,
+.marquee__item video::-webkit-media-controls-start-playback-button,
+.marquee__item video::-webkit-media-controls-play-button,
+.marquee__item video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  -webkit-appearance: none;
 }
 
 /* ============================= */

@@ -1,4 +1,51 @@
+import { useEffect, useRef, useState } from "react";
 import "./marquee.css";
+
+const MarqueeVideo = ({ src }) => {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return undefined;
+
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+        video.setAttribute("webkit-playsinline", "");
+
+        const playVideo = () => {
+            video.play().catch(() => {});
+        };
+
+        playVideo();
+        video.addEventListener("canplay", playVideo, { once: true });
+
+        return () => {
+            video.removeEventListener("canplay", playVideo);
+        };
+    }, [src]);
+
+    return (
+        <video
+            ref={videoRef}
+            src={src}
+            autoPlay
+            muted
+            defaultMuted
+            loop
+            playsInline
+            preload="metadata"
+            controls={false}
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate noremoteplayback"
+            onPlaying={() => setIsPlaying(true)}
+            className={isPlaying ? "is-playing" : ""}
+        />
+    );
+};
 
 export default function Marquee({
     data = [],
@@ -33,14 +80,7 @@ export default function Marquee({
                             className="marquee__item"
                         >
                             {item.type === "video" ? (
-                                <video
-                                    src={item.src}
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    preload="metadata"
-                                />
+                                <MarqueeVideo src={item.src} />
                             ) : (
                                 <img src={item.src} alt="" />
                             )}
