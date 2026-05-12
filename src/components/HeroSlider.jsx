@@ -4,6 +4,20 @@ import TacoButton from './TacoButton';
 
 const ORDER_LINK = 'https://tacopros.toast.site/';
 
+const nudgeScrollForAutoplay = () => {
+  if (typeof window === 'undefined') return;
+
+  const initialX = window.scrollX;
+  const initialY = window.scrollY;
+
+  window.requestAnimationFrame(() => {
+    window.scrollTo(initialX, initialY + 1);
+    window.requestAnimationFrame(() => {
+      window.scrollTo(initialX, initialY);
+    });
+  });
+};
+
 const HeroSlider = ({ images, video }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
@@ -59,6 +73,7 @@ const HeroSlider = ({ images, video }) => {
       video.play().catch(() => {});
       document.removeEventListener("touchstart", resume);
       document.removeEventListener("click", resume);
+      window.removeEventListener("scroll", resume);
     };
 
     const tryPlay = () => {
@@ -68,15 +83,19 @@ const HeroSlider = ({ images, video }) => {
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(() => {
+          nudgeScrollForAutoplay();
           document.addEventListener("touchstart", resume, { once: true });
           document.addEventListener("click", resume, { once: true });
+          window.addEventListener("scroll", resume, { once: true, passive: true });
         });
       }
     };
 
     playHeroVideo();
+    nudgeScrollForAutoplay();
     document.addEventListener("touchstart", resume, { once: true });
     document.addEventListener("click", resume, { once: true });
+    window.addEventListener("scroll", resume, { once: true, passive: true });
     video.addEventListener('loadedmetadata', playHeroVideo, { once: true });
     video.addEventListener('loadeddata', handleVideoPlaying, { once: true });
     video.addEventListener("canplay", tryPlay);
@@ -87,6 +106,7 @@ const HeroSlider = ({ images, video }) => {
       video.removeEventListener("canplay", tryPlay);
       document.removeEventListener("touchstart", resume);
       document.removeEventListener("click", resume);
+      window.removeEventListener("scroll", resume);
     };
   }, [showVideo, video]);
 

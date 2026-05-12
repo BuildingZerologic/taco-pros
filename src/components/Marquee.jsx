@@ -1,6 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import "./marquee.css";
 
+const nudgeScrollForAutoplay = () => {
+    if (typeof window === "undefined") return;
+
+    const initialX = window.scrollX;
+    const initialY = window.scrollY;
+
+    window.requestAnimationFrame(() => {
+        window.scrollTo(initialX, initialY + 1);
+        window.requestAnimationFrame(() => {
+            window.scrollTo(initialX, initialY);
+        });
+    });
+};
+
 const MarqueeVideo = ({ src }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [shouldLoad, setShouldLoad] = useState(false);
@@ -57,6 +71,7 @@ const MarqueeVideo = ({ src }) => {
             video.play().catch(() => {});
             document.removeEventListener("touchstart", resume);
             document.removeEventListener("click", resume);
+            window.removeEventListener("scroll", resume);
         };
 
         const tryPlay = () => {
@@ -66,8 +81,10 @@ const MarqueeVideo = ({ src }) => {
             const playPromise = video.play();
             if (playPromise !== undefined) {
                 playPromise.catch(() => {
+                    nudgeScrollForAutoplay();
                     document.addEventListener("touchstart", resume, { once: true });
                     document.addEventListener("click", resume, { once: true });
+                    window.addEventListener("scroll", resume, { once: true, passive: true });
                 });
             }
         };
@@ -75,8 +92,10 @@ const MarqueeVideo = ({ src }) => {
         const handleLoadedData = () => setIsPlaying(true);
 
         playVideo();
+        nudgeScrollForAutoplay();
         document.addEventListener("touchstart", resume, { once: true });
         document.addEventListener("click", resume, { once: true });
+        window.addEventListener("scroll", resume, { once: true, passive: true });
         video.addEventListener("loadeddata", handleLoadedData, { once: true });
         video.addEventListener("canplay", tryPlay);
 
@@ -85,6 +104,7 @@ const MarqueeVideo = ({ src }) => {
             video.removeEventListener("canplay", tryPlay);
             document.removeEventListener("touchstart", resume);
             document.removeEventListener("click", resume);
+            window.removeEventListener("scroll", resume);
         };
     }, [src, shouldLoad]);
 
