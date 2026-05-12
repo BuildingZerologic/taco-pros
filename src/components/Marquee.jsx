@@ -16,15 +16,28 @@ const MarqueeVideo = ({ src }) => {
         video.setAttribute("playsinline", "");
         video.setAttribute("webkit-playsinline", "");
 
-        const playVideo = () => {
+        const resumePlayback = () => {
             video.play().catch(() => {});
+            document.removeEventListener("touchstart", resumePlayback);
+            document.removeEventListener("click", resumePlayback);
         };
 
-        playVideo();
+        const playVideo = () => {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    document.addEventListener("touchstart", resumePlayback, { once: true, passive: true });
+                    document.addEventListener("click", resumePlayback, { once: true });
+                });
+            }
+        };
+
         video.addEventListener("canplay", playVideo, { once: true });
 
         return () => {
             video.removeEventListener("canplay", playVideo);
+            document.removeEventListener("touchstart", resumePlayback);
+            document.removeEventListener("click", resumePlayback);
         };
     }, [src]);
 

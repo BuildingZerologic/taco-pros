@@ -40,32 +40,28 @@ const HeroSlider = ({ images, video }) => {
     heroVideo.setAttribute('playsinline', '');
     heroVideo.setAttribute('webkit-playsinline', '');
 
+    const resumePlayback = () => {
+      heroVideo.play().catch(() => {});
+      document.removeEventListener('touchstart', resumePlayback);
+      document.removeEventListener('click', resumePlayback);
+    };
+
     const playHeroVideo = () => {
       const playPromise = heroVideo.play();
-      if (playPromise) {
+      if (playPromise !== undefined) {
         playPromise.catch(() => {
-          // Safari may still block autoplay in Low Power Mode or strict user settings.
+          document.addEventListener('touchstart', resumePlayback, { once: true, passive: true });
+          document.addEventListener('click', resumePlayback, { once: true });
         });
       }
     };
 
-    playHeroVideo();
-    const retryOnVisible = () => {
-      if (!document.hidden) playHeroVideo();
-    };
-
-    heroVideo.addEventListener('loadedmetadata', playHeroVideo, { once: true });
     heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
-    document.addEventListener('visibilitychange', retryOnVisible);
-    window.addEventListener('touchstart', playHeroVideo, { once: true, passive: true });
-    window.addEventListener('pointerdown', playHeroVideo, { once: true });
 
     return () => {
-      heroVideo.removeEventListener('loadedmetadata', playHeroVideo);
       heroVideo.removeEventListener('canplay', playHeroVideo);
-      document.removeEventListener('visibilitychange', retryOnVisible);
-      window.removeEventListener('touchstart', playHeroVideo);
-      window.removeEventListener('pointerdown', playHeroVideo);
+      document.removeEventListener('touchstart', resumePlayback);
+      document.removeEventListener('click', resumePlayback);
     };
   }, [showVideo, video]);
 
