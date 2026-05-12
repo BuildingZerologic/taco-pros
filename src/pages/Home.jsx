@@ -15,7 +15,7 @@ const DiscoverMenu = lazy(() => import('../components/DiscoverMenu'));
 
 export default function Home() {
 
-  const currentVideo = useVideoSource("/hero.mp4", "/hero-m.mp4");
+  const currentVideo = useVideoSource("/hero.mp4", "/hero-m.webm");
 
   const heroProps = useMemo(() => ({
     images: null,
