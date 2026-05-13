@@ -88,7 +88,7 @@ const HiringForm = () => {
         }
 
         try {
-            const response = await fetch('/hiring_api.php', {
+            const response = await fetch('/hire.php', {
                 method: 'POST',
                 body: dataToSend,
             });
