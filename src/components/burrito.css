@@ -240,6 +240,21 @@
     padding: 10px 25px;
 }
 
+@media (min-width: 768px) and (max-width: 965px) {
+    .summer-carousel-container .summer-offer-swiper {
+        padding: 16px 0 12px;
+    }
+
+    .summer-carousel-container .summer-slider-stage {
+        height: 405px;
+    }
+
+    .summer-carousel-container .sw-controls-row {
+        gap: 40px;
+        margin: 0 0 18px;
+    }
+}
+
 .sw-title2 {
     text-transform: uppercase;
     margin: 12px 0 10px;

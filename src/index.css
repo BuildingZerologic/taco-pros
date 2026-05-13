@@ -95,7 +95,7 @@ body {
 .cfx-main-content {
   animation: cfxFadeIn 0.8s ease-in-out;
   overflow: hidden;
-  min-height: 100dvh;
+  /* min-height: 100dvh; */
 }
 
 .cfx-app-wrapper{

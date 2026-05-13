@@ -220,3 +220,44 @@
     background-position: center center;
   }
 }
+
+@media (min-width: 768px) and (max-width: 965px) {
+  .banner-location {
+    align-items: stretch;
+  }
+
+  .billboard-container {
+    background-image: url(/TP-locations-tablet-white-bottom.gif);
+    background-position: center center;
+    
+  }
+
+  .billboard-content-d {
+    display: none;
+  }
+
+  .billboard-content {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(88%, 620px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    z-index: 2;
+  }
+
+  .location-number {
+    font-size: clamp(120px, 16vw, 154px);
+    margin-right: 0;
+  }
+
+  .location-text {
+    font-size: clamp(48px, 7vw, 68px);
+    line-height: 1.05;
+    margin: 8px 0 38px;
+  }
+}

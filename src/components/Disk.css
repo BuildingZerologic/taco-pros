@@ -41,6 +41,8 @@
     flex: 1;
     padding: 10px 15px;
     font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
     border: none;
     background: #eee;
     cursor: pointer;
@@ -52,7 +54,6 @@
 .menuTypeTabs .activeTab {
     background: #d15527;
     color: #fff;
-    font-weight: 600;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
@@ -272,7 +273,7 @@ img, svg {
 /* ===== RESPONSIVE ======== */
 /* ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 965px) {
 
     .discoverMenu {
         padding: 40px 0;

@@ -440,7 +440,7 @@ export default function RestaurantApp() {
         <h1 className="cat-title">{activeCategory.name}</h1>
 
         {/* COVER IMAGE (SEO FIXED) */}
-        <div className="coverImg">
+        <div className={`coverImg ${activeCategory.name === "Protein Bowl" ? "protein-bowl-cover" : ""}`}>
           <picture className="cat-cover">
             <source
               media="(max-width: 767px)"
