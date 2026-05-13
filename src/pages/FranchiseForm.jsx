@@ -125,6 +125,44 @@ function FranchiseForm() {
     event.currentTarget.value = event.currentTarget.value.replace(/\D/g, "");
   };
 
+  const buildFranchisePayload = () => ({
+    fullName: formData["Full Name"] || "",
+    email: formData["Email"] || "",
+    phone: formData["Phone"] || "",
+    homeAddress: formData["Home Address"] || "",
+    city: formData["City"] || "",
+    province: formData["Province"] || "",
+    postalCode: formData["Postal Code"] || "",
+    citizenship: formData["Country of Citizen?"] || "",
+    interestReason: formData["Why are you interested in the Tacopros Franchise?"] || "",
+
+    highSchool: formData["High School"] || "",
+    graduated: formData["Did you graduate?"] || "",
+    diploma: formData["Diploma"] || "",
+
+    occupation: formData["Occupation"] || "",
+    position: formData["Position"] || "",
+    employerName: formData["Name of Employer"] || "",
+    workPhone: formData["Employer Phone"] || "",
+
+    liquidAssets: formData["Total Liquid Assets"] || "",
+    tangibleAssets: formData["Total Tangible Assets"] || "",
+    liabilities: formData["Total Liabilities"] || "",
+    netWorth: formData["Total Net Worth"] || "",
+    capitalAvailable: formData["Total capital available"] || "",
+    financing: formData["Will you need financing?"] || "",
+
+    experience: formData["Do you have experience in restaurant management?"] || "",
+    experienceDesc: formData['If "Yes", please describe'] || "",
+    whoWillManage: formData["Who will manage operations?"] || "",
+    preferredArea: formData["Preferred City/Area"] || "",
+    interestType: Array.isArray(formData["Interested In"])
+      ? formData["Interested In"].join(", ")
+      : formData["Interested In"] || "",
+    siteSelected: formData["Do you already have a site selected?"] || "",
+    siteAddress: formData['If "Yes", what is the address?'] || "",
+  });
+
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && e.target.tagName !== "TEXTAREA" && step !== steps.length) {
       e.preventDefault();
@@ -146,7 +184,7 @@ function FranchiseForm() {
     }
 
     try {
-      const response = await axios.post("/franchise_api.php", formData, {
+      const response = await axios.post("/franchise_api.php", buildFranchisePayload(), {
         headers: { "Content-Type": "application/json" },
       });
 

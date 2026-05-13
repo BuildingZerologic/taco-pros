@@ -95,7 +95,7 @@ const HiringForm = () => {
             dataToSend.append(key, formData[key]);
         }
         try {
-            await axios.post('/api/hire', dataToSend, {
+            await axios.post('/hire', dataToSend, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             alert('Application submitted successfully!');
