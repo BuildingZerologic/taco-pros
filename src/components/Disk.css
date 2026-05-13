@@ -341,6 +341,6 @@ img, svg {
 
     /* hide arrows on mobile */
     .mdx-scroll-arrow {
-        display: flex;
+        display: none;
     }
 }

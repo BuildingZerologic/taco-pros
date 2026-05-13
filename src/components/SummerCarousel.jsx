@@ -26,11 +26,13 @@ const SummerCarousel = () => {
             title: "Lunch Special",
             desc: `2 Tacos and a Drink $7.99 (11am – 4pm)`,
             img: "/tp mob offer lunch spl.jpg"
-        }, {
+        }, 
+        {
             id: 4,
-            title: "New Dish Alert",
-            desc: `Bigger Better Pro Burritos Starting at $10`,
-            img: "/tp mob offer new dish alert (1).jpg"
+            title: "Get the App",
+            desc: `Tacos and more at your fingertips!`,
+            img: "/Frame 111.png"
+            
         },
         {
             id: 5,
@@ -40,9 +42,9 @@ const SummerCarousel = () => {
         },
         {
             id: 6,
-            title: "Get the App",
-            desc: `Tacos and more at your fingertips!`,
-            img: "/Frame 111.png"
+            title: "New Dish Alert",
+            desc: `Bigger Better Pro Burritos Starting at $10`,
+            img: "/tp mob offer new dish alert (1).jpg"
         },
 
     ], []);

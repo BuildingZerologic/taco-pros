@@ -195,7 +195,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-huntley-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=12902+Route+47+Huntley+IL+60142",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Huntley/@42.1425956,-88.4319203,21z/data=!4m15!1m8!3m7!1s0x880f168341b0cbf1:0x813499a60bdde8d2!2s12902+IL-47,+Huntley,+IL+60142,+USA!3b1!8m2!3d42.1426999!4d-88.4318116!16s%2Fg%2F11n3zkjlzw!3m5!1s0x880f1797d2ccb495:0x3573872a9644267!8m2!3d42.1426172!4d-88.431805!16s%2Fg%2F11ymzpg4qx?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=12902+Route+47+Huntley+IL+60142&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Huntley IL | Mexican Restaurant & Tacos",
@@ -292,7 +292,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-rogers-park-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=2321+W+Howard+St+Chicago+IL+60645",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Rogers+Park/@42.0192369,-87.6907619,17z/data=!4m15!1m8!3m7!1s0x880fd02dec8e4583:0xffdb37ae2d884455!2s2321+W+Howard+St,+Chicago,+IL+60645,+USA!3b1!8m2!3d42.0192369!4d-87.6885732!16s%2Fg%2F11rp1yw2p9!3m5!1s0x880fd13911be9c89:0x84ce5f0132e1472c!8m2!3d42.0192369!4d-87.6885732!16s%2Fg%2F11zjj9xwz4?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=2321+W+Howard+St+Chicago+IL+60645&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Rogers Park Chicago | Mexican Restaurant & Tacos",
@@ -382,7 +382,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-elburn-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=780+N+Main+St+Elburn+IL+60119",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Elburn/@41.9008997,-88.47519,17z/data=!4m15!1m8!3m7!1s0x880ee005bffce1f9:0x3871f65bc2eb5b36!2s780+N+Main+St,+Elburn,+IL+60119,+USA!3b1!8m2!3d41.9008434!4d-88.473029!16s%2Fg%2F11dzp2r4_7!3m5!1s0x880ee148946243a5:0x2e7cb873fc5311dc!8m2!3d41.9008997!4d-88.4730013!16s%2Fg%2F11mlyjfxt9?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=780+N+Main+St+Elburn+IL+60119&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Elburn IL | Mexican Restaurant & Tacos",
@@ -479,7 +479,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-tinley-park-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=15943+S+Harlem+Ave+Tinley+Park+IL+60477",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Tinley+Park/@41.6002507,-87.7949971,17z/data=!4m15!1m8!3m7!1s0x880e3e6b3249f8a9:0x7563a6ceca1777ec!2s15943+S+Harlem+Ave,+Tinley+Park,+IL+60477,+USA!3b1!8m2!3d41.6002507!4d-87.7928084!16s%2Fg%2F11bw3xs9c7!3m5!1s0x880e3f492f9403fb:0xd5eac5972b5315d3!8m2!3d41.6002507!4d-87.7928084!16s%2Fg%2F11xntsxrqb?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=15943+S+Harlem+Ave+Tinley+Park+IL+60477&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Tinley Park | Mexican Restaurant & Tacos",
@@ -557,7 +557,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-old-town-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=1435+N+Wells+St+Chicago+IL+60610",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Old+Town/@41.9087129,-87.6365381,17z/data=!4m15!1m8!3m7!1s0x880fd34694011cf3:0xf92e5878dd15cf7!2s1435+N+Wells+St,+Chicago,+IL+60610,+USA!3b1!8m2!3d41.9087129!4d-87.6343494!16s%2Fg%2F11c3q50fwq!3m5!1s0x880fd3916efdbebb:0x63975ad3845d73b2!8m2!3d41.9087129!4d-87.6343494!16s%2Fg%2F11yfrdq93f?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=1435+N+Wells+St+Chicago+IL+60610&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Old Town Chicago | Mexican Restaurant & Tacos",
@@ -642,7 +642,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-carol-stream-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=772+W+Army+Trail+Rd+Carol+Stream+IL+60188",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Carol+Stream/@41.9389133,-88.1485003,17z/data=!4m15!1m8!3m7!1s0x880faaf3782e3ffb:0x26c11c469bcf0ac!2s772+W+Army+Trail+Rd,+Carol+Stream,+IL+60188,+USA!3b1!8m2!3d41.9399261!4d-88.1458131!16s%2Fg%2F11c21v5xfs!3m5!1s0x880fab591779d7a1:0x2d012c331d8ef2ed!8m2!3d41.9389133!4d-88.1463116!16s%2Fg%2F11xg4bmtdv?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=772+W+Army+Trail+Rd+Carol+Stream+IL+60188&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Carol Stream | Mexican Restaurant & Tacos",
@@ -654,13 +654,13 @@ const rawLocations = [
     "ogType": "website"
   },
   "pageContent": {
-    "h1": "Mexican Restaurant in Taco Pros - Carol Stream | Taco Pros",
-    "introTitle": "Authentic Mexican Food in Taco Pros - Carol Stream",
-    "introText": "Looking for a Mexican restaurant in Taco Pros - Carol Stream? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and bold, freshly prepared dishes. Whether you're dining in, ordering takeout, or planning catering, Taco Pros delivers a fast and satisfying experience.",
+    "h1": "Mexican Restaurant in Carol Stream | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Carol Stream",
+    "introText": "Looking for a Mexican restaurant in Carol Stream? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and bold, freshly prepared dishes. Whether you're dining in, ordering takeout, or planning catering, Taco Pros delivers a fast and satisfying experience.",
     "whyTitle": "Why Taco Pros in Carol Stream",
     "cateringTitle": "Mexican Catering in Carol Stream",
     "cateringText": "Taco Pros offers Mexican catering services across Taco Pros - Carol Stream:",
-    "locationName": "Taco Pros - Taco Pros - Carol Stream",
+    "locationName": "Taco Pros - Carol Stream",
     "googleMapsText": "772 W Army Trail Rd, Taco Pros - Carol Stream 60188"
   },
   "schema": {
@@ -713,7 +713,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-marysville-oh",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=15710+US-36+Marysville+OH+43040",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Marysville/@40.2410682,-83.3420462,17z/data=!3m1!4b1!4m6!3m5!1s0x8838c5003157f89f:0x4b9cfaad253f9fb!8m2!3d40.2410682!4d-83.3394713!16s%2Fg%2F11wpl6mzdy?entry=ttu&g_ep=EgoyMDI2MDUxMC4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=15710+US-36+Marysville+OH+43040&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Marysville OH | Mexican Restaurant & Tacos",

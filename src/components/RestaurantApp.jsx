@@ -158,8 +158,8 @@ const menuItems = [
 
     },
     dishes: [
-      { title: 'Classic Protein (Pollo,Picadillo,Al Pastor,Veggie)', description: 'Flour tortilla with side of lettuce, tomato, and sour cream. (Extra Topping $0.25 each)', price: '$9', img: "GUAC AND CHIPS.png" },
-      { title: 'Signature Protein (Barbacoa,Asada,Camaron)', description: 'Melted C​hihuahua cheese with Mexican Sausage', price: '$9', img: "GUAC AND CHIPS.png" },
+      { title: 'Classic Protein (Pollo, Picadillo, Al Pastor ,Veggie)', description: 'Flour tortilla with side of lettuce, tomato, and sour cream. (Extra Topping $0.25 each)', price: '$9', img: "GUAC AND CHIPS.png" },
+      { title: 'Signature Protein (Barbacoa, Asada, Camaron)', description: 'Melted C​hihuahua cheese with Mexican Sausage', price: '$9', img: "GUAC AND CHIPS.png" },
     ],
   },
   
