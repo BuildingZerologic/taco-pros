@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import axios from "axios";
 import "./FranchiseForm.css";
 import TacoButton from "../components/TacoButton";
 
@@ -184,11 +183,15 @@ function FranchiseForm() {
     }
 
     try {
-      const response = await axios.post("/franchise_api.php", buildFranchisePayload(), {
+      const response = await fetch("/franchise_api.php", {
+        method: "POST",
         headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(buildFranchisePayload()),
       });
 
-      if (response.data?.success) {
+      const result = await response.json();
+
+      if (result.success) {
         setSubmitted(true);
         setSubmitStatus('success');
         setStep(steps.length);
@@ -196,7 +199,7 @@ function FranchiseForm() {
       }
 
       setSubmitStatus('idle');
-      alert(`Error: ${response.data?.message || "Unable to submit application."}`);
+      alert(`Error: ${result?.message || "Server did not return a successful response."}`);
     } catch (err) {
       console.error("Submission Error:", err);
       setSubmitStatus('idle');

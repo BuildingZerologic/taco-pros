@@ -1,5 +1,4 @@
 import React, { useMemo, useRef, useState } from 'react';
-import axios from 'axios';
 import './HiringForm.css';
 import './HiringLayout.css';
 import TacoButton from './TacoButton';
@@ -59,15 +58,6 @@ const HiringForm = () => {
     const today = useMemo(() => new Date().toISOString().split('T')[0], []);
     const requiredStar = <span className="required-star">*</span>;
 
-    const getConsoleData = () => Object.fromEntries(
-        Object.entries(formData).map(([key, value]) => [
-            key,
-            key === 'resume' && value
-                ? { name: value.name, type: value.type, size: value.size }
-                : value,
-        ])
-    );
-
     const handleChange = (e) => {
         const { name, type, checked, files } = e.target;
         const value = name === 'phone' ? e.target.value.replace(/\D/g, '') : e.target.value;
@@ -82,25 +72,42 @@ const HiringForm = () => {
     };
 
 
-       const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (submitted) return;
         if (!validateStep(4)) return;
-        console.log('Hiring application JSON:', getConsoleData());
-        setSubmitted(true);
-        setSubmitStatus('success');
-        setStep(steps.length);
+
+        setError('');
+        setSubmitStatus('loading');
+
         const dataToSend = new FormData();
         for (const key in formData) {
-            dataToSend.append(key, formData[key]);
+            if (formData[key] !== null && formData[key] !== undefined) {
+                dataToSend.append(key, formData[key]);
+            }
         }
+
         try {
-            await axios.post('/hire', dataToSend, {
-                headers: { 'Content-Type': 'multipart/form-data' },
+            const response = await fetch('/hiring_api.php', {
+                method: 'POST',
+                body: dataToSend,
             });
-            alert('Application submitted successfully!');
+
+            const result = await response.json();
+
+            if (result.success) {
+                setSubmitted(true);
+                setSubmitStatus('success');
+                setStep(steps.length);
+                return;
+            }
+
+            setSubmitStatus('idle');
+            setError(result.message || 'Server did not return a successful response. Please try again.');
         } catch (error) {
             console.error('Submission error:', error);
+            setSubmitStatus('idle');
+            setError('An error occurred while sending the application.');
         }
     };
 
