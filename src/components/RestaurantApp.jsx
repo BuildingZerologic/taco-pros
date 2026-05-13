@@ -68,8 +68,8 @@ const menuItems = [
   },
   {
     category: 'PROTEIN BOWL',
-    menuIcon: '/proteinbowl.jpg',
-    image: '/proteinbowl.jpg',
+    menuIcon: '/pretein bowl mob.jpg',
+    image: '/pretein bowl.jpg',
     menuTitle: 'Protein Bowl',
      combo: {
       title: 'TACO TRIO COMBO',
@@ -468,7 +468,7 @@ export default function RestaurantApp() {
 
             <div className="cds-panel cds-combo-panel cds-image-panel">
               <img
-                src={isTacosCategory ? "/3 taco combo banner-02.jpg" : "/make combo banner-01.jpg"}
+                src={isTacosCategory ? "/tp site menu banners-02.jpg" : "/make combo banner-01.jpg"}
                 alt={isTacosCategory ? "Taco Trio Combo" : "Make it a combo"}
                 className="cds-combo-img"
                 loading="lazy"
