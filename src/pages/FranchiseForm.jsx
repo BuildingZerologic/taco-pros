@@ -5,6 +5,7 @@ import TacoButton from "../components/TacoButton";
 function FranchiseForm() {
   const [step, setStep] = useState(1);
   const [submitStatus, setSubmitStatus] = useState('idle');
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const formRef = useRef(null);
@@ -172,11 +173,13 @@ function FranchiseForm() {
     event.preventDefault();
 
     if (submitted) return;
+    setError("");
     setSubmitStatus('loading');
 
     const invalid = formRef.current?.querySelector(":invalid");
     if (invalid) {
       setSubmitStatus('idle');
+      setError("Please complete all required fields before submitting.");
       invalid.reportValidity();
       invalid.scrollIntoView({ behavior: "smooth", block: "center" });
       return;
@@ -199,11 +202,11 @@ function FranchiseForm() {
       }
 
       setSubmitStatus('idle');
-      alert(`Error: ${result?.message || "Server did not return a successful response."}`);
+      setError(result?.message || "Server did not return a successful response.");
     } catch (err) {
       console.error("Submission Error:", err);
       setSubmitStatus('idle');
-      alert("An error occurred while sending the application.");
+      setError("An error occurred while sending the application.");
     }
   };
 
@@ -284,6 +287,8 @@ function FranchiseForm() {
           onSubmit={handleSubmit}
           onKeyDown={handleKeyDown}
         >
+
+          {error && <p className="form-error" role="alert">{error}</p>}
         
           {step === 1 && (
             <>
