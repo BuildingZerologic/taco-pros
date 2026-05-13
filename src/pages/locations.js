@@ -802,7 +802,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-valparaiso-in",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=2005+E+Morthland+Dr+Valparaiso+IN+46383",
+  "dir": "https://www.google.com/maps?sca_esv=313a17643fd6427e&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B2005%2BE%2BMorthland%2BDr%2BValparaiso%2BIN%2B46383&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfjaT5dhZ8_w0iGulwCAVymwIU-zSbwz5MJtwfGhRO_IXf2iy3lMGDkxM2vVMdVJmJN-G3RgmbrgZHOFq1s9YimjZu7DA&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=2005+E+Morthland+Dr+Valparaiso+IN+46383&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Valparaiso IN | Mexican Restaurant & Tacos",
@@ -899,7 +899,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-87th-stony-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=1515+E+87th+St+Chicago+IL+60619",
+  "dir": "https://www.google.com/maps?sca_esv=313a17643fd6427e&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B1515%2BE%2B87th%2BSt%2BChicago%2BIL%2B60619&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfmvHbn3y1UYw1V5WOfUhtIqakPNDlzaJz1Q7kUJChWFjMucpQIW9Z0rH35vPCsb5wi0yEBNBANH9AZW7tAMc6Ybvi_uQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=1515+E+87th+St+Chicago+IL+60619&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros 87th & Stony Chicago | Mexican Restaurant & Tacos",
@@ -989,7 +989,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-hyde-park-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=1400+E+47th+St+Chicago+IL+60653",
+  "dir": "https://www.google.com/maps?sca_esv=313a17643fd6427e&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B1400%2BE%2B47th%2BSt%2BChicago%2BIL%2B60653&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLJ8iWKvaYB1iulsUG6WX2rFHOHQAfutjBXu2KM_xgZnRcPpypDqmswJL0SXZG-M6XcIU9c_WhXe7iLL8TVs5d4AYZhWtD00Aj7dNGumBMAwHitKIqQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=1400+E+47th+St+Chicago+IL+60653&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Hyde Park Chicago | Mexican Restaurant & Tacos",
@@ -1079,7 +1079,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-west-milwaukee-wi",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=2068+Miller+Park+Way+Ste+B+West+Milwaukee+WI+53219",
+  "dir": "https://www.google.com/maps?sca_esv=313a17643fd6427e&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B2068%2BMiller%2BPark%2BWay%2BWest%2BMilwaukee%2BWI%2B53219&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfmvHbn3y1UYw1V5WOfUhtIqakPNDlzaJz1Q7kUJChWFjMucpQIW9Z0rH35vPCsb5wi0yEBNBANH9AZW7tAMc6Ybvi_uQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=2068+Miller+Park+Way+Ste+B+West+Milwaukee+WI+53219&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros West Milwaukee | Mexican Restaurant & Tacos",
@@ -1157,7 +1157,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-edgewater-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=5310+N+Broadway+Chicago+IL+60640",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Edgewater/@41.9786798,-87.6630208,17z/data=!3m1!4b1!4m6!3m5!1s0x880fd10043b99497:0x85c0e5baf71b82c1!8m2!3d41.9786798!4d-87.6604459!16s%2Fg%2F11wmsfw993?entry=ttu&g_ep=EgoyMDI2MDUxMC4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=5310+N+Broadway+Chicago+IL+60640&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Edgewater Chicago | Mexican Restaurant & Tacos",
@@ -1254,7 +1254,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-north-ave-oak-park-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=6427+W+North+Ave+Oak+Park+IL+60302",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+North+%26+Narragansett/@41.9087445,-87.7883741,17z/data=!3m1!4b1!4m6!3m5!1s0x880fcb5b51def989:0xd7fbab111da91a4b!8m2!3d41.9087445!4d-87.7857992!16s%2Fg%2F11x1_qwvf4?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=6427+W+North+Ave+Oak+Park+IL+60302&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros North Ave Oak Park | Mexican Restaurant & Tacos",
@@ -1332,7 +1332,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-glen-ellyn-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=850+Roosevelt+Rd+Glen+Ellyn+IL+60137",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B850%2BRoosevelt%2BRd%2BGlen%2BEllyn%2BIL%2B60135&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1QD8TCIDJfGa0vqjN9IHrvFmrQIo_O6UDquuOKFVChUZl0BFC0QpNrGDeps1mdS6ZKQGqyeZFEUbOq1ucUuG4tR5Zgkmo8nbPAGnwlQ0RdrjvIjkfcS1aQKfgcHemQ_6BtV3EXlzDH_76WzhapVhCFc7CuiRdvKeuEr7jTV8f0pZTqzYkQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=850+Roosevelt+Rd+Glen+Ellyn+IL+60137&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Glen Ellyn | Mexican Restaurant & Tacos",
@@ -1410,7 +1410,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-capitol-dr-milwaukee-wi",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=242+E+Capitol+Dr+Milwaukee+WI+53212",
+  "dir": "google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B242%2BE%2BCapitol%2BDr%2BMilwaukee%2BWI%2B53212&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfmvHbn3y1UYw1V5WOfUhtIqakPNDlzaJz1Q7kUJChWFjMucpQIW9Z0rH35vPCsb5wi0yEBNBANH9AZW7tAMc6Ybvi_uQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=242+E+Capitol+Dr+Milwaukee+WI+53212&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Capitol Dr Milwaukee | Mexican Restaurant & Tacos",
@@ -1514,7 +1514,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-franklin-wi",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=7730+S+Lovers+Lane+Rd+Ste+300+Franklin+WI+53132",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Franklin/@42.9051314,-88.0392274,17z/data=!3m1!4b1!4m6!3m5!1s0x88050d003c5e19d1:0xff4697ab9f227bbe!8m2!3d42.9051314!4d-88.0366525!16s%2Fg%2F11wg5zv6fy?entry=ttu&g_ep=EgoyMDI2MDUxMC4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=7730+S+Lovers+Lane+Rd+Ste+300+Franklin+WI+53132&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Franklin WI | Mexican Restaurant & Tacos",
@@ -1603,7 +1603,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-wells-st-milwaukee-wi",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=1400+W+Wells+St+Milwaukee+WI+53233",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B1400%2BW%2BWells%2BSt%2BMilwaukee%2BWI%2B53233&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfjaT5dhZ8_w0iGulwCAVymwIU-zSbwz5MJtwfGhRO_IXf2iy3lMGDkxM2vVMdVJmJN-G3RgmbrgZHOFq1s9YimjZu7DA&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=1400+W+Wells+St+Milwaukee+WI+53233&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Wells St Milwaukee | Late Night Mexican Food & Tacos",
@@ -1700,7 +1700,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-79th-cicero-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=7959+S+Cicero+Ave+Chicago+IL+60652",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B7959%2BS%2BCicero%2BAve%2BChicago%2BIL%2B60652&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1QD8TCIDJfGa0vqjN9IHrvFmrQIo_O6UDquuOKFVChUZl0BFC0QpNrGDeps1mdS6ZKQGqyeZFEUbOq1ucUuG4tSz8xZXTgqXZLHI3_iovS1k4qGry0zT7yKaeIBv2kh_1CLz-YUJ6fZHqXgz1Ezf4T3EAWUZU3s3fef870DeQ10VjP3XoA&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=7959+S+Cicero+Ave+Chicago+IL+60652&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros 79th & Cicero Chicago | Mexican Restaurant & Tacos",
@@ -1778,7 +1778,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-dyer-in",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=1080+Joliet+St+Dyer+IN+46311",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B1080%2BJoliet%2BSt%2BDyer%2BIN%2B46311&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1ZhjDHkmcUrC1OAsJEdAcLx6A0tQgArsHbSv8ynKEYL8Q3hsB1zOZLSYJqsUdWgmZ_S6fJWQZK2Sx0VVO9g8BpvlJvnSlTXdjX-BIuEO1o2AW2LGsaZDanaMyexBiMhoTkczzdv-zVRcq4DUA18x5bmDvnBNHja5H8IQb38enQyPBi1UFQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=1080+Joliet+St+Dyer+IN+46311&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Dyer IN | Mexican Restaurant & Tacos",
@@ -1922,7 +1922,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-naperville-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=2860+Showplace+Dr+Suite+114+Naperville+IL+60564",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B2860%2BShowplace%2BDr%2BNaperville%2BIL%2B60564&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfmvHbn3y1UYw1V5WOfUhtIqakPNDlzaJz1Q7kUJChWFjMucpQIW9Z0rH35vPCsb5wi0yEBNBANH9AZW7tAMc6Ybvi_uQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=2860+Showplace+Dr+Suite+114+Naperville+IL+60564&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Naperville | Mexican Restaurant & Tacos",
@@ -2021,7 +2021,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-mequon-wi",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=10942+N+Port+Washington+Rd+Mequon+WI+53092",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B10942%2BN%2BPort%2BWashington%2BRd%2BMequon%2BWI%2B53092&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu_MX6RwCKUGkLw8vDzN8sl2eTDpaeNP6B-jzggPWHlSz66G54KBO8SzsvM5Fu6N9V-X3_x7_3aIQzl1BCu_9zxqShB5MfPNB_PN7RczTse-GWkETQtQ5hKDyT5XtZi5ykbAuN7ydjNvDiDcnHPB9dSKbewe6g&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=10942+N+Port+Washington+Rd+Mequon+WI+53092&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Mequon WI | Mexican Restaurant & Tacos",
@@ -2111,7 +2111,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-franklin-park-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=2830+Mannheim+Rd+Franklin+Park+IL+60131",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Franklin+Park/@41.9311005,-87.8878472,17z/data=!3m1!4b1!4m6!3m5!1s0x880fb5b508e5db9f:0x8e31ca63bc27056e!8m2!3d41.9311005!4d-87.8852723!16s%2Fg%2F11vt1_1ml3?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=2830+Mannheim+Rd+Franklin+Park+IL+60131&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Franklin Park | Mexican Restaurant & Tacos",
@@ -2168,84 +2168,6 @@ const rawLocations = [
         "opens": "10:30",
         "closes": "21:00"
       },
-      {
-  "name": "Taco Pros - Damen & Chicago",
-  "address": "1959 W Chicago Ave, Chicago, IL 60622",
-  "phone": "(312) 666-5941",
-  "orderLink": "https://tacopros.com/menu/",
-  "slug": "mexican-restaurant-damen-chicago-il",
-  "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=1959+W+Chicago+Ave+Chicago+IL+60622",
-  "mapSrc": "https://maps.google.com/maps?q=1959+W+Chicago+Ave+Chicago+IL+60622&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  "meta": {
-    "title": "Taco Pros Damen Chicago | Late Night Mexican Restaurant",
-    "description": "Taco Pros on Damen Ave in Chicago serves late-night tacos, burritos & Mexican street food. Open till 3 AM. Dine-in, takeout & catering available.",
-    "canonical": "https://tacopros.com/locations/mexican-restaurant-damen-chicago-il/",
-    "ogTitle": "Taco Pros Damen Chicago | Late Night Mexican Food",
-    "ogDescription": "Late-night tacos & burritos on Damen Ave, Chicago. Open till 3 AM. Order online or visit Taco Pros today.",
-    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-damen-chicago-il/",
-    "ogType": "website"
-  },
-  "pageContent": {
-    "h1": "Late Night Mexican Restaurant on Damen Ave, Chicago | Taco Pros",
-    "introTitle": "Late-Night Mexican Food in Chicago, IL (Damen Ave)",
-    "introText": "Looking for late-night tacos in Chicago, IL? Taco Pros on Damen Ave serves authentic Mexican street food including tacos, burritos, quesadillas, and bold, freshly prepared meals — perfect for late-night cravings, quick bites, or dine-in experiences.",
-    "whyTitle": "Why Taco Pros on Damen Ave",
-    "cateringTitle": "Mexican Catering in Chicago",
-    "cateringText": "Taco Pros offers Mexican catering services across Chicago, IL:",
-    "locationName": "Taco Pros - Damen Ave, Chicago, IL",
-    "googleMapsText": "1959 W Chicago Ave, Chicago, IL 60622"
-  },
-  "schema": {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Taco Pros Damen Chicago",
-    "image": "https://tacopros.com/images/taco-pros.jpg",
-    "url": "https://tacopros.com/locations/mexican-restaurant-damen-chicago-il/",
-    "telephone": "+1-312-666-5941",
-    "servesCuisine": "Mexican",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1959 W Chicago Ave",
-      "addressLocality": "Chicago",
-      "addressRegion": "IL",
-      "postalCode": "60622",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "41.895800",
-      "longitude": "-87.676300"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "08:00",
-        "closes": "03:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Sunday"
-        ],
-        "opens": "11:00",
-        "closes": "23:00"
-      }
-    ],
-    "hasMenu": "https://tacopros.com/menu/",
-    "hasDeliveryService": true,
-    "acceptsReservations": "False"
-  }
-  },
   {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
@@ -2267,7 +2189,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-merrillville-in",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=8160+Mississippi+St+Merrillville+IN+46410",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Merrillville/@41.4703172,-87.3196195,17z/data=!3m1!4b1!4m6!3m5!1s0x8811ef0030a8ece9:0xcf9db0f07bd70823!8m2!3d41.4703172!4d-87.3170446!16s%2Fg%2F11vskm147s?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=8160+Mississippi+St+Merrillville+IN+46410&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Merrillville IN | Mexican Restaurant & Tacos",
@@ -2356,7 +2278,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-71st-western-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=7108+S+Western+Ave+Chicago+IL+60636",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B7108%2BS%2BWestern%2BAve%2BChicago%2BIL%2B60636&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfjaT5dhZ8_w0iGulwCAVymwIU-zSbwz5MJtwfGhRO_IXf2iy3lMGDkxM2vVMdVJmJN-G3RgmbrgZHOFq1s9YimjZu7DA&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=7108+S+Western+Ave+Chicago+IL+60636&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros 71st & Western Chicago | Mexican Restaurant & Late Night Tacos",
@@ -2446,7 +2368,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-montrose-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=4126+W+Montrose+Ave+Chicago+IL+60641",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Montrose+%26+Keokuk/@41.9610872,-87.7336691,17z/data=!3m1!4b1!4m6!3m5!1s0x880fcda7ae3d7b47:0xe59571e3f346651a!8m2!3d41.9610872!4d-87.7310942!16s%2Fg%2F11vjvnxk09?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=4126+W+Montrose+Ave+Chicago+IL+60641&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Montrose Chicago | Mexican Restaurant & Tacos",
@@ -2533,7 +2455,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-gurnee-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=6681+Grand+Ave+Unit+A1+Gurnee+IL+60031",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B6681%2BGrand%2BAve%2BGurnee%2BIL%2B60031&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfjaT5dhZ8_w0iGulwCAVymwIU-zSbwz5MJtwfGhRO_IXf2iy3lMGDkxM2vVMdVJmJN-G3RgmbrgZHOFq1s9YimjZu7DA&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=6681+Grand+Ave+Unit+A1+Gurnee+IL+60031&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Gurnee | Mexican Restaurant & Tacos",
@@ -2617,13 +2539,13 @@ const rawLocations = [
   }
   },
   {
-  "name": "Pulaski & Belmont, Chicago, IL",
+  "name": "Taco Pros - Pulaski & Belmont, Chicago, IL",
   "address": "3029 N Pulaski Rd, Chicago, IL 60641",
   "phone": "(773) 580-9569",
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-pulaski-belmont-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=3029+N+Pulaski+Rd+Chicago+IL+60641",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B3029%2BN%2BPulaski%2BRd%2BChicago%2BIL%2B60641&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfmvHbn3y1UYw1V5WOfUhtIqakPNDlzaJz1Q7kUJChWFjMucpQIW9Z0rH35vPCsb5wi0yEBNBANH9AZW7tAMc6Ybvi_uQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=3029+N+Pulaski+Rd+Chicago+IL+60641&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant & Tacos",
@@ -2716,7 +2638,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-austin-diversey-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=5959+W+Diversey+Ave+Chicago+IL+60639",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Diversey+%26+Austin/@41.9309215,-87.7783317,17z/data=!3m1!4b1!4m6!3m5!1s0x880fcda7e6233d95:0xb19e09340150e95f!8m2!3d41.9309215!4d-87.7757568!16s%2Fg%2F11jzbqxyrh?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D",
   "mapSrc": "https://maps.google.com/maps?q=5959+W+Diversey+Ave+Chicago+IL+60639&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Austin Diversey Chicago | Mexican Restaurant & Tacos",
@@ -2799,110 +2721,110 @@ const rawLocations = [
     "acceptsReservations": "False"
   }
   },
-  {
-  "name": "Taco Pros - Pulaski & Belmont",
-  "address": "3029 N Pulaski Rd, Chicago, IL 60641",
-  "phone": "(773) 580-9569",
-  "orderLink": "https://tacopros.com/menu/",
-  "slug": "mexican-restaurant-pulaski-belmont-chicago-il",
-  "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=3029+N+Pulaski+Rd+Chicago+IL+60641",
-  "mapSrc": "https://maps.google.com/maps?q=3029+N+Pulaski+Rd+Chicago+IL+60641&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  "meta": {
-    "title": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant & Tacos",
-    "description": "Taco Pros near Pulaski & Belmont in Chicago serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
-    "canonical": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
-    "ogTitle": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant",
-    "ogDescription": "Fresh tacos, burritos & Mexican food near Pulaski & Belmont, Chicago. Order online or visit Taco Pros today.",
-    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
-    "ogType": "website"
-  },
-  "pageContent": {
-    "h1": "Mexican Restaurant near Pulaski & Belmont, Chicago, IL | Taco Pros",
-    "introTitle": "Authentic Mexican Food in Chicago, IL",
-    "introText": "Looking for a Mexican restaurant near Pulaski & Belmont in Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Perfect for dine-in, quick takeout, or group orders.",
-    "whyTitle": "Why Taco Pros in Pulaski & Belmont",
-    "popularItemsTitle": "Popular Menu Items",
-    "cateringTitle": "Mexican Catering in Chicago",
-    "cateringText": "Taco Pros offers Mexican catering services across Chicago, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
-    "locationName": "Taco Pros - Pulaski & Belmont",
-    "googleMapsText": "3029 N Pulaski Rd, Chicago, IL 60641",
-    "faq": [
-      {
-        "q": "What kind of food does Taco Pros serve?",
-        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
-      },
-      {
-        "q": "Is Taco Pros near Pulaski & Belmont good for quick meals?",
-        "a": "Yes, it’s ideal for quick bites, takeout, and casual dining."
-      },
-      {
-        "q": "Does this location offer catering?",
-        "a": "Yes, Taco Pros provides catering services across Chicago."
-      },
-      {
-        "q": "Can I order online from this location?",
-        "a": "Yes, online ordering is available for pickup."
-      }
-    ]
-  },
-  "schema": {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Taco Pros Pulaski & Belmont Chicago",
-    "image": "https://tacopros.com/images/taco-pros.jpg",
-    "url": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
-    "telephone": "+1-773-580-9569",
-    "servesCuisine": "Mexican",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "3029 N Pulaski Rd",
-      "addressLocality": "Chicago",
-      "addressRegion": "IL",
-      "postalCode": "60641",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "41.935600",
-      "longitude": "-87.727200"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday"
-        ],
-        "opens": "10:30",
-        "closes": "22:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "10:30",
-        "closes": "23:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Sunday"
-        ],
-        "opens": "11:00",
-        "closes": "21:00"
-      }
-    ],
-    "hasMenu": "https://tacopros.com/menu/",
-    "hasDeliveryService": true,
-    "acceptsReservations": "False"
-  }
-  },
+  // {
+  // "name": "Taco Pros - Pulaski & Belmont",
+  // "address": "3029 N Pulaski Rd, Chicago, IL 60641",
+  // "phone": "(773) 580-9569",
+  // "orderLink": "https://tacopros.com/menu/",
+  // "slug": "mexican-restaurant-pulaski-belmont-chicago-il",
+  // "country": "US",
+  // "dir": "https://www.google.com/maps/search/?api=1&query=3029+N+Pulaski+Rd+Chicago+IL+60641",
+  // "mapSrc": "https://maps.google.com/maps?q=3029+N+Pulaski+Rd+Chicago+IL+60641&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  // "meta": {
+  //   "title": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant & Tacos",
+  //   "description": "Taco Pros near Pulaski & Belmont in Chicago serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+  //   "canonical": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
+  //   "ogTitle": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant",
+  //   "ogDescription": "Fresh tacos, burritos & Mexican food near Pulaski & Belmont, Chicago. Order online or visit Taco Pros today.",
+  //   "ogUrl": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
+  //   "ogType": "website"
+  // },
+  // "pageContent": {
+  //   "h1": "Mexican Restaurant near Pulaski & Belmont, Chicago, IL | Taco Pros",
+  //   "introTitle": "Authentic Mexican Food in Chicago, IL",
+  //   "introText": "Looking for a Mexican restaurant near Pulaski & Belmont in Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Perfect for dine-in, quick takeout, or group orders.",
+  //   "whyTitle": "Why Taco Pros in Pulaski & Belmont",
+  //   "popularItemsTitle": "Popular Menu Items",
+  //   "cateringTitle": "Mexican Catering in Chicago",
+  //   "cateringText": "Taco Pros offers Mexican catering services across Chicago, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
+  //   "locationName": "Taco Pros - Pulaski & Belmont",
+  //   "googleMapsText": "3029 N Pulaski Rd, Chicago, IL 60641",
+  //   "faq": [
+  //     {
+  //       "q": "What kind of food does Taco Pros serve?",
+  //       "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+  //     },
+  //     {
+  //       "q": "Is Taco Pros near Pulaski & Belmont good for quick meals?",
+  //       "a": "Yes, it’s ideal for quick bites, takeout, and casual dining."
+  //     },
+  //     {
+  //       "q": "Does this location offer catering?",
+  //       "a": "Yes, Taco Pros provides catering services across Chicago."
+  //     },
+  //     {
+  //       "q": "Can I order online from this location?",
+  //       "a": "Yes, online ordering is available for pickup."
+  //     }
+  //   ]
+  // },
+  // "schema": {
+  //   "@context": "https://schema.org",
+  //   "@type": "Restaurant",
+  //   "name": "Taco Pros Pulaski & Belmont Chicago",
+  //   "image": "https://tacopros.com/images/taco-pros.jpg",
+  //   "url": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
+  //   "telephone": "+1-773-580-9569",
+  //   "servesCuisine": "Mexican",
+  //   "priceRange": "$$",
+  //   "address": {
+  //     "@type": "PostalAddress",
+  //     "streetAddress": "3029 N Pulaski Rd",
+  //     "addressLocality": "Chicago",
+  //     "addressRegion": "IL",
+  //     "postalCode": "60641",
+  //     "addressCountry": "US"
+  //   },
+  //   "geo": {
+  //     "@type": "GeoCoordinates",
+  //     "latitude": "41.935600",
+  //     "longitude": "-87.727200"
+  //   },
+  //   "openingHoursSpecification": [
+  //     {
+  //       "@type": "OpeningHoursSpecification",
+  //       "dayOfWeek": [
+  //         "Monday",
+  //         "Tuesday",
+  //         "Wednesday",
+  //         "Thursday"
+  //       ],
+  //       "opens": "10:30",
+  //       "closes": "22:00"
+  //     },
+  //     {
+  //       "@type": "OpeningHoursSpecification",
+  //       "dayOfWeek": [
+  //         "Friday",
+  //         "Saturday"
+  //       ],
+  //       "opens": "10:30",
+  //       "closes": "23:00"
+  //     },
+  //     {
+  //       "@type": "OpeningHoursSpecification",
+  //       "dayOfWeek": [
+  //         "Sunday"
+  //       ],
+  //       "opens": "11:00",
+  //       "closes": "21:00"
+  //     }
+  //   ],
+  //   "hasMenu": "https://tacopros.com/menu/",
+  //   "hasDeliveryService": true,
+  //   "acceptsReservations": "False"
+  // }
+  // },
   {
   "name": "Taco Pros - Taylor & Ogden",
   "address": "2200 W Taylor St, Chicago, IL 60612",
@@ -2910,7 +2832,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-taylor-st-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=2200+W+Taylor+St+Chicago+IL+60612",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B2200%2BW%2BTaylor%2BSt%2BChicago%2BIL%2B60612&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfmvHbn3y1UYw1V5WOfUhtIqakPNDlzaJz1Q7kUJChWFjMucpQIW9Z0rH35vPCsb5wi0yEBNBANH9AZW7tAMc6Ybvi_uQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=2200+W+Taylor+St+Chicago+IL+60612&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Taylor St Chicago | Late Night Mexican Food & Tacos",
@@ -3007,7 +2929,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-damen-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=1959+W+Chicago+Ave+Chicago+IL+60622",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B1959%2BW%2BChicago%2BAve%2BChicago%2BIL%2B60622&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfmvHbn3y1UYw1V5WOfUhtIqakPNDlzaJz1Q7kUJChWFjMucpQIW9Z0rH35vPCsb5wi0yEBNBANH9AZW7tAMc6Ybvi_uQ&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=1959+W+Chicago+Ave+Chicago+IL+60622&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Damen Chicago | Late Night Mexican Restaurant",
@@ -3104,7 +3026,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-river-west-chicago-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=833+W+Chicago+Ave+Chicago+IL+60642",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B833%2BW%2BChicago%2BAve%2BChicago%2BIL%2B60642&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLGqW0mrA9i0Rvp-fOr-WLAfjaT5dhZ8_w0iGulwCAVymwIU-zSbwz5MJtwfGhRO_IXf2iy3lMGDkxM2vVMdVJmJN-G3RgmbrgZHOFq1s9YimjZu7DA&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=833+W+Chicago+Ave+Chicago+IL+60642&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros River West Chicago | Mexican Restaurant & Tacos",
@@ -3194,7 +3116,7 @@ const rawLocations = [
   "orderLink": "https://tacopros.com/menu/",
   "slug": "mexican-restaurant-oak-park-il",
   "country": "US",
-  "dir": "https://www.google.com/maps/search/?api=1&query=2+Chicago+Ave+Oak+Park+IL+60302",
+  "dir": "https://www.google.com/maps?sca_esv=42f0e4a3732bb734&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B2%2BChicago%2BAve%2BOak%2BPark%2BIL%2B60302&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLJ8iWKvaYB1iulsUG6WX2rHnZyaPuL4wNAZs1VYKXgoul9yHK71opaRtg4_FEZdC2BcP8BeDQVEoXJj4wYNYHbjFjrdUo-4Ifwg47rzPO78BPRJPpA&entry=mc&ved=1t:200715&ictx=111",
   "mapSrc": "https://maps.google.com/maps?q=2+Chicago+Ave+Oak+Park+IL+60302&t=&z=15&ie=UTF8&iwloc=&output=embed",
   "meta": {
     "title": "Taco Pros Oak Park IL | Mexican Restaurant & Tacos",
