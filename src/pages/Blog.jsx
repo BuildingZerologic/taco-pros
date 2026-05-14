@@ -51,7 +51,6 @@ const Blog = () => {
       <Helmet>
         <title>{`${post.title} | Taco Pros`}</title>
         <meta name="description" content={post.description} />
-        <link rel="canonical" href={`https://tacopros.com/blog/${slug}`} />
       </Helmet>
 
       <div className="pop-blog-wrapper">

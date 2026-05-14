@@ -52,7 +52,6 @@ const News = () => {
           name="description"
           content="Read Taco Pros news, taco guides, food trends, pairing ideas and behind-the-scenes stories from our fresh Mexican food menu."
         />
-        <link rel="canonical" href="https://tacopros.com/news" />
       </Helmet>
 
 

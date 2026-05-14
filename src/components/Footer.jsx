@@ -9,24 +9,24 @@ const Footer = () => {
           <div className='wave'>
         <div className='cactus-wrap'>
           <div className='c-left'>
-            <img src='/cactus2.svg' className='cactus2' />
-            <img src='/cactus3.svg' className='cactus3' />
+            <img src='/cactus2.svg' alt='cactus2img' className='cactus2' />
+            <img src='/cactus3.svg' alt='cactus3img' className='cactus3' />
 
           </div>
 
           <div className='c-middel'>
-            <img src='/cactus4.svg' className='cactus4' />
+            <img src='/cactus4.svg' alt='cactus4img' className='cactus4' />
           </div>
 
           <div className='c-right'>
-            <img src='/cactus1.svg' className='cactus1' />
+            <img src='/cactus1.svg' alt='cactus1img' className='cactus1' />
           </div>
      
 
         </div>
         <div class="pattern-bg"></div>
         <div class="pattern-bg-layer1">
-          <img src='/cactus5.svg' className='cactus5' />
+          <img src='/cactus5.svg' alt='cactus5img' className='cactus5' />
         </div>
         <div class="pattern-bg-layer2"></div>
 
