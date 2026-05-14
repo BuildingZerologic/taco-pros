@@ -210,7 +210,7 @@ button[type="submit"]:hover {
 
   .hiring-form-nav {
     flex-direction: column;
-    align-items: center;
+    align-items: end;
   }
 
 }
