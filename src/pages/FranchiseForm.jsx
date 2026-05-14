@@ -192,13 +192,9 @@ function FranchiseForm() {
         body: JSON.stringify(buildFranchisePayload()),
       });
 
-      const result = await response.json().catch(() => null);
+      const result = await response.json();
 
-      if (!response.ok) {
-        throw new Error(result?.message || `Server returned ${response.status}`);
-      }
-
-      if (result?.success) {
+      if (result.success) {
         setSubmitted(true);
         setSubmitStatus('success');
         setStep(steps.length);

@@ -58,33 +58,6 @@ const HiringForm = () => {
     const today = useMemo(() => new Date().toISOString().split('T')[0], []);
     const requiredStar = <span className="required-star">*</span>;
 
-    const readFileAsDataUrl = (file) =>
-        new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result);
-            reader.onerror = () => reject(reader.error);
-            reader.readAsDataURL(file);
-        });
-
-    const buildHiringPayload = async () => {
-        const { resume, consent, ...fields } = formData;
-        const payload = {
-            ...fields,
-            consent: consent ? 'true' : 'false',
-        };
-
-        if (resume) {
-            payload.resume = {
-                fileName: resume.name,
-                contentType: resume.type,
-                size: resume.size,
-                data: await readFileAsDataUrl(resume),
-            };
-        }
-
-        return payload;
-    };
-
     const handleChange = (e) => {
         const { name, type, checked, files } = e.target;
         const value = name === 'phone' ? e.target.value.replace(/\D/g, '') : e.target.value;
@@ -107,21 +80,22 @@ const HiringForm = () => {
         setError('');
         setSubmitStatus('loading');
 
+        const dataToSend = new FormData();
+        for (const key in formData) {
+            if (formData[key] !== null && formData[key] !== undefined) {
+                dataToSend.append(key, formData[key]);
+            }
+        }
+
         try {
-            const payload = await buildHiringPayload();
             const response = await fetch('/hire.php', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
+                body: dataToSend,
             });
 
-            const result = await response.json().catch(() => null);
+            const result = await response.json();
 
-            if (!response.ok) {
-                throw new Error(result?.message || `Server returned ${response.status}`);
-            }
-
-            if (result?.success) {
+            if (result.success) {
                 setSubmitted(true);
                 setSubmitStatus('success');
                 setStep(steps.length);
@@ -129,7 +103,7 @@ const HiringForm = () => {
             }
 
             setSubmitStatus('idle');
-            setError(result?.message || 'Server did not return a successful response. Please try again.');
+            setError(result.message || 'Server did not return a successful response. Please try again.');
         } catch (error) {
             console.error('Submission error:', error);
             setSubmitStatus('idle');
