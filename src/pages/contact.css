@@ -167,9 +167,6 @@
     margin-top: 10px;
 }
 
-.form-mix-submit:hover {
-    background-color: #1a1d20;
-}
 
 .form-mix-error { color: #d9534f; font-size: 14px; text-align: center; }
 .form-mix-success { color: #5cb85c; font-size: 14px; text-align: center; }

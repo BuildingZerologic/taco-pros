@@ -288,19 +288,8 @@ label {
     }
     
 
-    .form-nav {
-        flex-direction: column-reverse;
-        gap: 18px;
-        align-items: stretch;
-    }
-
     .form-nav > div:empty {
         display: none;
-    }
-
-    .form-nav .taco-btn-container {
-        width: 100% !important;
-        max-width: none;
     }
      .bhjk .franchise-progress-steps {
         margin-top: -20px;
@@ -308,6 +297,18 @@ label {
     .success-card {
         margin-top: 8px;
         min-height: 320px;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-nav {
+        flex-direction: column-reverse;
+        gap: 18px;
+        align-items: center;
+    }
+
+    .form-nav .taco-btn-container {
+        flex: 0 0 auto;
     }
 }
 

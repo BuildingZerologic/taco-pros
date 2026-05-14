@@ -184,6 +184,17 @@ button[type="submit"]:hover {
     }
 }
 
+@media (max-width: 767px) {
+    .hiring-form-nav {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .hiring-form-nav .taco-btn-container {
+        flex: 0 0 auto;
+    }
+}
+
 @media (min-width:768px){
     small.mnone,
     .step-label {
@@ -199,16 +210,7 @@ button[type="submit"]:hover {
 
   .hiring-form-nav {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
 
-  .hiring-form-nav .taco-btn-container {
-    width: 100% !important;
-    max-width: none;
-  }
-
-  button[type="submit"] {
-    font-size: 0.9rem;
-    padding: 0.6rem;
-  }
 }
