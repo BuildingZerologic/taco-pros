@@ -243,6 +243,21 @@ label {
 .next-btn.full-width, .btn-success { width: 100% !important; }
 
 
+@media (min-width: 768px) and (max-width: 965px) {
+    .form-nav {
+        gap: 24px;
+    }
+
+    .form-nav > div:empty {
+        display: none;
+    }
+
+    .form-nav .taco-btn-container {
+        flex: 0 1 min(310px, calc(50% - 12px));
+        max-width: calc(50% - 12px);
+    }
+}
+
 
 @media (max-width: 768px) {
     .Heading-main {
@@ -273,8 +288,19 @@ label {
     }
     
 
-    .d-flex.justify-content-between.mt-4 {
+    .form-nav {
         flex-direction: column-reverse;
+        gap: 18px;
+        align-items: stretch;
+    }
+
+    .form-nav > div:empty {
+        display: none;
+    }
+
+    .form-nav .taco-btn-container {
+        width: 100% !important;
+        max-width: none;
     }
      .bhjk .franchise-progress-steps {
         margin-top: -20px;

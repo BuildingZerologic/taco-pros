@@ -128,10 +128,29 @@ button[type="submit"]:hover {
   color: #2e7d32;
 }
 
+.hiring-form-nav {
+  gap: 0;
+}
+
 
 @media (max-width: 992px) {
   .form-grid {
     grid-template-columns: 1fr; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 965px) {
+  .hiring-form-nav {
+    gap: 24px;
+  }
+
+  .hiring-form-nav > div:empty {
+    display: none;
+  }
+
+  .hiring-form-nav .taco-btn-container {
+    flex: 0 1 min(310px, calc(50% - 12px));
+    max-width: calc(50% - 12px);
   }
 }
 
@@ -150,6 +169,19 @@ button[type="submit"]:hover {
         margin-top: 8px;
         min-height: 320px;
     }
+
+    .hiring-form-nav {
+        gap: 18px;
+    }
+
+    .hiring-form-nav > div:empty {
+        display: none;
+    }
+
+    .hiring-form-nav .taco-btn-container {
+        flex: 1 1 calc(50% - 9px);
+        min-width: min(100%, 145px);
+    }
 }
 
 @media (min-width:768px){
@@ -163,6 +195,16 @@ button[type="submit"]:hover {
   .hiring-form {
     padding: 0.8rem;
     font-size: 0.9rem; 
+  }
+
+  .hiring-form-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hiring-form-nav .taco-btn-container {
+    width: 100% !important;
+    max-width: none;
   }
 
   button[type="submit"] {
