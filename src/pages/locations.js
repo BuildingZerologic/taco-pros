@@ -49,6 +49,47 @@ const stateFromLocation = (location, parsedAddress) => {
   return parsedAddress.addressRegion || nameState || "";
 };
 
+const dayOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+const normalizeDayOfWeek = (day) => {
+  const dayName = String(day).split(/[/#]/).pop();
+  return dayOrder.find((item) => item.toLowerCase() === dayName.toLowerCase()) || dayName;
+};
+
+const formatOpeningTime = (time) => {
+  const match = String(time).match(/^(\d{1,2}):(\d{2})/);
+  if (!match) return time;
+
+  const hour = Number(match[1]) % 24;
+  const minute = match[2];
+  const period = hour >= 12 ? "PM" : "AM";
+  const displayHour = hour % 12 || 12;
+
+  return `${displayHour}:${minute} ${period}`;
+};
+
+const formatOpeningHours = (opens, closes) =>
+  `${formatOpeningTime(opens)} - ${formatOpeningTime(closes)}`;
+
+const createPageHours = (openingHoursSpecification = []) =>
+  openingHoursSpecification
+    .flatMap((item) => {
+      const days = Array.isArray(item.dayOfWeek) ? item.dayOfWeek : [item.dayOfWeek];
+
+      return days.filter(Boolean).map((day) => {
+        const label = normalizeDayOfWeek(day);
+
+        return {
+          days: [label],
+          label,
+          hours: formatOpeningHours(item.opens, item.closes),
+          opens: item.opens,
+          closes: item.closes,
+        };
+      });
+    })
+    .sort((a, b) => dayOrder.indexOf(a.label) - dayOrder.indexOf(b.label));
+
 const makeLocationDetails = (location) => {
   const parsedAddress = parseAddress(location.address);
   const city = cityFromName(location.name);
@@ -61,6 +102,23 @@ const makeLocationDetails = (location) => {
   const phoneE164 = normalizePhone(location.phone);
   const displayPhone = formatPhone(location.phone);
   const defaultDescription = `Taco Pros in ${cityState} serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.`;
+  const defaultOpeningHoursSpecification = [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "10:00",
+      closes: "21:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday", "Sunday"],
+      opens: "11:00",
+      closes: "20:00",
+    },
+  ];
+  const openingHoursSpecification =
+    location.schema?.openingHoursSpecification || defaultOpeningHoursSpecification;
+  const pageHours = createPageHours(openingHoursSpecification);
 
   const defaultDetails = {
     ...location,
@@ -105,15 +163,7 @@ const makeLocationDetails = (location) => {
       locationName: `Taco Pros - ${cityState}`,
       googleMapsText: location.address,
       stateName,
-      hours: [
-        { days: ["Monday"], label: "Monday", hours: "10:00 AM - 9:00 PM", opens: "10:00", closes: "21:00" },
-        { days: ["Tuesday"], label: "Tuesday", hours: "10:00 AM - 9:00 PM", opens: "10:00", closes: "21:00" },
-        { days: ["Wednesday"], label: "Wednesday", hours: "10:00 AM - 9:00 PM", opens: "10:00", closes: "21:00" },
-        { days: ["Thursday"], label: "Thursday", hours: "10:00 AM - 9:00 PM", opens: "10:00", closes: "21:00" },
-        { days: ["Friday"], label: "Friday", hours: "10:00 AM - 9:00 PM", opens: "10:00", closes: "21:00" },
-        { days: ["Saturday"], label: "Saturday", hours: "11:00 AM - 8:00 PM", opens: "11:00", closes: "20:00" },
-        { days: ["Sunday"], label: "Sunday", hours: "11:00 AM - 8:00 PM", opens: "11:00", closes: "20:00" },
-      ],
+      hours: pageHours,
       faqs: [
         {
           q: "What kind of food does Taco Pros serve?",
@@ -146,20 +196,7 @@ const makeLocationDetails = (location) => {
         "@type": "PostalAddress",
         ...parsedAddress,
       },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "10:00",
-          closes: "21:00",
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Saturday", "Sunday"],
-          opens: "11:00",
-          closes: "20:00",
-        },
-      ],
+      openingHoursSpecification,
       hasMenu: `${SITE_URL}/menu/`,
       hasDeliveryService: true,
       acceptsReservations: "False",
@@ -175,6 +212,8 @@ const makeLocationDetails = (location) => {
     pageContent: {
       ...defaultDetails.pageContent,
       ...(location.pageContent || {}),
+      hours: pageHours,
+      faqs: location.pageContent?.faq || location.pageContent?.faqs || defaultDetails.pageContent.faqs,
     },
     schema: {
       ...defaultDetails.schema,
@@ -2005,15 +2044,15 @@ const rawLocations = [
     "acceptsReservations": "False"
   }
   },
-  {
-    name: "79th and Cicero, IL",
-    address: "7959 S Cicero Ave, Chicago, IL 60652",
-    phone: "(773)-912-6389",
-    orderLink: "https://www.toasttab.com/taco-pros-79-and-cicero",
-    country: "US",
-    dir: "https://maps.app.goo.gl/sD3fH9Non1SBbEg97",
-    mapSrc: "https://maps.google.com/maps?q=7959+S+Cicero+Ave+Chicago+IL+60652&t=&z=15&ie=UTF8&iwloc=&output=embed"
-  },
+  // {
+  //   name: "79th and Cicero, IL",
+  //   address: "7959 S Cicero Ave, Chicago, IL 60652",
+  //   phone: "(773)-912-6389",
+  //   orderLink: "https://www.toasttab.com/taco-pros-79-and-cicero",
+  //   country: "US",
+  //   dir: "https://maps.app.goo.gl/sD3fH9Non1SBbEg97",
+  //   mapSrc: "https://maps.google.com/maps?q=7959+S+Cicero+Ave+Chicago+IL+60652&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  // },
   {
   "name": "Taco Pros - Mequon",
   "address": "10942 N Port Washington Rd, Mequon, WI 53092",
@@ -2440,13 +2479,101 @@ const rawLocations = [
   }
   },
   {
-    name: "Taco Pros - Niles",
-    address: "7870 N Milwaukee Ave, Niles, IL 60714",
-    phone: "(847) 230-0050",
-    orderLink: "https://www.toasttab.com/taco-pros-niles-7870-north-milwaukee-avenue",
-    country: "US",
-    dir: "https://maps.app.goo.gl/5fqwMRCrKWJz5hnn9",
-    mapSrc: "https://maps.google.com/maps?q=7870+N+Milwaukee+Ave+Niles+IL+60714&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  "name": "Taco Pros - Niles",
+  "address": "7870 N Milwaukee Ave, Niles, IL 60714",
+  "phone": "(847) 230-0050",
+  "orderLink": "https://tacopros.com/menu/",
+  "slug": "mexican-restaurant-niles-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/search/?api=1&query=Taco+Pros+7870+N+Milwaukee+Ave+Niles+IL+60714",
+  "mapSrc": "https://maps.google.com/maps?q=7870+N+Milwaukee+Ave+Niles+IL+60714&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Niles IL | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in Niles, IL serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-niles-il/",
+    "ogTitle": "Taco Pros Niles IL | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in Niles, IL. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-niles-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in Niles, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Niles, IL",
+    "introText": "Looking for a Mexican restaurant in Niles, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Ideal for dine-in, takeout, and everyday dining.",
+    "whyTitle": "Why Taco Pros in Niles",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Niles",
+    "cateringText": "Taco Pros offers Mexican catering services across Niles, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Niles, IL",
+    "googleMapsText": "7870 N Milwaukee Ave, Niles, IL 60714",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros in Niles good for family dining?",
+        "a": "Yes, it's a great option for family meals and casual dining."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services for events and gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online in Niles?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros Niles",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-niles-il/",
+    "telephone": "+1-847-230-0050",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7870 N Milwaukee Ave",
+      "addressLocality": "Niles",
+      "addressRegion": "IL",
+      "postalCode": "60714",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "42.027800",
+      "longitude": "-87.820300"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "23:00"
+      }
+    ],
+    "hasMenu": "https://tacopros.com/menu/",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
   },
   {
   "name": "Taco Pros - Gurnee",

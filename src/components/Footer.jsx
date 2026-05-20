@@ -84,9 +84,21 @@ const Footer = () => {
                     </Link>
                   </li>
                    
-                  <li className="menu-item">
-                    <Link to="/contact">
-                      <span>Contact Us</span>
+                     <li className="menu-item">
+                    <Link to="/menu">
+                      <span>Menu</span>
+                    </Link>
+                  </li>
+
+                   <li className="menu-item">
+                    <Link to="/catering">
+                      <span>Catering Menu</span>
+                    </Link>
+                  </li>
+
+                   <li className="menu-item">
+                    <Link to="/rewards">
+                      <span>Rewards</span>
                     </Link>
                   </li>
                   <li className="menu-item">
@@ -99,31 +111,16 @@ const Footer = () => {
                       <span>Franchising</span>
                     </Link>
                   </li>
-            
-                   <li className="menu-item">
-                    <Link to="/rewards">
-                      <span>Rewards</span>
-                    </Link>
-                  </li>
-
-                   <li className="menu-item">
-                    <Link to="/menu">
-                      <span>Menu</span>
-                    </Link>
-                  </li>
-
-                   <li className="menu-item">
-                    <Link to="/catering">
-                      <span>Catering Menu</span>
-                    </Link>
-                  </li>
-
-                    <li className="menu-item">
+                  <li className="menu-item">
                     <Link to="/locations">
                       <span>Location</span>
                     </Link>
                   </li>
-
+                    <li className="menu-item">
+                    <Link to="/contact">
+                      <span>Contact Us</span>
+                    </Link>
+                  </li>
                     <li className="menu-item">
                     <Link to="/news">
                       <span>News</span>
