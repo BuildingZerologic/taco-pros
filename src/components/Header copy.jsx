@@ -86,9 +86,13 @@ const moreRef = useRef(null);
         <nav className="nav-menu">
           <Link to="/" className="nav-link" onClick={toggleMenu}>Home</Link>
 
+          <Link to="/our-story" className="nav-link" onClick={toggleMenu}>Our Story</Link>
+
           <Link to="/menu" className="nav-link" onClick={toggleMenu}>Menu</Link>
 
           <Link to="/catering" className="nav-link" onClick={toggleMenu}>Catering</Link>
+
+           <Link to="/rewards" className="nav-link">REWARDS</Link>
 
           <Link to="/hiring" className="nav-link" onClick={toggleMenu}>Hiring</Link>
 
@@ -96,11 +100,10 @@ const moreRef = useRef(null);
 
           <Link to="/locations" className="nav-link" onClick={toggleMenu}>Locations</Link>
 
-          <Link to="/our-story" className="nav-link" onClick={toggleMenu}>Our Story</Link>
-
           <Link to="/contact" className="nav-link" onClick={toggleMenu}>Contact</Link>
+          
           <Link to="/news" className="nav-link">News</Link>
-          <Link to="/rewards" className="nav-link">REWARDS</Link>
+         
         </nav>
       </aside>
     </header>
