@@ -44,6 +44,46 @@ const formatPhone = (phone = "") => {
 
 const cityFromName = (name) => name.split(",")[0].trim();
 
+const getMapQueryFromDir = (dir = "") => {
+  try {
+    const mapsUrl = new URL(dir.startsWith("http") ? dir : `https://${dir}`);
+    const searchQuery = mapsUrl.searchParams.get("query");
+
+    if (searchQuery) {
+      return searchQuery;
+    }
+
+    const nestedMapUrl = mapsUrl.searchParams.get("q");
+
+    if (nestedMapUrl?.includes("google.com/maps")) {
+      return getMapQueryFromDir(nestedMapUrl);
+    }
+
+    const placePath = mapsUrl.pathname.match(/\/maps\/place\/([^/]+)/);
+
+    if (placePath) {
+      return decodeURIComponent(placePath[1].replace(/\+/g, " "));
+    }
+  } catch {
+    return "";
+  }
+
+  return "";
+};
+
+const createMapSrcFromDir = (location) => {
+  const dirQuery = getMapQueryFromDir(location.dir);
+
+  if (!dirQuery) {
+    return location.mapSrc;
+  }
+
+  const mapQuery = `${dirQuery}, ${location.address}`;
+  const embedQuery = encodeURIComponent(mapQuery);
+
+  return `https://maps.google.com/maps?q=${embedQuery}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+};
+
 const stateFromLocation = (location, parsedAddress) => {
   const nameState = location.name.split(",")[1]?.trim();
   return parsedAddress.addressRegion || nameState || "";
@@ -122,6 +162,7 @@ const makeLocationDetails = (location) => {
 
   const defaultDetails = {
     ...location,
+    mapSrc: createMapSrcFromDir(location),
     orderLink: ORDER_LINK,
     slug,
     phoneE164,
