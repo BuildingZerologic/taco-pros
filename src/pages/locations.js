@@ -2044,15 +2044,6 @@ const rawLocations = [
     "acceptsReservations": "False"
   }
   },
-  // {
-  //   name: "79th and Cicero, IL",
-  //   address: "7959 S Cicero Ave, Chicago, IL 60652",
-  //   phone: "(773)-912-6389",
-  //   orderLink: "https://www.toasttab.com/taco-pros-79-and-cicero",
-  //   country: "US",
-  //   dir: "https://maps.app.goo.gl/sD3fH9Non1SBbEg97",
-  //   mapSrc: "https://maps.google.com/maps?q=7959+S+Cicero+Ave+Chicago+IL+60652&t=&z=15&ie=UTF8&iwloc=&output=embed"
-  // },
   {
   "name": "Taco Pros - Mequon",
   "address": "10942 N Port Washington Rd, Mequon, WI 53092",
@@ -2848,110 +2839,6 @@ const rawLocations = [
     "acceptsReservations": "False"
   }
   },
-  // {
-  // "name": "Taco Pros - Pulaski & Belmont",
-  // "address": "3029 N Pulaski Rd, Chicago, IL 60641",
-  // "phone": "(773) 580-9569",
-  // "orderLink": "https://tacopros.com/menu/",
-  // "slug": "mexican-restaurant-pulaski-belmont-chicago-il",
-  // "country": "US",
-  // "dir": "https://www.google.com/maps/search/?api=1&query=3029+N+Pulaski+Rd+Chicago+IL+60641",
-  // "mapSrc": "https://maps.google.com/maps?q=3029+N+Pulaski+Rd+Chicago+IL+60641&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  // "meta": {
-  //   "title": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant & Tacos",
-  //   "description": "Taco Pros near Pulaski & Belmont in Chicago serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
-  //   "canonical": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
-  //   "ogTitle": "Taco Pros Pulaski & Belmont Chicago | Mexican Restaurant",
-  //   "ogDescription": "Fresh tacos, burritos & Mexican food near Pulaski & Belmont, Chicago. Order online or visit Taco Pros today.",
-  //   "ogUrl": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
-  //   "ogType": "website"
-  // },
-  // "pageContent": {
-  //   "h1": "Mexican Restaurant near Pulaski & Belmont, Chicago, IL | Taco Pros",
-  //   "introTitle": "Authentic Mexican Food in Chicago, IL",
-  //   "introText": "Looking for a Mexican restaurant near Pulaski & Belmont in Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Perfect for dine-in, quick takeout, or group orders.",
-  //   "whyTitle": "Why Taco Pros in Pulaski & Belmont",
-  //   "popularItemsTitle": "Popular Menu Items",
-  //   "cateringTitle": "Mexican Catering in Chicago",
-  //   "cateringText": "Taco Pros offers Mexican catering services across Chicago, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
-  //   "locationName": "Taco Pros - Pulaski & Belmont",
-  //   "googleMapsText": "3029 N Pulaski Rd, Chicago, IL 60641",
-  //   "faq": [
-  //     {
-  //       "q": "What kind of food does Taco Pros serve?",
-  //       "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
-  //     },
-  //     {
-  //       "q": "Is Taco Pros near Pulaski & Belmont good for quick meals?",
-  //       "a": "Yes, it’s ideal for quick bites, takeout, and casual dining."
-  //     },
-  //     {
-  //       "q": "Does this location offer catering?",
-  //       "a": "Yes, Taco Pros provides catering services across Chicago."
-  //     },
-  //     {
-  //       "q": "Can I order online from this location?",
-  //       "a": "Yes, online ordering is available for pickup."
-  //     }
-  //   ]
-  // },
-  // "schema": {
-  //   "@context": "https://schema.org",
-  //   "@type": "Restaurant",
-  //   "name": "Taco Pros Pulaski & Belmont Chicago",
-  //   "image": "https://tacopros.com/images/taco-pros.jpg",
-  //   "url": "https://tacopros.com/locations/mexican-restaurant-pulaski-belmont-chicago-il/",
-  //   "telephone": "+1-773-580-9569",
-  //   "servesCuisine": "Mexican",
-  //   "priceRange": "$$",
-  //   "address": {
-  //     "@type": "PostalAddress",
-  //     "streetAddress": "3029 N Pulaski Rd",
-  //     "addressLocality": "Chicago",
-  //     "addressRegion": "IL",
-  //     "postalCode": "60641",
-  //     "addressCountry": "US"
-  //   },
-  //   "geo": {
-  //     "@type": "GeoCoordinates",
-  //     "latitude": "41.935600",
-  //     "longitude": "-87.727200"
-  //   },
-  //   "openingHoursSpecification": [
-  //     {
-  //       "@type": "OpeningHoursSpecification",
-  //       "dayOfWeek": [
-  //         "Monday",
-  //         "Tuesday",
-  //         "Wednesday",
-  //         "Thursday"
-  //       ],
-  //       "opens": "10:30",
-  //       "closes": "22:00"
-  //     },
-  //     {
-  //       "@type": "OpeningHoursSpecification",
-  //       "dayOfWeek": [
-  //         "Friday",
-  //         "Saturday"
-  //       ],
-  //       "opens": "10:30",
-  //       "closes": "23:00"
-  //     },
-  //     {
-  //       "@type": "OpeningHoursSpecification",
-  //       "dayOfWeek": [
-  //         "Sunday"
-  //       ],
-  //       "opens": "11:00",
-  //       "closes": "21:00"
-  //     }
-  //   ],
-  //   "hasMenu": "https://tacopros.com/menu/",
-  //   "hasDeliveryService": true,
-  //   "acceptsReservations": "False"
-  // }
-  // },
   {
   "name": "Taco Pros - Taylor & Ogden",
   "address": "2200 W Taylor St, Chicago, IL 60612",
@@ -3333,6 +3220,91 @@ const rawLocations = [
     "acceptsReservations": "False"
   }
   },
+  {
+  "name": "Taco Pros - Mexican Cocina (Waukegan)",
+  "address": "4055 Northpoint Blvd #104, Waukegan, IL 60085",
+  "phone": "(224) 480-4522",
+  "orderLink": "https://order.toasttab.com/online/taco-pros-waukegan-il",
+  "slug": "mexican-restaurant-waukegan-il",
+  "country": "US",
+  "dir": "https://www.google.com/maps/place/Taco+Pros+-+Mexican+Cocina+(Waukegan)/@42.3451468,-87.9004966,17z/data=!3m1!4b1!4m6!3m5!1s0x880f93682135bc31:0xe27e1302d46ab9ad!8m2!3d42.3451468!4d-87.9004966!16s%2Fg%2F11z385y36z?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D",
+  "mapSrc": "https://maps.google.com/maps?q=4055+Northpoint+Blvd+%23104+Waukegan+IL+60085&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "meta": {
+    "title": "Taco Pros Waukegan IL | Mexican Restaurant & Tacos",
+    "description": "Taco Pros in Waukegan, IL serves fresh tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+    "canonical": "https://tacopros.com/locations/mexican-restaurant-waukegan-il/",
+    "ogTitle": "Taco Pros Waukegan IL | Mexican Restaurant",
+    "ogDescription": "Fresh tacos, burritos & Mexican food in Waukegan, IL. Order online or visit Taco Pros today.",
+    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-waukegan-il/",
+    "ogType": "website"
+  },
+  "pageContent": {
+    "h1": "Mexican Restaurant in Waukegan, IL | Taco Pros",
+    "introTitle": "Authentic Mexican Food in Waukegan, IL",
+    "introText": "Looking for a Mexican restaurant in Waukegan, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared meals packed with bold flavors. Ideal for dine-in, takeout, and casual dining.",
+    "whyTitle": "Why Taco Pros in Waukegan",
+    "popularItemsTitle": "Popular Menu Items",
+    "cateringTitle": "Mexican Catering in Waukegan",
+    "cateringText": "Taco Pros offers Mexican catering services across Waukegan, IL including corporate events, family gatherings, birthday parties, and group celebrations.",
+    "locationName": "Taco Pros - Mexican Cocina (Waukegan)",
+    "googleMapsText": "4055 Northpoint Blvd #104, Waukegan, IL 60085",
+    "faq": [
+      {
+        "q": "What kind of food does Taco Pros serve?",
+        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+      },
+      {
+        "q": "Is Taco Pros in Waukegan good for casual dining?",
+        "a": "Yes, it's perfect for casual meals, takeout, and quick bites."
+      },
+      {
+        "q": "Does this location offer catering?",
+        "a": "Yes, Taco Pros provides catering services for events and gatherings."
+      },
+      {
+        "q": "Can I order Taco Pros online in Waukegan?",
+        "a": "Yes, online ordering is available for pickup."
+      }
+    ]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Taco Pros - Mexican Cocina (Waukegan)",
+    "image": "https://tacopros.com/images/taco-pros.jpg",
+    "url": "https://tacopros.com/locations/mexican-restaurant-waukegan-il/",
+    "telephone": "+1-224-480-4522",
+    "servesCuisine": "Mexican",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4055 Northpoint Blvd #104",
+      "addressLocality": "Waukegan",
+      "addressRegion": "IL",
+      "postalCode": "60085",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "22:00"
+      }
+    ],
+    "hasMenu": "https://order.toasttab.com/online/taco-pros-waukegan-il",
+    "hasDeliveryService": true,
+    "acceptsReservations": "False"
+  }
+}
 ];
 
 const locations = rawLocations.map(makeLocationDetails);

@@ -8,7 +8,7 @@ const BannerLocation = () => {
       <div className="billboard-container">
         {/* Content Overlay */}
         <div className="billboard-content">
-          <h1 className="location-number">36</h1>
+          <h1 className="location-number">35</h1>
           <h2 className="location-text">
             Locations <br /> & Growing
           </h2>
@@ -29,7 +29,7 @@ const BannerLocation = () => {
 
           <div className="sjdhik">
 
-            <h1 className="location-number">36</h1>
+            <h1 className="location-number">35</h1>
             <h2 className="location-text2">
               Locations 
             </h2>
