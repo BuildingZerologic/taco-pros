@@ -32,15 +32,15 @@ const locationsData = [
     dir: "https://www.google.com/maps/dir/?api=1&destination=780+N+Main+St+Elburn+IL+60119",
     mapSrc: "https://maps.google.com/maps?q=780+N+Main+St+Elburn+IL+60119&t=&z=15&ie=UTF8&iwloc=&output=embed"
   },
-  {
-    name: "Suwanee, GA",
-    address: "3155 Peachtree Parkway, Suite 170, Suwanee Georgia 30024",
-    phone: "(470) 239-3255",
-    orderLink: "https://order.toasttab.com/online/taco-pros-suwanee-ga",
-    country: "US",
-    dir: "https://www.google.com/maps/dir/?api=1&destination=3155+Peachtree+Parkway+Suwanee+GA+30024",
-    mapSrc: "https://maps.google.com/maps?q=3155+Peachtree+Parkway+Suwanee+GA+30024&t=&z=15&ie=UTF8&iwloc=&output=embed"
-  },
+  // {
+  //   name: "Suwanee, GA",
+  //   address: "3155 Peachtree Parkway, Suite 170, Suwanee Georgia 30024",
+  //   phone: "(470) 239-3255",
+  //   orderLink: "https://order.toasttab.com/online/taco-pros-suwanee-ga",
+  //   country: "US",
+  //   dir: "https://www.google.com/maps/dir/?api=1&destination=3155+Peachtree+Parkway+Suwanee+GA+30024",
+  //   mapSrc: "https://maps.google.com/maps?q=3155+Peachtree+Parkway+Suwanee+GA+30024&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  // },
   {
     name: "Tinley Park, IL",
     address: "15943 S Harlem Ave Unit B, Tinley Park, IL 60477",

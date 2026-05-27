@@ -1023,7 +1023,7 @@ function custom_email_routing_debug($contact_form) {
 
         $email_map = array(
             'Eggholic HQ Office' => ['contact@eggholic.com'],
-            'Suwanee, GA' => ['eggholicsuwanee@gmail.com'],
+            // 'Suwanee, GA' => ['eggholicsuwanee@gmail.com'],
             'Shrewsbury, MA' => ['eggholicbnk@gmail.com'],
             'Indianapolis, IN' => ['eggholicindy@gmail.com'],
             'Sugar Land, TX' => ['info@eggholichtx.com'],
@@ -1099,7 +1099,7 @@ function custom_email_routing_debug($contact_form) {
 add_filter('wpcf7_form_tag_data_option', function($data, $options, $args) {
     if (in_array('desired_city_options', $options)) { // ✅ this must match the `data:desired_city_options`
         $data = array(
-            'Eggholic HQ Office', 'Suwanee, GA', 'Shrewsbury, MA', 'Indianapolis, IN',
+            'Eggholic HQ Office', 'Shrewsbury, MA', 'Indianapolis, IN',
             'Sugar Land, TX', 'Mechanicsburg, PA', 'Catonsville, MD', 'Edison, NJ',
             'Nashville, TN', 'Queens, NY', 'Chantilly, VA', 'Niles, IL', 'Irving, TX',
             'Louisville, KY', 'Chicago, IL', 'Schaumburg, IL', 'Burlington, MA',
@@ -1546,7 +1546,7 @@ function maps_custom_code_callback() {
 		  { lng: -84.50847588960332, lat: 33.94007359274813, name: "Marietta, GA", address: "490 Franklin Gateway, Marietta, GA 30067", contact_no: "+1 (770) 422-8000", pickup_link: "https://order.toasttab.com/online/eggholic-marietta-ga", country: "us" },
 		  { lng: -71.1881033586229, lat: 42.48531774709752, name: "Burlington, MA", address: "10 Wall St, Burlington, MA 01803", contact_no: "781-359-4024", pickup_link: "https://order.toasttab.com/online/eggholic-burlington-new-10-wall-street", country: "us" },
 		  { lng: -79.58402107946887, lat: 43.75066457126287, name: "Etobicoke, ON", address: "2687 Kipling Avenue #16, Etobicoke, ON M9V 5G6", contact_no: "416-741-4254", pickup_link: "https://order.toasttab.com/online/eggholic-etobicoke-2687-kipling-avenue", country: "ca" },
-		  { lng: -84.16251314541987, lat: 34.08662726942317, name: "Suwanee, GA", address: "3155 Peachtree Parkway, Suite 170, Suwanee, GA 30024", contact_no: "470-239-3255", pickup_link: "https://order.toasttab.com/online/eggholic-suwanee-3155-peachtree-parkway", country: "us" },
+		//   { lng: -84.16251314541987, lat: 34.08662726942317, name: "Suwanee, GA", address: "3155 Peachtree Parkway, Suite 170, Suwanee, GA 30024", contact_no: "470-239-3255", pickup_link: "https://order.toasttab.com/online/eggholic-suwanee-3155-peachtree-parkway", country: "us" },
 		  { lng: -113.97435032942666, lat: 51.15387581380418, name: "Calgary, AB", address: "4150 109 Ave NE, Calgary, AB T3N 1A6, Canada", contact_no: "(587) 625-0334", pickup_link: "https://order.toasttab.com/online/eggholic-calgary-4150-109-avenue-northeast", country: "ca" },
 		  { lng: -71.73752817397386, lat: 42.27728923624665, name: "Shrewsbury, MA", address: "378 Maple Avenue, Shrewsbury, MA 01545", contact_no: "774-275-3165", pickup_link: "https://order.toasttab.com/online/eggholic-shrewsbury-new-378-maple-avenue", country: "us" },
 		  { lng: -80.30359637022978, lat: 43.39912722028357, name: "Cambridge, ON", address: "1655 Bishop Street #103, Cambridge, ON N1R 8B5", contact_no: "(519)-621-1990", pickup_link: "https://order.toasttab.com/online/eggholic-cambridge-1655-bishop-street-north-ytmhz", country: "ca" },
