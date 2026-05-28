@@ -95,15 +95,15 @@ const locationsData = [
     dir: "https://www.google.com/maps/dir/?api=1&destination=1515+E+87th+Street+Chicago+IL+60619",
     mapSrc: "https://maps.google.com/maps?q=1515+E+87th+Street+Chicago+IL+60619&t=&z=15&ie=UTF8&iwloc=&output=embed"
   },
-  {
-    name: "Hyde Park, IL",
-    address: "1400 E 47th Street, Unit E, Chicago, IL 60653",
-    phone: "872-731-2101",
-    orderLink: "https://www.toasttab.com/taco-pros-chicago-hyde-park",
-    country: "US",
-    dir: "https://www.google.com/maps/dir/?api=1&destination=1400+E+47th+Street+Chicago+IL+60653",
-    mapSrc: "https://maps.google.com/maps?q=1400+E+47th+Street+Chicago+IL+60653&t=&z=15&ie=UTF8&iwloc=&output=embed"
-  },
+  // {
+  //   name: "Hyde Park, IL",
+  //   address: "1400 E 47th Street, Unit E, Chicago, IL 60653",
+  //   phone: "872-731-2101",
+  //   orderLink: "https://www.toasttab.com/taco-pros-chicago-hyde-park",
+  //   country: "US",
+  //   dir: "https://www.google.com/maps/dir/?api=1&destination=1400+E+47th+Street+Chicago+IL+60653",
+  //   mapSrc: "https://maps.google.com/maps?q=1400+E+47th+Street+Chicago+IL+60653&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  // },
   {
     name: "West Milwaukee, WI",
     address: "2068 Miller Park Way, Ste B, West Milwaukee, WI 53219",

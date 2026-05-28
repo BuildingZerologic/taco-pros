@@ -30,7 +30,7 @@ function Contact() {
     "Marysville, OH: 15710 US Hwy 36, Marysville, OH 43040",
     "Valparaiso, IN: 2005 Morthland Drive, Valparaiso, IN 46383",
     "Chatham, IL: 1515 E 87th Street, Chicago, IL 60619",
-    "Hyde Park, IL: 1400 E 47th Street, Unit E, Chicago, IL 60653",
+    // "Hyde Park, IL: 1400 E 47th Street, Unit E, Chicago, IL 60653",
     "West Milwaukee, WI: 2068 Miller Park Way, Ste B, West Milwaukee, WI 53219",
     "Edgewater, IL: 5310 N Broadway, Chicago, IL 60640",
     "North Ave, IL: 6427 W North Ave, Oak Park, IL 60302",

@@ -1062,96 +1062,96 @@ const rawLocations = [
     "acceptsReservations": "False"
   }
   },
-  {
-  "name": "Taco Pros - Hyde Park",
-  "address": "1400 E 47th St, Chicago, IL 60653",
-  "phone": "(872) 731-2101",
-  "orderLink": "https://tacopros.com/menu/",
-  "slug": "mexican-restaurant-hyde-park-chicago-il",
-  "country": "US",
-  "dir": "https://www.google.com/maps?sca_esv=313a17643fd6427e&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B1400%2BE%2B47th%2BSt%2BChicago%2BIL%2B60653&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLJ8iWKvaYB1iulsUG6WX2rFHOHQAfutjBXu2KM_xgZnRcPpypDqmswJL0SXZG-M6XcIU9c_WhXe7iLL8TVs5d4AYZhWtD00Aj7dNGumBMAwHitKIqQ&entry=mc&ved=1t:200715&ictx=111",
-  "mapSrc": "https://maps.google.com/maps?q=1400+E+47th+St+Chicago+IL+60653&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  "meta": {
-    "title": "Taco Pros Hyde Park Chicago | Mexican Restaurant & Tacos",
-    "description": "Taco Pros in Hyde Park, Chicago serves tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
-    "canonical": "https://tacopros.com/locations/mexican-restaurant-hyde-park-chicago-il/",
-    "ogTitle": "Taco Pros Hyde Park Chicago | Mexican Restaurant",
-    "ogDescription": "Fresh tacos, burritos & Mexican food in Hyde Park, Chicago. Order online or visit Taco Pros today.",
-    "ogUrl": "https://tacopros.com/locations/mexican-restaurant-hyde-park-chicago-il/",
-    "ogType": "website"
-  },
-  "pageContent": {
-    "h1": "Mexican Restaurant in Hyde Park, Chicago, IL | Taco Pros",
-    "introTitle": "Authentic Mexican Food in Hyde Park, Chicago, IL",
-    "introText": "Looking for tacos in Hyde Park, Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared dishes packed with bold flavors. Whether you're dining in, grabbing a quick bite, or ordering late evening meals, Taco Pros is a go-to destination in Hyde Park.",
-    "whyTitle": "Why Taco Pros in Hyde Park",
-    "popularItemsTitle": "Popular Menu Items",
-    "cateringTitle": "Mexican Catering in Hyde Park",
-    "cateringText": "Taco Pros offers Mexican catering services across Hyde Park and nearby areas in Chicago, IL including student events, office lunches, private gatherings, and small parties and celebrations.",
-    "locationName": "Taco Pros - Hyde Park, Chicago, IL",
-    "googleMapsText": "1400 E 47th St, Chicago, IL 60653",
-    "faq": [
-      {
-        "q": "What kind of food does Taco Pros serve?",
-        "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
-      },
-      {
-        "q": "Is Taco Pros Hyde Park good for students?",
-        "a": "Yes, Taco Pros is a popular choice for students and quick meals in Hyde Park."
-      },
-      {
-        "q": "Does Taco Pros in Hyde Park offer catering?",
-        "a": "Yes, Taco Pros provides catering services for events, student groups, and gatherings."
-      },
-      {
-        "q": "Can I order Taco Pros online in Hyde Park?",
-        "a": "Yes, online ordering is available for pickup and takeout."
-      }
-    ]
-  },
-  "schema": {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Taco Pros Hyde Park Chicago",
-    "image": "https://tacopros.com/images/taco-pros.jpg",
-    "url": "https://tacopros.com/locations/mexican-restaurant-hyde-park-chicago-il/",
-    "telephone": "+1-872-731-2101",
-    "servesCuisine": "Mexican",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1400 E 47th St",
-      "addressLocality": "Chicago",
-      "addressRegion": "IL",
-      "postalCode": "60653",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "41.809000",
-      "longitude": "-87.590700"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "10:00",
-        "closes": "23:00"
-      }
-    ],
-    "hasMenu": "https://tacopros.com/menu/",
-    "hasDeliveryService": true,
-    "acceptsReservations": "False"
-  }
-  },
+  // {
+  // "name": "Taco Pros - Hyde Park",
+  // "address": "1400 E 47th St, Chicago, IL 60653",
+  // "phone": "(872) 731-2101",
+  // "orderLink": "https://tacopros.com/menu/",
+  // "slug": "mexican-restaurant-hyde-park-chicago-il",
+  // "country": "US",
+  // "dir": "https://www.google.com/maps?sca_esv=313a17643fd6427e&output=search&q=https://www.google.com/maps/search/?api%3D1%26query%3DTaco%2BPros%2B1400%2BE%2B47th%2BSt%2BChicago%2BIL%2B60653&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpUrv6YeyJhXfuYqj4Fj6c1RYL5DaX_U0gMkcklonRgu__ZI_29-uOdtMsgNAZtmJffKqfD007x7pmo1qB05oVLJ8iWKvaYB1iulsUG6WX2rFHOHQAfutjBXu2KM_xgZnRcPpypDqmswJL0SXZG-M6XcIU9c_WhXe7iLL8TVs5d4AYZhWtD00Aj7dNGumBMAwHitKIqQ&entry=mc&ved=1t:200715&ictx=111",
+  // "mapSrc": "https://maps.google.com/maps?q=1400+E+47th+St+Chicago+IL+60653&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  // "meta": {
+  //   "title": "Taco Pros Hyde Park Chicago | Mexican Restaurant & Tacos",
+  //   "description": "Taco Pros in Hyde Park, Chicago serves tacos, burritos & Mexican street food. Dine-in, takeout & catering available. Order online today.",
+  //   "canonical": "https://tacopros.com/locations/mexican-restaurant-hyde-park-chicago-il/",
+  //   "ogTitle": "Taco Pros Hyde Park Chicago | Mexican Restaurant",
+  //   "ogDescription": "Fresh tacos, burritos & Mexican food in Hyde Park, Chicago. Order online or visit Taco Pros today.",
+  //   "ogUrl": "https://tacopros.com/locations/mexican-restaurant-hyde-park-chicago-il/",
+  //   "ogType": "website"
+  // },
+  // "pageContent": {
+  //   "h1": "Mexican Restaurant in Hyde Park, Chicago, IL | Taco Pros",
+  //   "introTitle": "Authentic Mexican Food in Hyde Park, Chicago, IL",
+  //   "introText": "Looking for tacos in Hyde Park, Chicago, IL? Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and freshly prepared dishes packed with bold flavors. Whether you're dining in, grabbing a quick bite, or ordering late evening meals, Taco Pros is a go-to destination in Hyde Park.",
+  //   "whyTitle": "Why Taco Pros in Hyde Park",
+  //   "popularItemsTitle": "Popular Menu Items",
+  //   "cateringTitle": "Mexican Catering in Hyde Park",
+  //   "cateringText": "Taco Pros offers Mexican catering services across Hyde Park and nearby areas in Chicago, IL including student events, office lunches, private gatherings, and small parties and celebrations.",
+  //   "locationName": "Taco Pros - Hyde Park, Chicago, IL",
+  //   "googleMapsText": "1400 E 47th St, Chicago, IL 60653",
+  //   "faq": [
+  //     {
+  //       "q": "What kind of food does Taco Pros serve?",
+  //       "a": "Taco Pros serves authentic Mexican street food including tacos, burritos, quesadillas, and combo meals."
+  //     },
+  //     {
+  //       "q": "Is Taco Pros Hyde Park good for students?",
+  //       "a": "Yes, Taco Pros is a popular choice for students and quick meals in Hyde Park."
+  //     },
+  //     {
+  //       "q": "Does Taco Pros in Hyde Park offer catering?",
+  //       "a": "Yes, Taco Pros provides catering services for events, student groups, and gatherings."
+  //     },
+  //     {
+  //       "q": "Can I order Taco Pros online in Hyde Park?",
+  //       "a": "Yes, online ordering is available for pickup and takeout."
+  //     }
+  //   ]
+  // },
+  // "schema": {
+  //   "@context": "https://schema.org",
+  //   "@type": "Restaurant",
+  //   "name": "Taco Pros Hyde Park Chicago",
+  //   "image": "https://tacopros.com/images/taco-pros.jpg",
+  //   "url": "https://tacopros.com/locations/mexican-restaurant-hyde-park-chicago-il/",
+  //   "telephone": "+1-872-731-2101",
+  //   "servesCuisine": "Mexican",
+  //   "priceRange": "$$",
+  //   "address": {
+  //     "@type": "PostalAddress",
+  //     "streetAddress": "1400 E 47th St",
+  //     "addressLocality": "Chicago",
+  //     "addressRegion": "IL",
+  //     "postalCode": "60653",
+  //     "addressCountry": "US"
+  //   },
+  //   "geo": {
+  //     "@type": "GeoCoordinates",
+  //     "latitude": "41.809000",
+  //     "longitude": "-87.590700"
+  //   },
+  //   "openingHoursSpecification": [
+  //     {
+  //       "@type": "OpeningHoursSpecification",
+  //       "dayOfWeek": [
+  //         "Monday",
+  //         "Tuesday",
+  //         "Wednesday",
+  //         "Thursday",
+  //         "Friday",
+  //         "Saturday",
+  //         "Sunday"
+  //       ],
+  //       "opens": "10:00",
+  //       "closes": "23:00"
+  //     }
+  //   ],
+  //   "hasMenu": "https://tacopros.com/menu/",
+  //   "hasDeliveryService": true,
+  //   "acceptsReservations": "False"
+  // }
+  // },
   {
   "name": "Taco Pros - Miller Park",
   "address": "2068 Miller Park Way Ste B, West Milwaukee, WI 53219",
